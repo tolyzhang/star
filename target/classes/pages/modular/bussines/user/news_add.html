@@ -1,0 +1,40 @@
+@layout("/common/_container.html",{bg:"bg-white",js:["/assets/modular/bussines/news/news_add.js"]}){
+<div style="height: 520px;">
+    <form id="newForm" lay-filter="newForm" class="layui-form model-form">
+        <input name="id" type="hidden"/>
+        <div class="layui-form-item">
+            <label class="layui-form-label">标题<span style="color: red;">*</span></label>
+            <div class="layui-input-block">
+                <input name="newTitle" id="newTitle" placeholder="请输入标题" type="text" class="layui-input" lay-verify="required" required="">
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">所属行业<span style="color: red;">*</span></label>
+            <div class="layui-input-block">
+                <select id="newType">
+                    <option value="">所属行业类型</option>
+                    <option value="1">道路交通</option>
+                    <option value="2">绿色交通</option>
+                    <option value="3">智能交通</option>
+                    <option value="4">公路运输</option>
+                    <option value="5">铁路城轨运输</option>
+                    <option value="6">水上运输</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label"><span style="color: red;"></span></label>
+            <div class="layui-input-block">
+                <textarea id="newContent" name="newContent" style="display: none;"></textarea>
+            </div>
+        </div>
+        <!--<-->
+
+        <div class="layui-form-item text-right">
+            <button class="layui-btn layui-btn-primary" type="button" ew-event="closeDialog">取消</button>
+            <button class="layui-btn" lay-filter="btnSubmit" lay-submit>保存</button>
+        </div>
+    </form>
+</div>
+
+@}

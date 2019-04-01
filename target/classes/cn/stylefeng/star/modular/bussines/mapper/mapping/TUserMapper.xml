@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.star.modular.bussines.mapper.TUserMapper">
+  <resultMap id="BaseResultMap" type="cn.stylefeng.star.modular.bussines.entity.TUser">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="USER_NAME" jdbcType="VARCHAR" property="userName" />
+    <result column="USER_REAL_NAME" jdbcType="VARCHAR" property="userRealName" />
+    <result column="INDUSTRY_TYPE" jdbcType="VARCHAR" property="industryType" />
+    <result column="INDUSTRT_ID" jdbcType="INTEGER" property="industrtId" />
+    <result column="USER_FAX" jdbcType="VARCHAR" property="userFax" />
+    <result column="USER_PASSWORD" jdbcType="VARCHAR" property="userPassword" />
+    <result column="USER_PHONE" jdbcType="VARCHAR" property="userPhone" />
+    <result column="USER_CODE" jdbcType="VARCHAR" property="userCode" />
+    <result column="USER_EMAIL" jdbcType="VARCHAR" property="userEmail" />
+    <result column="USER_STATUS" jdbcType="VARCHAR" property="userStatus" />
+    <result column="USER_IP" jdbcType="VARCHAR" property="userIp" />
+    <result column="COMPANY_NAME" jdbcType="VARCHAR" property="companyName" />
+    <result column="COMPANY_CODE" jdbcType="VARCHAR" property="companyCode" />
+    <result column="COMPANY_PERSON" jdbcType="VARCHAR" property="companyPerson" />
+    <result column="COMPANY_LICENSE" jdbcType="VARCHAR" property="companyLicense" />
+    <result column="COMPANY_URL_ADD" jdbcType="VARCHAR" property="companyUrlAdd" />
+    <result column="CRT_TIME" jdbcType="TIMESTAMP" property="crtTime" />
+    <result column="UPT_TIME" jdbcType="TIMESTAMP" property="uptTime" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    ID as id, USER_NAME as userName, USER_REAL_NAME as userRealName,
+     INDUSTRY_TYPE as industryType, INDUSTRT_ID as industrtId, USER_FAX as userFax, USER_PASSWORD as userPassword,
+    USER_PHONE as userPhone, USER_CODE as userCode, USER_EMAIL as userEmail,
+    USER_STATUS as userStatus, USER_IP as userIp, COMPANY_NAME as companyName, COMPANY_CODE companyCode,
+    COMPANY_PERSON as companyPerson, COMPANY_LICENSE as  companyLicense, COMPANY_URL_ADD as companyUrlAdd,
+     CRT_TIME as crtTime, UPT_TIME as uptTime
+  </sql>
+
+  <!--查询全部-->
+  <select id="getUserList" resultType="map" parameterType="com.baomidou.mybatisplus.extension.plugins.pagination.Page">
+    select
+    <include refid="Base_Column_List"/>
+    from T_USER where 1 = 1
+    <if test="industryType != null and industryType !=''">
+      and INDUSTRY_TYPE= #{industryType}
+    </if>
+    <if test="userStatus !=null and userStatus!=''">
+      and USER_STATUS = #{userStatus}
+    </if>
+    <if test="companyName != null and companyName !=''">
+      and COMPANY_NAME  like  '%${companyName}%'
+    </if>
+    <if test="userName != null and userName !=''">
+      and USER_NAME like '%${userName}%'
+    </if>
+  </select>
+
+  <!--查询用户名和密码-->
+  <select id="getUserPass" parameterType="cn.stylefeng.star.modular.bussines.entity.TUser" resultType="cn.stylefeng.star.modular.bussines.entity.TUser">
+    select   <include refid="Base_Column_List"/>
+    from T_USER where 1=1 and USER_NAME = #{userName} and USER_PASSWORD=#{userPassword}
+  </select>
+
+  <!--新增-->
+  <insert id="insertUser" parameterType="cn.stylefeng.star.modular.bussines.entity.TUser">
+    insert into T_USER
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="userName != null">
+        USER_NAME,
+      </if>
+      <if test="userRealName != null">
+        USER_REAL_NAME,
+      </if>
+      <if test="industryType != null">
+        INDUSTRY_TYPE,
+      </if>
+      <if test="industrtId != null">
+        INDUSTRT_ID,
+      </if>
+      <if test="userFax != null">
+        USER_FAX,
+      </if>
+      <if test="userPassword != null">
+        USER_PASSWORD,
+      </if>
+      <if test="userPhone != null">
+        USER_PHONE,
+      </if>
+      <if test="userCode != null">
+        USER_CODE,
+      </if>
+      <if test="userEmail != null">
+        USER_EMAIL,
+      </if>
+      <if test="userStatus != null">
+        USER_STATUS,
+      </if>
+      <if test="userIp != null">
+        USER_IP,
+      </if>
+      <if test="companyName != null">
+        COMPANY_NAME,
+      </if>
+      <if test="companyCode != null">
+        COMPANY_CODE,
+      </if>
+      <if test="companyPerson != null">
+        COMPANY_PERSON,
+      </if>
+      <if test="companyLicense != null">
+        COMPANY_LICENSE,
+      </if>
+      <if test="companyUrlAdd != null">
+        COMPANY_URL_ADD,
+      </if>
+      <if test="crtTime != null">
+        CRT_TIME,
+      </if>
+      <if test="uptTime != null">
+        UPT_TIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="userName != null">
+        #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userRealName != null">
+        #{userRealName,jdbcType=VARCHAR},
+      </if>
+      <if test="industryType != null">
+        #{industryType,jdbcType=VARCHAR},
+      </if>
+      <if test="industrtId != null">
+        #{industrtId,jdbcType=INTEGER},
+      </if>
+      <if test="userFax != null">
+        #{userFax,jdbcType=VARCHAR},
+      </if>
+      <if test="userPassword != null">
+        #{userPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userPhone != null">
+        #{userPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode != null">
+        #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userEmail != null">
+        #{userEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="userStatus != null">
+        #{userStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="userIp != null">
+        #{userIp,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null">
+        #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="companyCode != null">
+        #{companyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="companyPerson != null">
+        #{companyPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLicense != null">
+        #{companyLicense,jdbcType=VARCHAR},
+      </if>
+      <if test="companyUrlAdd != null">
+        #{companyUrlAdd,jdbcType=VARCHAR},
+      </if>
+      <if test="crtTime != null">
+        #{crtTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uptTime != null">
+        #{uptTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+
+<!--修改-->
+  <update id="editUser" parameterType="cn.stylefeng.star.modular.bussines.entity.TUser">
+    update T_USER
+    <set>
+      <if test="userName != null">
+        USER_NAME = #{userName,jdbcType=VARCHAR},
+      </if>
+      <if test="userRealName != null">
+        USER_REAL_NAME = #{userRealName,jdbcType=VARCHAR},
+      </if>
+      <if test="industryType != null">
+        INDUSTRY_TYPE = #{industryType,jdbcType=VARCHAR},
+      </if>
+      <if test="industrtId != null">
+        INDUSTRT_ID = #{industrtId,jdbcType=INTEGER},
+      </if>
+      <if test="userFax != null">
+        USER_FAX = #{userFax,jdbcType=VARCHAR},
+      </if>
+      <if test="userPassword != null">
+        USER_PASSWORD = #{userPassword,jdbcType=VARCHAR},
+      </if>
+      <if test="userPhone != null">
+        USER_PHONE = #{userPhone,jdbcType=VARCHAR},
+      </if>
+      <if test="userCode != null">
+        USER_CODE = #{userCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userEmail != null">
+        USER_EMAIL = #{userEmail,jdbcType=VARCHAR},
+      </if>
+      <if test="userStatus != null">
+        USER_STATUS = #{userStatus,jdbcType=VARCHAR},
+      </if>
+      <if test="userIp != null">
+        USER_IP = #{userIp,jdbcType=VARCHAR},
+      </if>
+      <if test="companyName != null">
+        COMPANY_NAME = #{companyName,jdbcType=VARCHAR},
+      </if>
+      <if test="companyCode != null">
+        COMPANY_CODE = #{companyCode,jdbcType=VARCHAR},
+      </if>
+      <if test="companyPerson != null">
+        COMPANY_PERSON = #{companyPerson,jdbcType=VARCHAR},
+      </if>
+      <if test="companyLicense != null">
+        COMPANY_LICENSE = #{companyLicense,jdbcType=VARCHAR},
+      </if>
+      <if test="companyUrlAdd != null">
+        COMPANY_URL_ADD = #{companyUrlAdd,jdbcType=VARCHAR},
+      </if>
+      <if test="crtTime != null">
+        CRT_TIME = #{crtTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uptTime != null">
+        UPT_TIME = #{uptTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+
+  <!--删除-->
+  <delete id="deleteUser">
+      delete from T_USER where ID = #{id}
+  </delete>
+
+  <select id="getByTUserId" resultType="cn.stylefeng.star.modular.bussines.entity.TUser">
+     select
+    <include refid="Base_Column_List"/>
+    from T_USER where 1 = 1  AND id = #{id}
+  </select>
+</mapper>

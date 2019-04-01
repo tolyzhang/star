@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.star.modular.bussines.mapper.TInfosMapper">
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.star.modular.bussines.entity.TInfos">
+        <id column="ID" jdbcType="INTEGER" property="id" />
+        <result column="INFO_TYPE" jdbcType="VARCHAR" property="infoType" />
+        <result column="INFO_CONTENT" jdbcType="VARCHAR" property="infoContent" />
+        <result column="INFO_TAG" jdbcType="VARCHAR" property="infoTag" />
+        <result column="INFO_TIME" jdbcType="TIMESTAMP" property="infoTime" />
+        <result column="INFO_UPT_TIME" jdbcType="TIMESTAMP" property="infoUptTime" />
+        <result column="OPERATOR" jdbcType="VARCHAR" property="operator" />
+        <result column="INFO_TITLE" jdbcType="VARCHAR" property="infoTitle" />
+        <result column="INFO_STATUS" jdbcType="INTEGER" property="infoStatus" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+          ID, INFO_TYPE, INFO_CONTENT, INFO_TITLE,INFO_TAG, INFO_TIME, INFO_UPT_TIME, OPERATOR,INFO_STATUS
+    </sql>
+
+    <!--查询全部信息-->
+    <select id="getInfoList" resultType="map" parameterType="com.baomidou.mybatisplus.extension.plugins.pagination.Page">
+        select
+        <include refid="Base_Column_List"/>
+        from T_INFOS where 1 = 1
+        <if test="infoType != null and infoType !=''">
+            and INFO_TYPE= #{infoType}
+        </if>
+        <if test="infoStatus != null and infoStatus !='' ">
+            and INFO_STATUS = #{infoStatus}
+        </if>
+    </select>
+    <!--保存行业信息-->
+    <insert id="addInfos" parameterType="cn.stylefeng.star.modular.bussines.entity.TInfos">
+        insert into T_INFOS
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="infoType != null">
+                INFO_TYPE,
+            </if>
+            <if test="infoContent != null">
+                INFO_CONTENT,
+            </if>
+            <if test="infoTag != null">
+                INFO_TAG,
+            </if>
+            <if test="infoTime != null">
+                INFO_TIME,
+            </if>
+            <if test="infoUptTime != null">
+                INFO_UPT_TIME,
+            </if>
+            <if test="operator != null">
+                OPERATOR,
+            </if>
+            <if test="infoTitle !=null">
+                INFO_TITLE,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="infoType != null">
+                #{infoType,jdbcType=VARCHAR},
+            </if>
+            <if test="infoContent != null">
+                #{infoContent,jdbcType=VARCHAR},
+            </if>
+            <if test="infoTag != null">
+                #{infoTag,jdbcType=VARCHAR},
+            </if>
+            <if test="infoTime != null">
+                #{infoTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="infoUptTime != null">
+                #{infoUptTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="operator != null">
+                #{operator,jdbcType=VARCHAR},
+            </if>
+            <if test="infoTitle !=null">
+                #{infoTitle,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+</mapper>

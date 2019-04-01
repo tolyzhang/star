@@ -1,0 +1,209 @@
+{
+  "groups": [
+    {
+      "name": "beetl",
+      "type": "cn.stylefeng.star.config.properties.BeetlProperties",
+      "sourceType": "cn.stylefeng.star.config.properties.BeetlProperties"
+    },
+    {
+      "name": "spring.datasource",
+      "type": "cn.stylefeng.roses.core.config.properties.DruidProperties",
+      "sourceType": "cn.stylefeng.star.config.datasource.MultiDataSourceConfig",
+      "sourceMethod": "druidProperties()"
+    },
+    {
+      "name": "star",
+      "type": "cn.stylefeng.star.config.properties.StarProperties",
+      "sourceType": "cn.stylefeng.star.config.properties.StarProperties"
+    },
+    {
+      "name": "star.muti-datasource",
+      "type": "cn.stylefeng.roses.core.config.properties.MutiDataSourceProperties",
+      "sourceType": "cn.stylefeng.star.config.datasource.MultiDataSourceConfig",
+      "sourceMethod": "mutiDataSourceProperties()"
+    }
+  ],
+  "properties": [
+    {
+      "name": "beetl.delimiter-statement-end",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.star.config.properties.BeetlProperties"
+    },
+    {
+      "name": "beetl.delimiter-statement-start",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.star.config.properties.BeetlProperties"
+    },
+    {
+      "name": "beetl.properties",
+      "type": "java.util.Properties",
+      "sourceType": "cn.stylefeng.star.config.properties.BeetlProperties"
+    },
+    {
+      "name": "beetl.resource-auto-check",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.star.config.properties.BeetlProperties"
+    },
+    {
+      "name": "beetl.resource-tagroot",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.star.config.properties.BeetlProperties"
+    },
+    {
+      "name": "beetl.resource-tagsuffix",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.star.config.properties.BeetlProperties"
+    },
+    {
+      "name": "spring.datasource.driver-class-name",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.filters",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.initial-size",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.max-active",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.max-pool-prepared-statement-per-connection-size",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.max-wait",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.min-evictable-idle-time-millis",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.min-idle",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.password",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.pool-prepared-statements",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.test-on-borrow",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.test-on-return",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.test-while-idle",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.time-between-eviction-runs-millis",
+      "type": "java.lang.Integer",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.url",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.username",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "spring.datasource.validation-query",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.DruidProperties"
+    },
+    {
+      "name": "star.file-upload-path",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.star.config.properties.StarProperties"
+    },
+    {
+      "name": "star.kaptcha-open",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.stylefeng.star.config.properties.StarProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "star.muti-datasource.data-source-names",
+      "type": "java.lang.String[]",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.MutiDataSourceProperties"
+    },
+    {
+      "name": "star.muti-datasource.driver-class-name",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.MutiDataSourceProperties"
+    },
+    {
+      "name": "star.muti-datasource.password",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.MutiDataSourceProperties"
+    },
+    {
+      "name": "star.muti-datasource.url",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.MutiDataSourceProperties"
+    },
+    {
+      "name": "star.muti-datasource.username",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.MutiDataSourceProperties"
+    },
+    {
+      "name": "star.muti-datasource.validation-query",
+      "type": "java.lang.String",
+      "sourceType": "cn.stylefeng.roses.core.config.properties.MutiDataSourceProperties"
+    },
+    {
+      "name": "star.session-invalidate-time",
+      "type": "java.lang.Integer",
+      "description": "session 失效时间（默认为30分钟 单位：秒）",
+      "sourceType": "cn.stylefeng.star.config.properties.StarProperties"
+    },
+    {
+      "name": "star.session-validation-interval",
+      "type": "java.lang.Integer",
+      "description": "session 验证失效时间（默认为15分钟 单位：秒）",
+      "sourceType": "cn.stylefeng.star.config.properties.StarProperties"
+    },
+    {
+      "name": "star.spring-session-open",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.stylefeng.star.config.properties.StarProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "star.swagger-open",
+      "type": "java.lang.Boolean",
+      "sourceType": "cn.stylefeng.star.config.properties.StarProperties",
+      "defaultValue": false
+    }
+  ],
+  "hints": []
+}

@@ -1,0 +1,41 @@
+@layout("/common/_container.html",{js:["/assets/modular/bussines/news/list.js"]}){
+
+<div class="layui-body-header">
+    <span class="layui-body-header-title">成果转化</span>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-xs12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <div class="layui-form toolbar">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <select id="newType">
+                                    <option value="">所属行业类型</option>
+                                    <option value="1">道路交通</option>
+                                    <option value="2">绿色交通</option>
+                                    <option value="3">智能交通</option>
+                                    <option value="4">公路运输</option>
+                                    <option value="5">铁路城轨运输</option>
+                                    <option value="6">水上运输</option>
+                                </select>
+                            </div>
+                            <div class="layui-inline">
+                                <button id="btnSearch" class="layui-btn icon-btn"><i class="layui-icon">&#xe615;</i>搜索</button>
+                                <button id="btnAdd" class="layui-btn icon-btn"><i class="layui-icon">&#xe654;</i>添加</button>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="layui-table" id="newsTable" lay-filter="newsTable"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/html" id="tableBar">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="edit">修改</a>
+    <a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="delete">删除</a>
+</script>
+@}

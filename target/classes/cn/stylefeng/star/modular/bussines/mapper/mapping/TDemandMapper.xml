@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.star.modular.bussines.mapper.TDemandMapper">
+  <resultMap id="BaseResultMap" type="cn.stylefeng.star.modular.bussines.entity.TDemand">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="UNIT_ID" jdbcType="INTEGER" property="unitId" />
+    <result column="UNIT_NAME" jdbcType="VARCHAR" property="unitName" />
+    <result column="DEMAND_TYPE" jdbcType="VARCHAR" property="demandType" />
+    <result column="COMPANY_NAME" jdbcType="VARCHAR" property="companyName" />
+    <result column="COMPANY_ADDRESS" jdbcType="VARCHAR" property="companyAddress" />
+    <result column="DEMAND_PERSON" jdbcType="VARCHAR" property="demandPerson" />
+    <result column="DEMAND_PHONE" jdbcType="VARCHAR" property="demandPhone" />
+    <result column="DEMAND_EMAIL" jdbcType="VARCHAR" property="demandEmail" />
+    <result column="COMPANY_SURVEY" jdbcType="VARCHAR" property="companySurvey" />
+    <result column="PRODUCT_TRADE" jdbcType="VARCHAR" property="productTrade" />
+    <result column="PRODUCT_SURVEY" jdbcType="VARCHAR" property="productSurvey" />
+    <result column="PRODUCT_DEMAND" jdbcType="VARCHAR" property="productDemand" />
+    <result column="DEMAND_STATUS" jdbcType="VARCHAR" property="demandStatus" />
+    <result column="CRT_TIME" jdbcType="TIMESTAMP" property="crtTime" />
+    <result column="UPT_TIME" jdbcType="TIMESTAMP" property="uptTime" />
+    <result column="OPERATOR" jdbcType="VARCHAR" property="operator" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    ID, UNIT_ID, UNIT_NAME, DEMAND_TYPE, COMPANY_NAME, COMPANY_ADDRESS, DEMAND_PERSON, 
+    DEMAND_PHONE, DEMAND_EMAIL, COMPANY_SURVEY, PRODUCT_TRADE, PRODUCT_SURVEY, PRODUCT_DEMAND, 
+    DEMAND_STATUS, CRT_TIME, UPT_TIME, OPERATOR
+  </sql>
+
+  <!--查询全部信息-->
+  <select id="getDemandList" resultType="map" parameterType="com.baomidou.mybatisplus.extension.plugins.pagination.Page">
+    select
+    <include refid="Base_Column_List"/>
+    from T_DEMAND where 1 = 1
+  </select>
+
+</mapper>

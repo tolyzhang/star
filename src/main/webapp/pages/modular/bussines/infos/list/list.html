@@ -1,0 +1,46 @@
+@layout("/common/_container.html",{js:["/assets/modular/bussines/infos/list/list.js"]}){
+
+<div class="layui-body-header">
+    <span class="layui-body-header-title">行业信息数据</span>
+</div>
+
+<div class="layui-fluid">
+    <div class="layui-row layui-col-space15">
+        <div class="layui-col-xs12">
+            <div class="layui-card">
+                <div class="layui-card-body">
+                    <div class="layui-form toolbar">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <select id="infoStatus">
+                                    <option value="">状态</option>
+                                    <option value="0">正常</option>
+                                    <option value="1">挂起</option>
+                                    <option value="2">冻结</option>
+                                    <option value="3">删除</option>
+                                </select>
+                            </div>
+                            <div class="layui-inline">
+                                <select id="infoType">
+                                    <option value="">所属行业类型</option>
+                                    <option value="info">行业信息</option>
+                                    <option value="standard">规范标准</option>
+                                    <option value="focus">重点实验室</option>
+                                    <option value="expert">专家人才库</option>
+                                </select>
+                            </div>
+                            <div class="layui-inline">
+                                <button id="btnSearch" class="layui-btn icon-btn"><i class="layui-icon">&#xe615;</i>搜索</button>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="layui-table" id="infosTable" lay-filter="infosTable"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/html" id="tableBar">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看详情</a>
+</script>
+@}

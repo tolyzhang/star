@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.star.modular.bussines.mapper.TWarehousMapper">
+  <resultMap id="BaseResultMap" type="cn.stylefeng.star.modular.bussines.entity.TWarehous">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="UNIT_ID" jdbcType="INTEGER" property="unitId" />
+    <result column="UNIT_NAME" jdbcType="VARCHAR" property="unitName" />
+    <result column="CREATIVE_TYPE" jdbcType="VARCHAR" property="creativeType" />
+    <result column="COMPANY_NAME" jdbcType="VARCHAR" property="companyName" />
+    <result column="COMPANY_ADDRESS" jdbcType="VARCHAR" property="companyAddress" />
+    <result column="COMPANY_ORG_NO" jdbcType="VARCHAR" property="companyOrgNo" />
+    <result column="COMPANY_LEGAL" jdbcType="VARCHAR" property="companyLegal" />
+    <result column="PRODUCT_PERSON" jdbcType="VARCHAR" property="productPerson" />
+    <result column="PRODUCT_PHONE" jdbcType="VARCHAR" property="productPhone" />
+    <result column="PRODUCT_EMAIL" jdbcType="VARCHAR" property="productEmail" />
+    <result column="COMPANY_BRIEF" jdbcType="VARCHAR" property="companyBrief" />
+    <result column="PRODUCT_NAME" jdbcType="VARCHAR" property="productName" />
+    <result column="PRODUCT_TRADE" jdbcType="VARCHAR" property="productTrade" />
+    <result column="PRODUCT_SURVEY" jdbcType="VARCHAR" property="productSurvey" />
+    <result column="ENCLOSURE_ID" jdbcType="INTEGER" property="enclosureId" />
+    <result column="WAREHOU_STATUS" jdbcType="VARCHAR" property="warehouStatus" />
+    <result column="CRT_TIME" jdbcType="TIMESTAMP" property="crtTime" />
+    <result column="UPT_TIME" jdbcType="TIMESTAMP" property="uptTime" />
+    <result column="OPERATOR" jdbcType="VARCHAR" property="operator" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    ID, UNIT_ID, UNIT_NAME, CREATIVE_TYPE, COMPANY_NAME, COMPANY_ADDRESS, COMPANY_ORG_NO,
+    COMPANY_LEGAL, PRODUCT_PERSON, PRODUCT_PHONE, PRODUCT_EMAIL, COMPANY_BRIEF, PRODUCT_NAME,
+    PRODUCT_TRADE, PRODUCT_SURVEY, ENCLOSURE_ID,WAREHOU_STATUS, CRT_TIME, UPT_TIME,
+    OPERATOR
+  </sql>
+
+  <!--查询全部信息-->
+  <select id="getTWarehousList" resultType="map" parameterType="com.baomidou.mybatisplus.extension.plugins.pagination.Page">
+    select
+    <include refid="Base_Column_List"/>
+    from T_WAREHOUS where 1 = 1
+  </select>
+
+</mapper>

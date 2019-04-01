@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.star.modular.bussines.mapper.CreativeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.star.modular.bussines.entity.Creative">
+        <id column="ID" jdbcType="INTEGER" property="id" />
+        <result column="UNIT_ID" jdbcType="INTEGER" property="unitId" />
+        <result column="UNIT_NAME" jdbcType="VARCHAR" property="unitName" />
+        <result column="ALL_TYPE" jdbcType="VARCHAR" property="allType" />
+        <result column="COMPANY_NAME" jdbcType="VARCHAR" property="companyName" />
+        <result column="ORG_NO" jdbcType="VARCHAR" property="orgNo" />
+        <result column="INDUSTRY_TYPE" jdbcType="VARCHAR" property="industryType" />
+        <result column="REGIST_TIME" jdbcType="DATE" property="registTime" />
+        <result column="COMPANY_ADDRESS" jdbcType="VARCHAR" property="companyAddress" />
+        <result column="BUSSINESS_SCOPE" jdbcType="VARCHAR" property="bussinessScope" />
+        <result column="TELEPHONE" jdbcType="VARCHAR" property="telephone" />
+        <result column="EMAIL" jdbcType="VARCHAR" property="email" />
+        <result column="POSTAL_CODE" jdbcType="VARCHAR" property="postalCode" />
+        <result column="COMPANY_URL" jdbcType="VARCHAR" property="companyUrl" />
+        <result column="COMPANY_PERSON_NUM" jdbcType="VARCHAR" property="companyPersonNum" />
+        <result column="COMPANY_CAPITAL" jdbcType="VARCHAR" property="companyCapital" />
+        <result column="PRE_YEAR_AMT" jdbcType="VARCHAR" property="preYearAmt" />
+        <result column="PRE_YEAR_ASSETS" jdbcType="VARCHAR" property="preYearAssets" />
+        <result column="PRE_YEAR_LIAB" jdbcType="VARCHAR" property="preYearLiab" />
+        <result column="BANK_NAME" jdbcType="VARCHAR" property="bankName" />
+        <result column="BANK_CODE" jdbcType="VARCHAR" property="bankCode" />
+        <result column="PRODUCT_NAME" jdbcType="VARCHAR" property="productName" />
+        <result column="PRODUCT_PERSON" jdbcType="VARCHAR" property="productPerson" />
+        <result column="PRODUCT_PER_ID" jdbcType="VARCHAR" property="productPerId" />
+        <result column="PRODUCT_TITLE" jdbcType="VARCHAR" property="productTitle" />
+        <result column="PRODUCT_EDU" jdbcType="VARCHAR" property="productEdu" />
+        <result column="PRODUCT_PART_ID" jdbcType="INTEGER" property="productPartId" />
+        <result column="PRODUCT_IMPLE_STATE" jdbcType="VARCHAR" property="productImpleState" />
+        <result column="PRODUCT_IMPLE_END" jdbcType="VARCHAR" property="productImpleEnd" />
+        <result column="PRODUCT_ADDRESS" jdbcType="VARCHAR" property="productAddress" />
+        <result column="PRODUCT_GROUND" jdbcType="VARCHAR" property="productGround" />
+        <result column="PRODUCT_PROG" jdbcType="VARCHAR" property="productProg" />
+        <result column="PRODUCT_PLAN" jdbcType="VARCHAR" property="productPlan" />
+        <result column="PRODUCT_BENEFIT" jdbcType="VARCHAR" property="productBenefit" />
+        <result column="ENCLOSURE" jdbcType="VARCHAR" property="enclosure" />
+        <result column="EXPAND_A" jdbcType="VARCHAR" property="expandA" />
+        <result column="EXPAND_B" jdbcType="VARCHAR" property="expandB" />
+        <result column="EXPAND_C" jdbcType="VARCHAR" property="expandC" />
+        <result column="EXPAND_D" jdbcType="VARCHAR" property="expandD" />
+        <result column="CREATIVE_STATUS" jdbcType="VARCHAR" property="creativeStatus" />
+        <result column="CRT_TIME" jdbcType="TIMESTAMP" property="crtTime" />
+        <result column="UPT_TIME" jdbcType="TIMESTAMP" property="uptTime" />
+        <result column="OPERATOR" jdbcType="VARCHAR" property="operator" />
+        <result column="ITEM_NO" jdbcType="VARCHAR" property="itemNo"/>
+        <result column="IS_ANNEX" jdbcType="INTEGER" property="isAnnex" />
+    </resultMap>
+
+
+    <resultMap id="BaseResultAnntx" type="cn.stylefeng.star.modular.bussines.entity.TAnnex">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="item_no" jdbcType="VARCHAR" property="itemNo" />
+        <result column="all_type" jdbcType="VARCHAR" property="allType" />
+        <result column="annex_name" jdbcType="VARCHAR" property="annexName" />
+        <result column="annex_url_add" jdbcType="VARCHAR" property="annexUrlAdd" />
+        <result column="annex_type" jdbcType="VARCHAR" property="annexType" />
+        <result column="annex_status" jdbcType="INTEGER" property="annexStatus" />
+        <result column="crt_time" jdbcType="TIMESTAMP" property="crtTime" />
+        <result column="upt_time" jdbcType="TIMESTAMP" property="uptTime" />
+        <result column="operator" jdbcType="VARCHAR" property="operator" />
+    </resultMap>
+
+    <!--项目人员附属表-->
+    <resultMap id="BaseResultMapPart" type="cn.stylefeng.star.modular.bussines.entity.TPart">
+        <id column="ID" jdbcType="INTEGER" property="id" />
+        <result column="ITEM_NO" jdbcType="VARCHAR" property="itemNo" />
+        <result column="PART_NAME" jdbcType="VARCHAR" property="partName" />
+        <result column="PART_CODE" jdbcType="VARCHAR" property="partCode" />
+        <result column="PART_JOB" jdbcType="VARCHAR" property="partJob" />
+        <result column="PART_EDU" jdbcType="VARCHAR" property="partEdu" />
+        <result column="CRT_TIME" jdbcType="TIMESTAMP" property="crtTime" />
+        <result column="UPT_TIME" jdbcType="TIMESTAMP" property="uptTime" />
+        <result column="UNIT_ID" jdbcType="INTEGER" property="unitId" />
+        <result column="UNIT_NAME" jdbcType="VARCHAR" property="unitName" />
+        <result column="PART_STATUS" jdbcType="INTEGER" property="partStatus" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+    ID as id, UNIT_ID as unitId, UNIT_NAME as unitName, ALL_TYPE as allType,INDUSTRY_TYPE as industryType,
+    COMPANY_NAME as companyName, ORG_NO as orgNo, REGIST_TIME as registTime, COMPANY_ADDRESS as companyAddress,
+    BUSSINESS_SCOPE  as bussinessScope, TELEPHONE  as telephone, EMAIL as email, POSTA_CODE as postaCode,
+    COMPANY_URL as companyUrl, COMPANY_PERSON_NUM  as companyPersonNum,
+    COMPANY_CAPITAL  as  companyCapital, PRE_YEAR_AMT as perYearAmt, PRE_YEAR_ASSETS  as perYearAssets,
+    PRE_YEAR_LIAB as perYearLiab, BANK_NAME  as  bankName, BANK_CODE  as  bankCode,
+    PRODUCT_NAME as productName, PRODUCT_PERSON  as productPerson, PRODUCT_PER_ID  as productPerId,
+    PRODUCT_TITLE as productTitle, PRODUCT_EDU  as productEdu, PRODUCT_PART_ID  as productPartId,
+    PRODUCT_IMPLE_STATE  as productImpleState, PRODUCT_IMPLE_END as productImpleEnd,
+    PRODUCT_ADDRESS as productAddress, PRODUCT_GROUND as productGround, PRODUCT_PROG  as productProg,
+    PRODUCT_PLAN as productPlan, PRODUCT_BENEFIT as productBenefit, ENCLOSURE as enclosure,
+    EXPAND_A  as  expandA, EXPAND_B as expandB, EXPAND_C as expandC, EXPAND_D  as expandD,
+    CREATIVE_STATUS as creativeStatus, CRT_TIME as crtTime, UPT_TIME as uptTime, OPERATOR  as operator,
+    ITEM_NO as itemNo,IS_ANNEX as isAnnex
+    </sql>
+
+    <sql id="Base_Column_List_ANNEX">
+    id as id, item_no as itemNo, all_type as allType, annex_name as annexName, annex_url_add as annexUrlAdd,
+    annex_type as annexType, annex_status as annexStatus, crt_time as crtTime,
+    upt_time as uptTime, operator
+  </sql>
+
+    <sql id="Base_Column_List_Part">
+    ID as id, ITEM_NO as itemNo, PART_NAME as partName, PART_CODE as partCode,
+    PART_JOB as partJob, PART_EDU as partEdu, CRT_TIME as crtTime, UPT_TIME as uptTime, UNIT_ID as unitId,
+    UNIT_NAME as unitName, PART_STATUS as partStatus
+  </sql>
+
+    <!--查询全部信息-->
+    <select id="getCreativeList" resultType="map" parameterType="com.baomidou.mybatisplus.extension.plugins.pagination.Page">
+        select
+        <include refid="Base_Column_List"/>
+        from T_CREATIVE where 1 = 1
+        <if test="productName != null and productName !=''">
+            and PRODUCT_NAME= #{productName}
+        </if>
+        <if test="industryType != null and industryType != ''">
+            and INDUSTRY_TYPE = #{industryType}
+        </if>
+        <if test="productName != null and productName !=''">
+           and  PRODUCT_NAME like '%productName%'
+        </if>
+        <if test="productPerson !=null and productPerson !=''">
+            and  PRODUCT_PERSON like '%productPerson%'
+        </if>
+        <if test="orgNo !=null and orgNo !=''">
+            and  ORG_NO like '%orgNo%'
+        </if>
+    </select>
+
+    <!--导出下载-->
+    <select id="getDownExcel" resultType="map" parameterType="cn.stylefeng.star.modular.bussines.entity.Creative">
+        select
+        <include refid="Base_Column_List"/>
+        from T_CREATIVE where 1 = 1
+        <if test="productName != null and productName !=''">
+            and PRODUCT_NAME= #{productName}
+        </if>
+        <if test="industryType != null and industryType != ''">
+            and INDUSTRY_TYPE = #{industryType}
+        </if>
+        <if test="productName != null and productName !=''">
+            and  PRODUCT_NAME like '%productName%'
+        </if>
+        <if test="productPerson !=null and productPerson !=''">
+            and  PRODUCT_PERSON like '%productPerson%'
+        </if>
+        <if test="orgNo !=null and orgNo !=''">
+            and  ORG_NO like '%orgNo%'
+        </if>
+    </select>
+
+
+
+    <!--查询id-->
+    <select id="findById" resultType="cn.stylefeng.star.modular.bussines.entity.Creative">
+        select <include refid="Base_Column_List"/>
+        from T_CREATIVE where 1 = 1 and id=#{id}
+    </select>
+
+    <!--根据编号查询上传附件表信息-->
+    <select id="selectByTannex" resultType="cn.stylefeng.star.modular.bussines.entity.TAnnex" resultMap="BaseResultAnntx">
+        select
+       *
+        from T_ANNEX
+        where 1=1
+        <if test="itemNo != null and itemNo != ''">
+            and item_no = #{itemNo}
+        </if>
+    </select>
+
+    <select id="selectByPart" resultType="cn.stylefeng.star.modular.bussines.entity.TPart" resultMap="BaseResultMapPart">
+        SELECT *
+    FROM T_PART
+    WHERE  1=1 AND ITEM_NO = #{itemNo}
+    </select>
+
+    <!--新增-->
+    <insert id="addCreative" parameterType="cn.stylefeng.star.modular.bussines.entity.Creative">
+        insert into T_CREATIVE
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="unitId != null">
+                UNIT_ID,
+            </if>
+            <if test="unitName != null">
+                UNIT_NAME,
+            </if>
+            <if test="creativeHappen != null">
+                CREATIVE_HAPPEN,
+            </if>
+            <if test="allType != null">
+                ALL_TYPE,
+            </if>
+            <if test="industryType != null">
+                INDUSTRY_TYPE,
+            </if>
+            <if test="companyName != null">
+                COMPANY_NAME,
+            </if>
+            <if test="orgNo != null">
+                ORG_NO,
+            </if>
+            <if test="registTime != null">
+                REGIST_TIME,
+            </if>
+            <if test="companyAddress != null">
+                COMPANY_ADDRESS,
+            </if>
+            <if test="bussinessScope != null">
+                BUSSINESS_SCOPE,
+            </if>
+            <if test="telephone != null">
+                TELEPHONE,
+            </if>
+            <if test="email != null">
+                EMAIL,
+            </if>
+            <if test="companyUrl != null">
+                COMPANY_URL,
+            </if>
+            <if test="companyPersonNum != null">
+                COMPANY_PERSON_NUM,
+            </if>
+            <if test="companyCapital != null">
+                COMPANY_CAPITAL,
+            </if>
+            <if test="preYearAmt != null">
+                PRE_YEAR_AMT,
+            </if>
+            <if test="preYearAssets != null">
+                PRE_YEAR_ASSETS,
+            </if>
+            <if test="preYearLiab != null">
+                PRE_YEAR_LIAB,
+            </if>
+            <if test="bankName != null">
+                BANK_NAME,
+            </if>
+            <if test="bankCode != null">
+                BANK_CODE,
+            </if>
+            <if test="productName != null">
+                PRODUCT_NAME,
+            </if>
+            <if test="productPerson != null">
+                PRODUCT_PERSON,
+            </if>
+            <if test="productPerId != null">
+                PRODUCT_PER_ID,
+            </if>
+            <if test="productTitle != null">
+                PRODUCT_TITLE,
+            </if>
+            <if test="productEdu != null">
+                PRODUCT_EDU,
+            </if>
+            <if test="productPartId != null">
+                PRODUCT_PART_ID,
+            </if>
+            <if test="productImpleState != null">
+                PRODUCT_IMPLE_STATE,
+            </if>
+            <if test="productImpleEnd != null">
+                PRODUCT_IMPLE_END,
+            </if>
+            <if test="productAddress != null">
+                PRODUCT_ADDRESS,
+            </if>
+            <if test="productGround != null">
+                PRODUCT_GROUND,
+            </if>
+            <if test="productProg != null">
+                PRODUCT_PROG,
+            </if>
+            <if test="productPlan != null">
+                PRODUCT_PLAN,
+            </if>
+            <if test="productBenefit != null">
+                PRODUCT_BENEFIT,
+            </if>
+            <if test="enclosure != null">
+                ENCLOSURE,
+            </if>
+            <if test="postaCode != null">
+                POSTA_CODE,
+            </if>
+            <if test="expandA != null">
+                EXPAND_A,
+            </if>
+            <if test="expandB != null">
+                EXPAND_B,
+            </if>
+            <if test="expandC != null">
+                EXPAND_C,
+            </if>
+            <if test="expandD != null">
+                EXPAND_D,
+            </if>
+            <if test="creativeStatus != null">
+                CREATIVE_STATUS,
+            </if>
+            <if test="crtTime != null">
+                CRT_TIME,
+            </if>
+            <if test="uptTime != null">
+                UPT_TIME,
+            </if>
+            <if test="operator != null">
+                OPERATOR,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="unitId != null">
+                #{unitId,jdbcType=INTEGER},
+            </if>
+            <if test="unitName != null">
+                #{unitName,jdbcType=VARCHAR},
+            </if>
+            <if test="creativeHappen != null">
+                #{creativeHappen,jdbcType=VARCHAR},
+            </if>
+            <if test="allType != null">
+                #{allType,jdbcType=VARCHAR},
+            </if>
+            <if test="industryType != null">
+                #{industryType,jdbcType=INTEGER},
+            </if>
+            <if test="companyName != null">
+                #{companyName,jdbcType=VARCHAR},
+            </if>
+            <if test="orgNo != null">
+                #{orgNo,jdbcType=VARCHAR},
+            </if>
+            <if test="registTime != null">
+                #{registTime,jdbcType=DATE},
+            </if>
+            <if test="companyAddress != null">
+                #{companyAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="bussinessScope != null">
+                #{bussinessScope,jdbcType=VARCHAR},
+            </if>
+            <if test="telephone != null">
+                #{telephone,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="companyUrl != null">
+                #{companyUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="companyPersonNum != null">
+                #{companyPersonNum,jdbcType=VARCHAR},
+            </if>
+            <if test="companyCapital != null">
+                #{companyCapital,jdbcType=VARCHAR},
+            </if>
+            <if test="preYearAmt != null">
+                #{preYearAmt,jdbcType=VARCHAR},
+            </if>
+            <if test="preYearAssets != null">
+                #{preYearAssets,jdbcType=VARCHAR},
+            </if>
+            <if test="preYearLiab != null">
+                #{preYearLiab,jdbcType=VARCHAR},
+            </if>
+            <if test="bankName != null">
+                #{bankName,jdbcType=VARCHAR},
+            </if>
+            <if test="bankCode != null">
+                #{bankCode,jdbcType=VARCHAR},
+            </if>
+            <if test="productName != null">
+                #{productName,jdbcType=VARCHAR},
+            </if>
+            <if test="productPerson != null">
+                #{productPerson,jdbcType=VARCHAR},
+            </if>
+            <if test="productPerId != null">
+                #{productPerId,jdbcType=VARCHAR},
+            </if>
+            <if test="productTitle != null">
+                #{productTitle,jdbcType=VARCHAR},
+            </if>
+            <if test="productEdu != null">
+                #{productEdu,jdbcType=VARCHAR},
+            </if>
+            <if test="productPartId != null">
+                #{productPartId,jdbcType=INTEGER},
+            </if>
+            <if test="productImpleState != null">
+                #{productImpleState,jdbcType=VARCHAR},
+            </if>
+            <if test="productImpleEnd != null">
+                #{productImpleEnd,jdbcType=VARCHAR},
+            </if>
+            <if test="productAddress != null">
+                #{productAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="productGround != null">
+                #{productGround,jdbcType=VARCHAR},
+            </if>
+            <if test="productProg != null">
+                #{productProg,jdbcType=VARCHAR},
+            </if>
+            <if test="productPlan != null">
+                #{productPlan,jdbcType=VARCHAR},
+            </if>
+            <if test="productBenefit != null">
+                #{productBenefit,jdbcType=VARCHAR},
+            </if>
+            <if test="enclosure != null">
+                #{enclosure,jdbcType=VARCHAR},
+            </if>
+            <if test="postaCode != null">
+                #{postaCode,jdbcType=VARCHAR},
+            </if>
+            <if test="expandA != null">
+                #{expandA,jdbcType=VARCHAR},
+            </if>
+            <if test="expandB != null">
+                #{expandB,jdbcType=VARCHAR},
+            </if>
+            <if test="expandC != null">
+                #{expandC,jdbcType=VARCHAR},
+            </if>
+            <if test="expandD != null">
+                #{expandD,jdbcType=VARCHAR},
+            </if>
+            <if test="creativeStatus != null">
+                #{creativeStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="crtTime != null">
+                #{crtTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="uptTime != null">
+                #{uptTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="operator != null">
+                #{operator,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <!--修改-->
+    <update id="editCreative" parameterType="cn.stylefeng.star.modular.bussines.entity.Creative">
+        update T_CREATIVE
+        <set>
+            <if test="unitId != null">
+                UNIT_ID = #{unitId,jdbcType=INTEGER},
+            </if>
+            <if test="unitName != null">
+                UNIT_NAME = #{unitName,jdbcType=VARCHAR},
+            </if>
+            <if test="creativeHappen != null">
+                CREATIVE_HAPPEN = #{creativeHappen,jdbcType=VARCHAR},
+            </if>
+            <if test="allType != null">
+                ALL_TYPE = #{allType,jdbcType=VARCHAR},
+            </if>
+            <if test="industryType != null">
+                INDUSTRY_TYPE = #{industryType,jdbcType=INTEGER},
+            </if>
+            <if test="companyName != null">
+                COMPANY_NAME = #{companyName,jdbcType=VARCHAR},
+            </if>
+            <if test="orgNo != null">
+                ORG_NO = #{orgNo,jdbcType=VARCHAR},
+            </if>
+            <if test="registTime != null">
+                REGIST_TIME = #{registTime,jdbcType=DATE},
+            </if>
+            <if test="companyAddress != null">
+                COMPANY_ADDRESS = #{companyAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="bussinessScope != null">
+                BUSSINESS_SCOPE = #{bussinessScope,jdbcType=VARCHAR},
+            </if>
+            <if test="telephone != null">
+                TELEPHONE = #{telephone,jdbcType=VARCHAR},
+            </if>
+            <if test="email != null">
+                EMAIL = #{email,jdbcType=VARCHAR},
+            </if>
+            <if test="companyUrl != null">
+                COMPANY_URL = #{companyUrl,jdbcType=VARCHAR},
+            </if>
+            <if test="companyPersonNum != null">
+                COMPANY_PERSON_NUM = #{companyPersonNum,jdbcType=VARCHAR},
+            </if>
+            <if test="companyCapital != null">
+                COMPANY_CAPITAL = #{companyCapital,jdbcType=VARCHAR},
+            </if>
+            <if test="preYearAmt != null">
+                PRE_YEAR_AMT = #{preYearAmt,jdbcType=VARCHAR},
+            </if>
+            <if test="preYearAssets != null">
+                PRE_YEAR_ASSETS = #{preYearAssets,jdbcType=VARCHAR},
+            </if>
+            <if test="preYearLiab != null">
+                PRE_YEAR_LIAB = #{preYearLiab,jdbcType=VARCHAR},
+            </if>
+            <if test="bankName != null">
+                BANK_NAME = #{bankName,jdbcType=VARCHAR},
+            </if>
+            <if test="bankCode != null">
+                BANK_CODE = #{bankCode,jdbcType=VARCHAR},
+            </if>
+            <if test="productName != null">
+                PRODUCT_NAME = #{productName,jdbcType=VARCHAR},
+            </if>
+            <if test="productPerson != null">
+                PRODUCT_PERSON = #{productPerson,jdbcType=VARCHAR},
+            </if>
+            <if test="productPerId != null">
+                PRODUCT_PER_ID = #{productPerId,jdbcType=VARCHAR},
+            </if>
+            <if test="productTitle != null">
+                PRODUCT_TITLE = #{productTitle,jdbcType=VARCHAR},
+            </if>
+            <if test="productEdu != null">
+                PRODUCT_EDU = #{productEdu,jdbcType=VARCHAR},
+            </if>
+            <if test="productPartId != null">
+                PRODUCT_PART_ID = #{productPartId,jdbcType=INTEGER},
+            </if>
+            <if test="productImpleState != null">
+                PRODUCT_IMPLE_STATE = #{productImpleState,jdbcType=VARCHAR},
+            </if>
+            <if test="productImpleEnd != null">
+                PRODUCT_IMPLE_END = #{productImpleEnd,jdbcType=VARCHAR},
+            </if>
+            <if test="productAddress != null">
+                PRODUCT_ADDRESS = #{productAddress,jdbcType=VARCHAR},
+            </if>
+            <if test="productGround != null">
+                PRODUCT_GROUND = #{productGround,jdbcType=VARCHAR},
+            </if>
+            <if test="productProg != null">
+                PRODUCT_PROG = #{productProg,jdbcType=VARCHAR},
+            </if>
+            <if test="productPlan != null">
+                PRODUCT_PLAN = #{productPlan,jdbcType=VARCHAR},
+            </if>
+            <if test="productBenefit != null">
+                PRODUCT_BENEFIT = #{productBenefit,jdbcType=VARCHAR},
+            </if>
+            <if test="enclosure != null">
+                ENCLOSURE = #{enclosure,jdbcType=VARCHAR},
+            </if>
+            <if test="postaCode != null">
+                POSTA_CODE = #{postaCode,jdbcType=VARCHAR},
+            </if>
+            <if test="expandA != null">
+                EXPAND_A = #{expandA,jdbcType=VARCHAR},
+            </if>
+            <if test="expandB != null">
+                EXPAND_B = #{expandB,jdbcType=VARCHAR},
+            </if>
+            <if test="expandC != null">
+                EXPAND_C = #{expandC,jdbcType=VARCHAR},
+            </if>
+            <if test="expandD != null">
+                EXPAND_D = #{expandD,jdbcType=VARCHAR},
+            </if>
+            <if test="creativeStatus != null">
+                CREATIVE_STATUS = #{creativeStatus,jdbcType=VARCHAR},
+            </if>
+            <if test="crtTime != null">
+                CRT_TIME = #{crtTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="uptTime != null">
+                UPT_TIME = #{uptTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="operator != null">
+                OPERATOR = #{operator,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where ID = #{id,jdbcType=INTEGER}
+    </update>
+
+</mapper>

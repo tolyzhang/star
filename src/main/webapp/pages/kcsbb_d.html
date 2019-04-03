@@ -111,7 +111,8 @@
 
                             </div>
 
-                            <button class="sb"><a href="/onlineAdd"  target="_blank">在线申报</a></button>
+                            <input type="hidden" id="islogin" value="${msg}" />
+                            <button class="sb" id="onlineAdd">在线申报</button>
 
                             <div class="row hidden-print hidden-sm hidden-xs">
                                     <!-- <div class="col-md-6">
@@ -144,9 +145,17 @@
 <script src="${ctxPath}/assets/style/js/main.js"></script>
 <script type="text/javascript" src="${ctxPath}/assets/style/plugin/infinitypush/jquery.ma.infinitypush.js"></script>
 <script>
-    jQuery(document).ready(function () {
-        Main.init();
-    });
+        $(function(){
+            $("#onlineAdd").click(function(){
+                var isLogin = $("#islogin").val();
+                if(isLogin==0){
+                    alert("您还未登陆,请登录");
+                }else{
+                    window.open('/onlineAdd');
+                }
+            });
+        });
+
 </script>
 </body>
 </html>

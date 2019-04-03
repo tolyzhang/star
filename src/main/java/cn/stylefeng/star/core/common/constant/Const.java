@@ -57,7 +57,7 @@ public interface Const {
      */
     List<String> NONE_PERMISSION_RES = CollectionUtil.newLinkedList("/assets/**",
             "/starApi/**", "/login","/logo","/regSt","/kcsbb","/kcsbb_d","/onlineAdd","/kcxmk_d","/kcxmk","/onkcxmkAdd",
-            "/rck","/onRckAdd","/hysj",
+            "/rck","/onRckAdd","/hysj","/add","/success",
             "/global/sessionError", "/kaptcha", "/error", "/global/error");
 
 }

@@ -8,6 +8,7 @@ import cn.stylefeng.star.modular.bussines.entity.TAnnex;
 import cn.stylefeng.star.modular.bussines.entity.TPart;
 import cn.stylefeng.star.modular.bussines.entity.TUser;
 import cn.stylefeng.star.modular.bussines.mapper.CreativeMapper;
+import cn.stylefeng.star.modular.bussines.model.SessionDto;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
@@ -52,6 +53,26 @@ public class CreativeService  extends ServiceImpl<CreativeMapper, Creative> {
                                                  String companyName){
         return this.baseMapper.getCreativeList(page, creativeTile,productName,productPerson,industryType,orgNo,companyName);
     }
+
+    /**
+     * 修改
+     * @author zhangty
+     * @Date 2018/12/23 5:00 PM
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public void addCreative(Creative dto, SessionDto sdto) {
+        if (ToolUtil.isOneEmpty(dto.getItemNo())) {
+            throw new ServiceException(BizExceptionEnum.REQUEST_NULL);
+        }
+        dto.setId(1);
+        dto.setCrtTime(new Date());
+        dto.setAllType("1");
+        dto.setUnitId(sdto.getUnitId());
+        dto.setUnitName(sdto.getUnitName());
+        log.info("所有参数:{}",dto);
+        this.creativeMapper.addCreative(dto);
+    }
+
 
 
     /**

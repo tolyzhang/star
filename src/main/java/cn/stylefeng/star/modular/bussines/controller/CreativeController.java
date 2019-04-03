@@ -88,7 +88,7 @@ public class CreativeController extends BaseController {
     public ResponseData review(@RequestParam Integer id){
         Creative model = new Creative();
         model.setId(id);
-        model.setCreativeStatus("1");
+        model.setCreativeStatus(1);
         creativeService.editCreative(model);
         return SUCCESS_TIP;
     }
@@ -104,7 +104,7 @@ public class CreativeController extends BaseController {
     public ResponseData refund(@RequestParam Integer id){
         Creative model = new Creative();
         model.setId(id);
-        model.setCreativeStatus("2");
+        model.setCreativeStatus(2);
         creativeService.editCreative(model);
         return SUCCESS_TIP;
     }

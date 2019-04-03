@@ -92,7 +92,7 @@ public class Creative implements Serializable {
 
     private String expandD;
 
-    private String creativeStatus;
+    private Integer creativeStatus;
 
     private Date crtTime;
 
@@ -106,9 +106,11 @@ public class Creative implements Serializable {
 
     private String  itemNo;
 
-    private String  isAnnex;
+    private Integer  isAnnex;
 
     private String declareTopic;
+
+    private String  Contacts;
 
     private static final long serialVersionUID = 1L;
 

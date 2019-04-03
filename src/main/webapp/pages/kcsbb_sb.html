@@ -117,7 +117,7 @@
                                     <h2 style="text-align: center;margin: 35px 0px;">科创项目申报 申请表</h2>
                                 </li>
                             </ul>
-                            <form class="form-horizontal user-form-horizontal" action="http://www.jt.sh.cn/kc-qyzc/#" role="form" id="form">
+                            <form class="form-horizontal user-form-horizontal" action="/add" role="form" id="form" method="post" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="errorHandler alert alert-danger padding-5 no-display">
@@ -152,148 +152,148 @@
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>电话：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="telephone" name="telephone">
                                     </div>
                                 </div>
 
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>联系人：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="contacts" name="contacts">
                                     </div>
                                 </div>
                                 
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>邮箱：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="email" name="email">
                                     </div>
                                 </div>
 
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>邮编：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="postaCode" name="postaCode">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>经营范围：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>经营范围：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="bussinessScope" name="bussinessScope">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>行业领域：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>行业领域：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="industrySectro" name="industrySectro">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>单位网址：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>单位网址：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="companyUrl" name="companyUrl">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>总 人 数：</label>
+                                    <label class="control-label col-sm-3"  ><span class="symbol required"></span>总 人 数：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>注册资本（万）：</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="companyPersonNum" name="companyPersonNum">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>2018年度经营收入（万）：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>注册资本（万）：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="companyCapital" name="companyCapital">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>2018年度经营收入（万）：</label>
+                                    <div class="col-sm-5">
+                                        <input type="text" placeholder="" class="form-control" id="preYearAmt" name="preYearAmt">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>2018年年度总资产（万）：</label>
+                                    <label class="control-label col-sm-3"  ><span class="symbol required"></span>2018年年度总资产（万）：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="preYearAssets" name="preYearAssets">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>2018年年度总负债（万）：</label>
+                                    <label class="control-label col-sm-3"  ><span class="symbol required"></span>2018年年度总负债（万）：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="preYearLiab" name="preYearLiab">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>开户银行：</label>
+                                    <label class="control-label col-sm-3"  ><span class="symbol required"></span>开户银行：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="bankName" name="bankName">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>开户帐号：</label>
+                                    <label class="control-label col-sm-3"  ><span class="symbol required"></span>开户帐号：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="bankCode" name="bankCode">
                                     </div>
                                 </div>
                                 <h4>二、项目基本概况</h4>
 
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>申报专题：</label>
+                                    <label class="control-label col-sm-3"><span class="symbol required"></span>申报专题：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="declareTopic" name="declareTopic">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>项目名称：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>项目名称：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="productName" name="productName">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>项目负责人：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>项目负责人：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="productPerson" name="productPerson">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>身份证号：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>身份证号：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="productPerId" name="productPerId">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>职务/职称：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>职务/职称：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="productTitle" name="productTitle">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>学历：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>学历：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="productEdu" name="productEdu">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>所属行业：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>所属行业：</label>
                                     <div class="col-sm-5">
-                                      <input type="checkbox" name="" id="">
+                                      <input type="checkbox" name="intype01" id="intype01">
                                       <span>道路交通 </span>
-                                      <input type="checkbox" name="" id="">
+                                      <input type="checkbox" name="intype02" id="intype02">
                                       <span>绿色交通</span>
-                                      <input type="checkbox" name="" id="">
+                                      <input type="checkbox" name="intype03" id="intype03">
                                       <span>智能交通</span>
-                                      <input type="checkbox" name="" id="">
+                                      <input type="checkbox" name="intype04" id="intype04">
                                       <span>公路运输 </span>
-                                      <input type="checkbox" name="" id="">
+                                      <input type="checkbox" name="intype05" id="intype05">
                                       <span>铁路城轨运输</span>
-                                      <input type="checkbox" name="" id="">
+                                      <input type="checkbox" name="intype06" id="intype06">
                                       <span>水上运输</span>
-                                      <input type="checkbox" name="" id="">
+                                      <input type="checkbox" name="intype07" id="intype07">
                                       <span>其他 </span>
                                     </div>
                                 </div>
@@ -303,57 +303,60 @@
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>姓 名：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="partName" name="partName">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>职务/职称：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="partJob" name="partJob">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>身份证号：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="partCode" name="partCode">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>学历：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="partEdu" name="partEdu">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>项目背景：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="productGround" name="productGround">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>项目建设内容、方案：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="productProg" name="productProg">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>项目实施周期</label>
-                                    <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                    <div class="col-sm-2">
+                                        <input type="text" placeholder="" class="form-control" id="productImpleState" name="productImpleState">
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <input type="text" placeholder="" class="form-control" id="productImpleEnd" name="productImpleEnd">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>项目进度计划：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>项目进度计划：</label>
                                     <div class="col-sm-5">
-                                        <textarea name="" id="" cols="30" rows="10" placeholder="500字以内"></textarea>
+                                        <textarea name="productPlan" id="productPlan" cols="30" rows="10" placeholder="500字以内"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>项目社会效益分析</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>项目社会效益分析</label>
                                     <div class="col-sm-5">
-                                        <textarea name="" id="" cols="30" rows="10" placeholder="500字以内"></textarea>
+                                        <textarea name="productBenefit" id="productBenefit" cols="30" rows="10" placeholder="500字以内"></textarea>
                                     </div>
                                 </div>
 
@@ -361,46 +364,46 @@
                                     <label class="control-label col-sm-3">附件上传：</label>
                                     <div class="col-sm-5">
                                         <p class="add">上传更多</p>
-                                        <input type="file" name="" id="">
+                                        <input type="file" name="file" id="file">
                                     </div>
                                 </div>
 
-                         
+                            <input class="bc" type="submit" value="保存提交"/>
                             </form>
 
-                           <a href="sb_1.html" class="bc">保存并预览</a>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-           <script src="style/kcpt/assets/js/footerkc.js"></script>
-
+        <script src="${ctxPath}/assets/style/js/footerkc.js"></script>
+    </div>
 </div>
-</div>
-  <!--Main JS-->
-    <script src="style/kcpt/assets/js/ETUI/jquery-2.0.3.min.js"></script>
-    <!--[if lt IE 9]>
-    <script src="/style/kcpt/assets/js/ETUI/html5shiv.min.js"></script>
-    <script src="/style/kcpt/assets/js/ETUI/respond.min.js"></script>
-    <![endif]-->
-    <script src="style/kcpt/assets/js/ETUI/ETUI3.min.js"></script>
-    <!--Custom JS-->
-    <script src="style/kcpt/assets/js/main.js"></script>
-    <script type="text/javascript" src="style/kcpt/assets/plugin/infinitypush/jquery.ma.infinitypush.js"></script>
+<!--Main JS-->
+<script src="${ctxPath}/assets/style/js/ETUI/jquery-2.0.3.min.js"></script>
+<!--[if lt IE 9]>
+<script src="${ctxPath}/assets/style/js/ETUI/html5shiv.min.js"></script>
+<script src="${ctxPath}/assets/style/js/ETUI/respond.min.js"></script>
+<![endif]-->
+<script src="${ctxPath}/assets/style/js/ETUI/ETUI3.min.js"></script>
+<!--Custom JS-->
+<script src="${ctxPath}/assets/style/js/main.js"></script>
+<script type="text/javascript" src="${ctxPath}/assets/style/plugin/infinitypush/jquery.ma.infinitypush.js"></script>
     <script>
-        jQuery(document).ready(function () {
-            Main.init();
+        $(function(){
+            var isLogin = "${msg}";
+            if(isLogin=="0"){
+                window.location.href = '/logo';
+            }
+        });
+        var num=5;
+        $('.add').click(function(){
+            num--;
+            var filest = "files"+num;
+            $(this).parent().append('<input type="file" name="file" id="file">');
         });
     </script>
-    
-    <script type="text/javascript" src="./regist2_files/3100000004.js.下载"></script>
-    <script>
-        $('.add').click(function(){
-            $(this).parent().append('<input type="file" name="" id="">')
-        })
-    
-    </script>
-    
+
 </body>
 </html>

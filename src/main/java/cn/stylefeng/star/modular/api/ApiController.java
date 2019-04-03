@@ -15,25 +15,30 @@
  */
 package cn.stylefeng.star.modular.api;
 
+import cn.stylefeng.star.core.common.page.LayuiPageFactory;
 import cn.stylefeng.star.core.shiro.ShiroKit;
 import cn.stylefeng.star.core.shiro.ShiroUser;
 import cn.stylefeng.star.core.util.JwtTokenUtil;
+import cn.stylefeng.star.modular.bussines.service.TNewsService;
+import cn.stylefeng.star.modular.bussines.warpper.newWarpper;
 import cn.stylefeng.star.modular.system.entity.User;
 import cn.stylefeng.star.modular.system.mapper.UserMapper;
 import cn.stylefeng.roses.core.base.controller.BaseController;
 import cn.stylefeng.roses.core.reqres.response.ErrorResponseData;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.SimpleAuthenticationInfo;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
 import org.apache.shiro.crypto.hash.Md5Hash;
 import org.apache.shiro.util.ByteSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 接口控制器提供
@@ -42,15 +47,45 @@ import java.util.HashMap;
  * @Date 2018/7/20 23:39
  */
 @RestController
+@Slf4j
 @RequestMapping("/starApi")
 public class ApiController extends BaseController {
 
     @Autowired
-    private UserMapper userMapper;
+    private TNewsService tNewsService;
+
 
     /**
-     * api登录接口，通过账号密码获取token
+     * 项目申报新闻
+     * @author zhangty
+     * @Date 2019/03/23 5:34 PM
      */
+    @RequestMapping(value = "/query", method = RequestMethod.POST)
+    @ResponseBody
+    public Object list(HttpServletRequest request) {
+        //获取分页参数
+        Integer proType = 1;
+        String newTitle = request.getParameter("newTitle");
+        String newType = "";
+        String newStatus = "";
+        Page page = LayuiPageFactory.defaultPage("10","1");
+        List<Map<String,Object>> result =tNewsService.getNewList(page,newType,newStatus,proType,newTitle);
+        log.info("返回的结果:{}",result);
+        page.setRecords(new newWarpper(result).wrap());
+        return LayuiPageFactory.createPageInfo(page);
+    }
+
+
+/*
+
+    @Autowired
+    private UserMapper userMapper;
+
+    */
+/**
+     * api登录接口，通过账号密码获取token
+     *//*
+
     @RequestMapping("/auth")
     public Object auth(@RequestParam("username") String username,
                        @RequestParam("password") String password) {
@@ -83,13 +118,16 @@ public class ApiController extends BaseController {
         }
     }
 
-    /**
+    */
+/**
      * 测试接口是否走鉴权
-     */
+     *//*
+
     @RequestMapping(value = "/test", method = RequestMethod.POST)
     public Object test() {
         return SUCCESS_TIP;
     }
+*/
 
 }
 

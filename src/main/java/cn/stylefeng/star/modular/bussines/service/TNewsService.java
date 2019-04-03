@@ -34,8 +34,8 @@ public class TNewsService extends ServiceImpl<TNewsMapper, TNews> {
      * @param newStatus
      * @return
      */
-    public List<Map<String, Object>> getNewList(Page page, String newType, String newStatus){
-        return this.baseMapper.getNewList(page,newType,newStatus);
+    public List<Map<String, Object>> getNewList(Page page, String newType, String newStatus,Integer proType,String newTitle){
+        return this.baseMapper.getNewList(page,newType,newStatus,proType,newTitle);
     }
 
     @Transactional(rollbackFor = Exception.class)

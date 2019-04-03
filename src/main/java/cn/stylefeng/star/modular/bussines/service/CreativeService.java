@@ -49,8 +49,8 @@ public class CreativeService  extends ServiceImpl<CreativeMapper, Creative> {
                                                  String productPerson,
                                                  String industryType,
                                                  String orgNo,
-                                                 String compamyName){
-        return this.baseMapper.getCreativeList(page, creativeTile,productName,productPerson,industryType,orgNo,compamyName);
+                                                 String companyName){
+        return this.baseMapper.getCreativeList(page, creativeTile,productName,productPerson,industryType,orgNo,companyName);
     }
 
 

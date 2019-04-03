@@ -1,0 +1,484 @@
+@layout("/common/_container.html",{js:["/assets/modular/bussines/expert/expert_detail.js"]}){
+<div style="height: 800px;">
+    <form id="expertForm" lay-filter="expertForm" class="layui-form model-form">
+    <div class="layui-form" lay-filter="layuiadmin-app-form-list" id="layuiadmin-app-form-list" >
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">姓名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="expertName"  id="expertName"
+                           value="" lay-verify="required" autocomplete="off" class="layui-input" readonly />
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">性别</label>
+                <div class="layui-input-block">
+                    <input type="text" name="expertSex"  id="expertSex"
+                           value="" lay-verify="required" autocomplete="off" class="layui-input" readonly />
+                </div>
+            </div>
+          </div>
+
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">职称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="expertJob"  id="expertJob"
+                           value="" lay-verify="required" autocomplete="off" class="layui-input" readonly />
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">身份证号</label>
+                <div class="layui-input-block">
+                    <input type="text" name="expertCardNo"  id="expertCardNo"
+                           value="" lay-verify="required" autocomplete="off" class="layui-input" readonly />
+                </div>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">手机</label>
+                <div class="layui-input-block">
+                    <input type="text" name="expertPhone"  id="expertPhone"
+                           value="" lay-verify="required" autocomplete="off" class="layui-input" readonly />
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">邮箱</label>
+                <div class="layui-input-block">
+                    <input type="text" name="expertEmail"  id="expertEmail"
+                           value="" lay-verify="required" autocomplete="off" class="layui-input" readonly />
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">学位学历</label>
+                <div class="layui-input-block">
+                    <input type="text" name="expertEdu"  id="expertEdu"
+                           value="" lay-verify="required" autocomplete="off" class="layui-input" readonly />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="layui-form-item">
+
+            <div class="layui-inline">
+                <label class="layui-form-label">毕业学校</label>
+                <div class="layui-input-block">
+                    <input type="text" name="expertSchool"  id="expertSchool"
+                           value="" lay-verify="required" autocomplete="off" class="layui-input" readonly />
+                </div>
+            </div>
+            <div class="layui-inline">
+                <label class="layui-form-label">专业</label>
+                <div class="layui-input-block">
+                    <input type="text" name="expertProfe"  id="expertProfe"
+                           value="" lay-verify="required" autocomplete="off" class="layui-input" readonly />
+                </div>
+            </div>
+
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-inline">
+                <label class="layui-form-label">其他团体职务</label>
+                <div class="layui-input-block">
+                    <input type="text" name="expertGroup"  id="expertGroup"
+                           value="" lay-verify="required" autocomplete="off" class="layui-input" readonly />
+                </div>
+            </div>
+            <div class="layui-inline">
+                        <label class="layui-form-label">所属行业</label>
+                        <div class="layui-input-block">
+                            <select id="industryType" disabled="disabled">
+                                <option value="1">道路交通</option>
+                                <option value="2">绿色交通</option>
+                                <option value="3">智能交通</option>
+                                <option value="4">公路运输</option>
+                                <option value="5">铁路城轨运输</option>
+                                <option value="6">水上运输</option>
+                                <option value="7">其他</option>
+                            </select>
+                          </div>
+                     </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">主要工作简历</label>
+            <div class="layui-input-inline">
+                <textarea name="expertResume" id="expertResume" lay-verify="required" style="width: 490px; height: 150px;"
+                          autocomplete="off" class="layui-textarea" readonly>
+                </textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">近五年科研项目</label>
+            <div class="layui-input-inline">
+                <textarea name="expertProject" id="expertProject" lay-verify="required" style="width: 490px; height: 150px;"
+                          autocomplete="off" class="layui-textarea" readonly>
+                </textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">近五年发表论文</label>
+            <div class="layui-input-inline">
+                <textarea name="expertSit" id="expertSit" lay-verify="required" style="width: 490px; height: 150px;"
+                          autocomplete="off" class="layui-textarea" readonly>
+                </textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">获得知识产权记录</label>
+            <div class="layui-input-inline">
+                <textarea name="expertRecord" id="expertRecord" lay-verify="required" style="width: 490px; height: 150px;"
+                          autocomplete="off" class="layui-textarea" readonly>
+                </textarea>
+            </div>
+        </div>
+
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">获得科技奖励</label>
+            <div class="layui-input-inline">
+                <textarea name="expertRewards" id="expertRewards" lay-verify="required" style="width: 490px; height: 150px;"
+                          autocomplete="off" class="layui-textarea" readonly>
+                </textarea>
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">参与科技评审记录</label>
+            <div class="layui-input-inline">
+                <textarea name="expertReview" id="expertReview" lay-verify="required" style="width: 490px; height: 150px;"
+                          autocomplete="off" class="layui-textarea" readonly>
+                </textarea>
+            </div>
+        </div>
+        <div class="layui-form-item" id="annexIm">
+
+        </div>
+
+    </div>
+    </form>
+    </div>@}
+
+              <!--  <div class="layui-inline">
+                    <label class="layui-form-label">职务/职称</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="names"  id="names"
+                               value="" lay-verify="required" autocomplete="off" class="layui-input" readonly />
+                    </div>
+                </div>
+
+                <div class="layui-inline">
+                    <label class="layui-form-label">身份证号</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="names"  id="names"
+                               value="" lay-verify="required" autocomplete="off" class="layui-input" readonly />
+                    </div>
+                </div>
+
+                <div class="layui-inline">
+                    <label class="layui-form-label">学历</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="names"  id="eduy"
+                               value="" lay-verify="required" autocomplete="off" class="layui-input" readonly />
+                    </div>
+                </div>-->
+
+
+
+     <!--   <div class="layui-form-item">
+            <label class="layui-form-label">文章内容</label>
+            <div class="layui-input-inline">
+                <script type="text/html" template="">
+                    <textarea name="content" lay-verify="required" style="width: 400px; height: 150px;" autocomplete="off" class="layui-textarea">
+            {{ d.params.content || '' }}
+          </textarea>
+                </script> <textarea name="content" lay-verify="required" style="width: 400px; height: 150px;" autocomplete="off" class="layui-textarea"> 通过中华美食的多个侧面，来展现食物给中国人生活带来的仪式、伦理等方面的文化；见识中国特色食材以及与食物相关、构成中国美食特有气质的一系列元素；了解中华饮食文化的精致和源远流长 </textarea>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">标签</label>
+            <div class="layui-input-inline">
+                <script type="text/html" template="">
+                    <select name="label" lay-verify="required">
+                        <option value="">请选择标签</option>
+                        <option value="美食" {{ d.params.label === '美食' ? 'selected' : '' }}>美食</option>
+                        <option value="新闻" {{ d.params.label === '新闻' ? 'selected' : '' }}>新闻</option>
+                        <option value="八卦" {{ d.params.label === '八卦' ? 'selected' : '' }}>八卦</option>
+                        <option value="体育" {{ d.params.label === '体育' ? 'selected' : '' }}>体育</option>
+                        <option value="音乐" {{ d.params.label === '音乐' ? 'selected' : '' }}>音乐</option>
+                    </select>
+                </script> <select name="label" lay-verify="required"> <option value="">请选择标签</option> <option value="美食" selected="">美食</option> <option value="新闻">新闻</option> <option value="八卦">八卦</option> <option value="体育">体育</option> <option value="音乐">音乐</option> </select><div class="layui-unselect layui-form-select"><div class="layui-select-title"><input type="text" placeholder="请选择标签" value="美食" readonly="" class="layui-input layui-unselect"><i class="layui-edge"></i></div><dl class="layui-anim layui-anim-upbit"><dd lay-value="" class="layui-select-tips">请选择标签</dd><dd lay-value="美食" class="layui-this">美食</dd><dd lay-value="新闻" class="">新闻</dd><dd lay-value="八卦" class="">八卦</dd><dd lay-value="体育" class="">体育</dd><dd lay-value="音乐" class="">音乐</dd></dl></div>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">发布状态</label>
+            <div class="layui-input-inline">
+                <input type="checkbox" lay-verify="required" lay-filter="status" name="status" lay-skin="switch" lay-text="已发布|待修改"><div class="layui-unselect layui-form-switch" lay-skin="_switch"><em>待修改</em><i></i></div>
+            </div>
+        </div>
+        <script type="text/html" template="">
+            <input type="hidden" name="id" value="{{ d.params.id || '' }}">
+        </script> <input type="hidden" name="id" value="001">
+        <div class="layui-form-item">
+            <label class="layui-form-label"></label>
+            <div class="layui-input-inline">
+                <input type="button" lay-submit="" lay-filter="layuiadmin-app-form-submit" value="确认" class="layui-btn">
+            </div>
+        </div>
+    </div>
+
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">单位名称<span style="color: red;">*</span></label>
+            <div class="layui-input-block">
+
+            </div>
+        </div>
+-->
+
+    <!--</div>
+        <div class="form-group ">
+            <label class="control-label col-sm-3" for=""><span class="symbol required"></span>单位名称：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="" value="">
+            </div>
+        </div>
+        <div class="form-group ">
+            <label class="control-label col-sm-3" for=""><span class="symbol required"></span>组织机构代码：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="zipcode"><span class="symbol required"></span>单位地址：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+
+        <div class="form-group ">
+            <label class="control-label col-sm-3" for=""><span class="symbol required"></span>电话：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+
+        <div class="form-group ">
+            <label class="control-label col-sm-3" for=""><span class="symbol required"></span>联系人：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+
+        <div class="form-group ">
+            <label class="control-label col-sm-3" for=""><span class="symbol required"></span>邮箱：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+
+        <div class="form-group ">
+            <label class="control-label col-sm-3" for=""><span class="symbol required"></span>邮编：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>经营范围：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>行业领域：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>单位网址：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>总 人 数：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>注册资本（万）：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>2018年度经营收入（万）：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>2018年年度总资产（万）：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>2018年年度总负债（万）：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>开户银行：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>开户帐号：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <h4>二、项目基本概况</h4>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>申报专题：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>项目名称：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>项目负责人：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>身份证号：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>职务/职称：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>学历：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>所属行业：</label>
+            <div class="col-sm-5">
+                <input type="checkbox" name="" id="">
+                <span>道路交通 </span>
+                <input type="checkbox" name="" id="">
+                <span>绿色交通</span>
+                <input type="checkbox" name="" id="">
+                <span>智能交通</span>
+                <input type="checkbox" name="" id="">
+                <span>公路运输 </span>
+                <input type="checkbox" name="" id="">
+                <span>铁路城轨运输</span>
+                <input type="checkbox" name="" id="">
+                <span>水上运输</span>
+                <input type="checkbox" name="" id="">
+                <span>其他 </span>
+            </div>
+        </div>
+
+        <h4>三、项目参与</h4>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>姓 名：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>职务/职称：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>身份证号：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>学历：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>项目背景：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>项目建设内容、方案：</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>项目实施周期</label>
+            <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="" name="">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>项目进度计划：</label>
+            <div class="col-sm-5">
+                <textarea name="" id="" cols="30" rows="10" placeholder="500字以内"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>项目社会效益分析</label>
+            <div class="col-sm-5">
+                <textarea name="" id="" cols="30" rows="10" placeholder="500字以内"></textarea>
+            </div>
+        </div>
+
+        <div class="form-group ">
+            <label class="control-label col-sm-3">附件上传：</label>
+            <div class="col-sm-5">
+                <p class="add">上传更多</p>
+                <input type="file" name="" id="">
+            </div>
+        </div>-->
+
+

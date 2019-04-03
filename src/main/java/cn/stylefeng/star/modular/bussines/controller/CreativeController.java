@@ -53,9 +53,9 @@ public class CreativeController extends BaseController {
 
 
     /**
-     * 查询操作日志列表
+     * 查询列表
      *
-     * @author fengshuonan
+     * @author zhangty
      * @Date 2018/12/23 5:34 PM
      */
     @RequestMapping("/list")
@@ -175,7 +175,8 @@ public class CreativeController extends BaseController {
         log.info("开始执行下载:{}");
         //服务器地址
         String rootPath = "";
-        rootPath ="C:\\Users\\zhangty\\yf项目\\guns\\src\\main\\resources\\static\\upload\\";
+         rootPath = "C:\\Users\\zhangty\\yf项目\\star\\target\\classes\\static\\upload\\";
+        String pathRoot ="C:\\Users\\zhangty\\yf项目\\guns\\src\\main\\resources\\static\\upload\\";
         String itemNo = request.getParameter("itemNo");
         log.info("获取的编号:{}",itemNo);
         List files = new ArrayList();
@@ -186,6 +187,7 @@ public class CreativeController extends BaseController {
         for(int i=0;i<lists.size();i++){
             if(lists.get(i).getAnnexName()!=null){
                 File file = new File(rootPath+lists.get(i).getAnnexName());
+                log.info("图片地址:{}",rootPath+lists.get(i).getAnnexName());
                 files.add(file);
             }
         }

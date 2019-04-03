@@ -7,6 +7,8 @@ import java.util.Date;
 
 @Data
 public class TWarehous implements Serializable {
+    private String itemNo;
+
     private Integer id;
 
     private Integer unitId;
@@ -39,15 +41,17 @@ public class TWarehous implements Serializable {
 
     private Integer enclosureId;
 
-    private String warehouStatus;
+    private Integer warehousStatus;
 
-    private Date crtTime;
+    private String crtTime;
 
     private Date uptTime;
 
     private String operator;
 
-    private static final long serialVersionUID = 1L;
+    private  String  industryType;
+
+  private static final long serialVersionUID = 1L;
 
 
 }

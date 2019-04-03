@@ -47,6 +47,18 @@ public class LayuiPageFactory {
         return new Page(page, limit);
     }
 
+    public static Page defaultPage(String limitst,String pagest) {
+        HttpServletRequest request = HttpContext.getRequest();
+
+        //每页多少条数据
+        int limit = Integer.valueOf(limitst);
+
+        //第几页
+        int page = Integer.valueOf(pagest);
+
+        return new Page(page, limit);
+    }
+
     /**
      * 创建layui能识别的分页响应参数
      *

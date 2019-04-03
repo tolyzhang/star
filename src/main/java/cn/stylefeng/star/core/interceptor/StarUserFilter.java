@@ -87,18 +87,18 @@ public class StarUserFilter extends AccessControlFilter {
                 saveRequestAndRedirectToLogin(request, response);
                 return false;
             } else {
-                return true;
+
                 /**
                  * 从别的页面跳转过来的
                  */
-             /*  if (ShiroKit.getSession().getAttribute("sessionFlag") == null) {
+               if (ShiroKit.getSession().getAttribute("sessionFlag") == null) {
                     httpServletRequest.setAttribute("tips", "session超时");
                     httpServletRequest.getRequestDispatcher("/login").forward(request, response);
                     return false;
                 } else {
                     saveRequestAndRedirectToLogin(request, response);
                     return false;
-                }*/
+                }
             }
         }
     }

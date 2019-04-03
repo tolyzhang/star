@@ -37,7 +37,7 @@ public interface CreativeMapper extends BaseMapper<Creative> {
             @Param("productPerson") String productPerson,
             @Param("industryType") String industryType,
             @Param("orgNo") String orgNo,
-            @Param("compamyName") String compamyName
+            @Param("companyName") String companyName
     );
 
     void editCreative(Creative dto);

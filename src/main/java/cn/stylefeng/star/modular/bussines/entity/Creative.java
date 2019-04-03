@@ -108,6 +108,8 @@ public class Creative implements Serializable {
 
     private String  isAnnex;
 
+    private String declareTopic;
+
     private static final long serialVersionUID = 1L;
 
 

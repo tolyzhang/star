@@ -49,18 +49,7 @@ layui.use(['layer', 'table', 'ax', 'laydate','admin'], function () {
      */
     CreativeList.exportExcel = function (data) {
         var checkRows = table.checkStatus(CreativeList.tableId);
-        /*console.info(CreativeList.tableId);
-        console.info(checkRows);
-        console.info(checkRows.data);*/
-
-        //var checkRows = table.checkStatus(CreativeList.tableId);
-        //console.info(checkRows.data);
         table.exportFile(['导出全部数据'],data, 'xls');
-       /* if (checkRows.data.length === 0) {
-            Feng.error("请选择要导出的数据");
-        } else {
-            table.exportFile(tableResult.config.id, checkRows.data, 'xls');
-        }*/
     };
 
 

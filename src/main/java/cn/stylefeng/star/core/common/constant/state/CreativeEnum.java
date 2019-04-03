@@ -13,7 +13,7 @@ public class CreativeEnum {
     @Getter
     public enum CreativeStatus {
         STATUS_0("0", "处理中"),
-        STATUS_1("1", "已完成"),
+        STATUS_1("1", "审核通过"),
         STATUS_2("2","退回"),
         STATUS_3("3","其他");
         String code;

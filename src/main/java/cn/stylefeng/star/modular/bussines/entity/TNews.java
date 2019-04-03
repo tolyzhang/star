@@ -14,6 +14,8 @@ public class TNews implements Serializable {
     private Integer id;
     private String newType;
 
+    private Integer proType;
+
     private String newTitle;
 
     private String newContent;

@@ -163,6 +163,8 @@ public class LoginController extends BaseController {
         return "/logo.html";
     }
 
+
+
     /**
      * 跳转注册首页-前台
      * @param model
@@ -215,12 +217,19 @@ public class LoginController extends BaseController {
     }
 
 
-
+    /**
+     * 注册
+     * @param tUser
+     * @param request
+     * @param model
+     * @param file
+     * @return
+     */
     @RequestMapping(value="/rest",method = RequestMethod.POST)
     public
     String registst(TUser tUser, HttpServletRequest request, Model model, @RequestParam("files") MultipartFile file){
         log.info("获取所有请求参数:{}",tUser);
-        //本地上传项目控件
+        //本地上传项目空间
         String pathRoot = "C:\\Users\\zhangty\\yf项目\\guns\\target\\classes\\static\\imgs\\";
         String info ="";
         //获取所有注册信息表单,提交后上传图片信息,保存到user表中
@@ -239,6 +248,11 @@ public class LoginController extends BaseController {
         model. addAttribute("msg", "注册成功,审核中");
         return "/logo.html";
     }
+
+
+
+
+
 
 
     public static void main(String[] arge) throws  Exception{

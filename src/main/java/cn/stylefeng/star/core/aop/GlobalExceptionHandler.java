@@ -68,12 +68,12 @@ public class GlobalExceptionHandler {
     /**
      * 用户未登录异常
      */
-  /*  @ExceptionHandler(AuthenticationException.class)
+    @ExceptionHandler(AuthenticationException.class)
     @ResponseStatus(HttpStatus.UNAUTHORIZED)
     public String unAuth(AuthenticationException e) {
         log.error("用户未登陆：", e);
         return "/login.html";
-    }*/
+    }
 
     /**
      * 账号被冻结异常

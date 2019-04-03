@@ -47,7 +47,7 @@ public class AttributeSetInteceptor extends HandlerInterceptorAdapter {
             return;
         }
 
-       /* ShiroUser user = ShiroKit.getUser();
+       ShiroUser user = ShiroKit.getUser();
 
         if (user == null) {
             throw new AuthenticationException("当前没有登录账号！");
@@ -55,6 +55,6 @@ public class AttributeSetInteceptor extends HandlerInterceptorAdapter {
             modelAndView.addObject("name", user.getName());
             modelAndView.addObject("avatar", DefaultImages.defaultAvatarUrl());
             modelAndView.addObject("email", user.getEmail());
-        }*/
+        }
     }
 }

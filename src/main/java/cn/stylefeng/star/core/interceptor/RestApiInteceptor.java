@@ -47,7 +47,7 @@ public class RestApiInteceptor extends HandlerInterceptorAdapter {
         if (request.getServletPath().equals(JwtConstants.AUTH_PATH)) {
             return true;
         }
-        final String requestHeader = request.getHeader(JwtConstants.AUTH_HEADER);
+     /*   final String requestHeader = request.getHeader(JwtConstants.AUTH_HEADER);
         String authToken;
         if (requestHeader != null && requestHeader.startsWith("Bearer ")) {
             authToken = requestHeader.substring(7);
@@ -68,7 +68,7 @@ public class RestApiInteceptor extends HandlerInterceptorAdapter {
             //header没有带Bearer字段
             RenderUtil.renderJson(response, new ErrorResponseData(BizExceptionEnum.TOKEN_ERROR.getCode(), BizExceptionEnum.TOKEN_ERROR.getMessage()));
             return false;
-        }
+        }*/
         return true;
     }
 

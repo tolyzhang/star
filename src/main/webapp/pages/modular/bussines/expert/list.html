@@ -1,37 +1,66 @@
 @layout("/common/_container.html",{js:["/assets/modular/bussines/expert/list.js"]}){
-
 <div class="layui-body-header">
-    <span class="layui-body-header-title">infos</span>
+    <span class="layui-body-header-title">专家人才库</span>
 </div>
-<form id="infoForm" lay-filter="infoForm" class="layui-form model-form">
+
 <div class="layui-fluid">
     <div class="layui-row layui-col-space15">
         <div class="layui-col-xs12">
             <div class="layui-card">
                 <div class="layui-card-body">
-                    <div class="layui-form-item" style="width: 50%;">
-                        <label class="layui-form-label">标题<span style="color: red;">*</span></label>
-                        <div class="layui-input-block">
-                            <input name="infoTitle" id="infoTitle" placeholder="请输入标题" type="text" class="layui-input" lay-verify="required" required="">
+                    <div class="layui-form toolbar">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <input id="expertName" class="layui-input" type="text" placeholder="专家姓名" />
+                            </div>
+                            <div class="layui-inline">
+                                <input id="expertWork" class="layui-input" type="text" placeholder="工作单位"/>
+                            </div>
+                            <div class="layui-inline">
+                                <input id="expertProfe" class="layui-input" type="text" placeholder="专业"/>
+                            </div>
+                            <br>
+                            <div class="layui-inline">
+                                <input id="expertJob" class="layui-input" type="text" placeholder="职称"/>
+                            </div>
+                            <div class="layui-inline">
+                                <input id="expertTime" class="layui-input" type="text" placeholder="有效时间"/>
+                            </div>
+                            <div class="layui-inline">
+                                <select id="industryType">
+                                    <option value="">所属行业类型</option>
+                                    <option value="1">道路交通</option>
+                                    <option value="2">绿色交通</option>
+                                    <option value="3">智能交通</option>
+                                    <option value="4">公路运输</option>
+                                    <option value="5">铁路城轨运输</option>
+                                    <option value="6">水上运输</option>
+                                </select>
+                            </div>
+
+
+
+                            <div class="layui-inline">
+                                <button id="btnSearch" class="layui-btn icon-btn"><i class="layui-icon">&#xe615;</i>搜索</button>
+                                <button id="btnExcel" class="layui-btn icon-btn"><i class="layui-icon">&#xe615;</i>导出Excel</button>
+
+                            </div>
                         </div>
                     </div>
-                    <div class="layui-form-item" style="width: 70%;">
-                        <label class="layui-form-label"><span style="color: red;"></span></label>
-                    <div class="layui-input-block">
-                        <textarea id="infoContent" name="infoContent" style="display: none;"></textarea>
-                    </div>
-                    </div>
-                    <div class="layui-form-item" >
-                        <div class="layui-input-block">
-                            <button class="layui-btn" lay-filter="btnSubmitst" lay-submit>保存</button>
-                        </div>
-                    </div>
+                    <table class="layui-table" id="expertTable" lay-filter="expertTable"></table>
                 </div>
             </div>
         </div>
     </div>
 </div>
-</form>
+<script type="text/html" id="tableBar">
+    {{# if (d.expertStatus =="处理中"){}}
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="reivew">审核</a>
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="refund">退回</a>
+    {{#}}}
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+    <a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="downLoad">下载</a>
 
 
+</script>
 @}

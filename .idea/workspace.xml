@@ -1,7 +1,230 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0a6db2e-f602-4008-a1ff-69332d20be75" name="Default Changelist" comment="" />
+    <list default="true" id="a56a6ce1-b635-49cc-8cd5-58c191729350" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/pages/kcsbb_sb.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/config/web/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/config/web/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/aop/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/aop/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/common/constant/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/common/constant/Const.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/common/constant/factory/ConstantFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/common/constant/factory/ConstantFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/common/constant/factory/IConstantFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/common/constant/factory/IConstantFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/common/constant/state/CreativeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/common/constant/state/CreativeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/common/page/LayuiPageFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/common/page/LayuiPageFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/interceptor/AttributeSetInteceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/interceptor/AttributeSetInteceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/interceptor/RestApiInteceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/interceptor/RestApiInteceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/interceptor/StarUserFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/interceptor/StarUserFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/api/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/api/ApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/controller/CreativeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/controller/CreativeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/controller/ExpertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/controller/ExpertController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/controller/TNewsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/controller/TNewsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/controller/TWarehousController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/controller/TWarehousController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/entity/Creative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/entity/Creative.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/entity/TNews.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/entity/TNews.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/entity/TWarehous.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/entity/TWarehous.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/mapper/CreativeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/mapper/CreativeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/mapper/TNewsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/mapper/TNewsMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/mapper/TWarehousMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/mapper/TWarehousMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/mapper/mapping/CreativeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/mapper/mapping/CreativeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/mapper/mapping/TNewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/mapper/mapping/TNewsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/mapper/mapping/TWarehousMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/mapper/mapping/TWarehousMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/service/CreativeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/service/CreativeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/service/TNewsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/service/TNewsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/service/TUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/service/TUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/service/TWarehousService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/service/TWarehousService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/system/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/system/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/welcome/controller/loginsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/welcome/controller/KcsbbController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/modular/bussines/creative/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/modular/bussines/creative/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/modular/bussines/expert/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/modular/bussines/expert/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/modular/bussines/warehous/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/modular/bussines/warehous/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/style/js/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/js/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/assets/style/js/headerkc.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/assets/style/js/headerkc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/modular/bussines/expert/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/modular/bussines/expert/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/modular/bussines/warehous/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/modular/bussines/warehous/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/modular/welcome/logins.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/welcome/regist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/welcome/s.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/modular/bussines/creative/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assets/modular/bussines/creative/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/modular/bussines/expert/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assets/modular/bussines/expert/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/modular/bussines/warehous/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assets/modular/bussines/warehous/list.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/style/js/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assets/style/js/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/assets/style/js/headerkc.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/assets/style/js/headerkc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/StarApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/StarApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/StarServletInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/StarServletInitializer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/config/EhCacheConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/config/EhCacheConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/config/datasource/MultiDataSourceConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/config/datasource/MultiDataSourceConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/config/properties/BeetlProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/config/properties/BeetlProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/config/properties/StarProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/config/properties/StarProperties.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/config/web/ShiroConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/config/web/ShiroConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/config/web/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/config/web/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/aop/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/aop/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/aop/LogAop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/aop/LogAop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/aop/PermissionAop.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/aop/PermissionAop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/beetl/BeetlConfiguration$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/beetl/BeetlConfiguration$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/beetl/ShiroExt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/beetl/ShiroExt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/Const.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/Const.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/TypesEnum$TypesEnumSt.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/TypesEnum$TypesEnumSt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/dictmap/base/AbstractDictMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/dictmap/base/AbstractDictMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/dictmap/factory/DictFieldWarpperFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/dictmap/factory/DictFieldWarpperFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/factory/ConstantFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/factory/ConstantFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/factory/IConstantFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/factory/IConstantFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/BizLogType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/BizLogType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/CreativeEnum$CreativeStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/CreativeEnum$CreativeStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/CreativeEnum$ExpertType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/CreativeEnum$ExpertType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/CreativeEnum$WarehousType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/CreativeEnum$WarehousType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/ExpenseState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/ExpenseState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/InfosStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/InfosStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/LogSucceed.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/LogSucceed.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/LogType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/LogType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/ManagerStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/ManagerStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/MenuOpenStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/MenuOpenStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/MenuStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/MenuStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/NewsEnum$NewsStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/NewsEnum$NewsStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/NewsEnum$NewsType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/NewsEnum$NewsType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/UserEnum$UserStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/UserEnum$UserStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/UserEnum$UserType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/constant/state/UserEnum$UserType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/controller/GlobalController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/controller/GlobalController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/controller/StarErrorView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/controller/StarErrorView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/exception/BizExceptionEnum.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/exception/BizExceptionEnum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/node/MenuNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/node/MenuNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/node/TreeviewNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/node/TreeviewNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/node/ZTreeNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/node/ZTreeNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/page/LayuiPageFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/page/LayuiPageFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/page/LayuiPageInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/common/page/LayuiPageInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/interceptor/AttributeSetInteceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/interceptor/AttributeSetInteceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/interceptor/RestApiInteceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/interceptor/RestApiInteceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/interceptor/SessionHolderInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/interceptor/SessionHolderInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/interceptor/StarUserFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/interceptor/StarUserFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/listener/ConfigListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/listener/ConfigListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/LogManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/LogManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/LogObjectHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/LogObjectHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/factory/LogFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/factory/LogFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/factory/LogTaskFactory$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/factory/LogTaskFactory$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/factory/LogTaskFactory$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/factory/LogTaskFactory$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/factory/LogTaskFactory$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/factory/LogTaskFactory$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/factory/LogTaskFactory$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/factory/LogTaskFactory$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/factory/LogTaskFactory$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/factory/LogTaskFactory$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/factory/LogTaskFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/log/factory/LogTaskFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/shiro/ShiroDbRealm.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/shiro/ShiroDbRealm.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/shiro/ShiroKit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/shiro/ShiroKit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/shiro/ShiroUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/shiro/ShiroUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/shiro/service/PermissionCheckService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/shiro/service/PermissionCheckService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/shiro/service/UserAuthService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/shiro/service/UserAuthService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/shiro/service/impl/PermissionCheckServiceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/shiro/service/impl/PermissionCheckServiceServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/shiro/service/impl/UserAuthServiceServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/shiro/service/impl/UserAuthServiceServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/util/ApiMenuFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/util/ApiMenuFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/util/CacheUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/util/CacheUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/util/Contrast.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/util/Contrast.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/util/FileUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/util/FileUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/util/JwtTokenUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/util/JwtTokenUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/util/MD5Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/core/util/MD5Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/api/ApiController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/api/ApiController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/CreativeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/CreativeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/ExpertController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/ExpertController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/FocusController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/FocusController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/StandardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/StandardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/TDemandController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/TDemandController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/TInfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/TInfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/TNewsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/TNewsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/TUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/TUserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/TWarehousController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/controller/TWarehousController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/Creative.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/Creative.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/TAnnex.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/TAnnex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/TDemand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/TDemand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/TInfos.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/TInfos.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/TNews.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/TNews.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/TPart.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/TPart.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/TUser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/TUser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/TWarehous.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/entity/TWarehous.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/CreativeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/CreativeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/TDemandMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/TDemandMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/TInfosMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/TInfosMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/TNewsMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/TNewsMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/TUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/TUserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/TWarehousMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/TWarehousMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/mapping/CreativeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/mapping/CreativeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/mapping/TNewsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/mapping/TNewsMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/mapping/TWarehousMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/mapper/mapping/TWarehousMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/model/TNewsDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/model/TNewsDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/service/CreativeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/service/CreativeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/service/TDemandService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/service/TDemandService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/service/TInfosService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/service/TInfosService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/service/TNewsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/service/TNewsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/service/TUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/service/TUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/service/TWarehousService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/service/TWarehousService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/warpper/CreativeWarpper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/warpper/CreativeWarpper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/warpper/InfoWarpper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/warpper/InfoWarpper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/warpper/newWarpper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/warpper/newWarpper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/warpper/userWarpper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/bussines/warpper/userWarpper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/DeptController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/DeptController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/DictController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/DictController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/KaptchaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/KaptchaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/LogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/LogController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/LoginLogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/LoginLogController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/MenuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/NoticeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/NoticeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/RoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/SystemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/SystemController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/UserMgrController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/controller/UserMgrController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/CodeDbinfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/CodeDbinfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/Dept.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/Dept.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/Dict.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/Dict.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/FileInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/FileInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/LoginLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/LoginLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/Menu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/Notice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/Notice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/OperationLog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/OperationLog.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/Relation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/Relation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/factory/UserFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/factory/UserFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/DeptMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/DeptMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/DictMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/DictMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/LoginLogMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/LoginLogMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/MenuMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/MenuMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/NoticeMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/NoticeMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/OperationLogMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/OperationLogMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/RoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/RoleMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/model/DeptDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/model/DeptDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/model/DictDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/model/DictDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/model/MenuDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/model/MenuDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/model/RoleDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/model/RoleDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/model/UserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/model/UserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/DeptService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/DeptService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/DictService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/DictService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/FileInfoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/FileInfoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/LoginLogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/LoginLogService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/MenuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/MenuService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/NoticeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/NoticeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/OperationLogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/OperationLogService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/RoleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/DeptTreeWarpper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/DeptTreeWarpper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/DeptWarpper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/DeptWarpper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/DictWarpper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/DictWarpper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/LogWarpper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/LogWarpper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/MenuWarpper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/MenuWarpper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/NoticeWrapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/NoticeWrapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/RoleWarpper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/RoleWarpper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/UserWarpper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/system/warpper/UserWarpper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/util/RequestUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/util/RequestUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/util/TagUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/util/TagUtil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/util/UploadUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/util/UploadUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/welcome/controller/loginsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/welcome/controller/registController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/cn/stylefeng/star/modular/welcome/controller/registController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/modular/bussines/expert/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/modular/bussines/expert/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/modular/bussines/warehous/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pages/modular/bussines/warehous/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pages/modular/welcome/logins.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/imgs/1554109922585.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/welcome/regist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/stylefeng/star/multi/entity/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/stylefeng/star/multi/entity/Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/stylefeng/star/shiro/Base64Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/stylefeng/star/shiro/Base64Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/stylefeng/star/system/MenuTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/cn/stylefeng/star/system/MenuTest.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,83 +233,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="856458989">
+    <session id="174233614">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="2" />
-          <entry key="txt" value="11" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="2" />
-          <entry key="PLAIN_TEXT" value="11" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="java" value="2" />
-          <entry key="md" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="JAVA" value="2" />
-          <entry key="Markdown" value="1" />
         </counts>
       </usages-collector>
     </session>
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/doc/技术文档 v5.1.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="20">
-                <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/controller/CreativeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/controller/StandardController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/doc/技术文档 v5.1.md" />
-        <option value="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/controller/CreativeController.java" />
-      </list>
-    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -97,20 +254,17 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="C:\work-kltong\apache-maven-repository" />
-        <option name="mavenHome" value="C:/apache-maven-3.5.2" />
-        <option name="userSettingsFile" value="C:\apache-maven-3.5.2\conf\settings.xml" />
+        <option name="localRepository" value="C:\work-maven\repo" />
+        <option name="mavenHome" value="C:/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="C:\apache-maven-3.6.0\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="MavenRunner">
-    <option name="jreName" value="1.8" />
-  </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="479" />
-    <option name="y" value="80" />
-    <option name="width" value="1147" />
-    <option name="height" value="468" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="227" />
+    <option name="y" value="41" />
+    <option name="width" value="1077" />
+    <option name="height" value="551" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -118,8 +272,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -127,16 +279,44 @@
               <item name="star" type="b2602c69:ProjectViewProjectNode" />
               <item name="star" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="star" type="b2602c69:ProjectViewProjectNode" />
+              <item name="star" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="star" type="b2602c69:ProjectViewProjectNode" />
+              <item name="star" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="star" type="b2602c69:ProjectViewProjectNode" />
+              <item name="star" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="star" type="b2602c69:ProjectViewProjectNode" />
+              <item name="star" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="star" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554112220288" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554298225160" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -168,42 +348,20 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f0a6db2e-f602-4008-a1ff-69332d20be75" name="Default Changelist" comment="" />
-      <created>1554111388883</created>
+      <changelist id="a56a6ce1-b635-49cc-8cd5-58c191729350" name="Default Changelist" comment="" />
+      <created>1554297841368</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1554111388883</updated>
-      <workItem from="1554111393646" duration="834000" />
+      <updated>1554297841368</updated>
+      <workItem from="1554297844720" duration="339000" />
     </task>
-    <task id="LOCAL-00001" summary="star系统">
-      <created>1554111664890</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1554111664890</updated>
-    </task>
-    <task id="LOCAL-00002" summary="star系统">
-      <created>1554111818791</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1554111818791</updated>
-    </task>
-    <task id="LOCAL-00003" summary="star系统">
-      <created>1554112019352</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1554112019352</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="834000" />
+    <option name="totallyTimeSpent" value="339000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -211,20 +369,18 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Capture Tool" />
       <window_info id="Web" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.244713" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22137405" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" />
       <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info active="true" anchor="bottom" id="Event Log" side_tool="true" visible="true" weight="0.22312704" />
-      <window_info anchor="bottom" id="Tail" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32935154" />
       <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="MyBatis Sql Log" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32935154" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -247,49 +403,8 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="star系统" />
-    <option name="LAST_COMMIT_MESSAGE" value="star系统" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/doc/技术文档 v5.1.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="20">
-            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/controller/StandardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/controller/CreativeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-  </component>
   <component name="masterDetails">
     <states>
-      <state key="ArquillianSettingsConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>

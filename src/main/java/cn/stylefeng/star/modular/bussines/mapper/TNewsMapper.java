@@ -20,7 +20,9 @@ public interface TNewsMapper extends BaseMapper<TNews> {
     List<Map<String, Object>> getNewList(
             @Param("page") Page page,
             @Param("newType") String newType,
-            @Param("newStatus") String newStatus
+            @Param("newStatus") String newStatus,
+            @Param("proType") Integer proType,
+            @Param("newTitle") String newTitle
     );
 
     /**

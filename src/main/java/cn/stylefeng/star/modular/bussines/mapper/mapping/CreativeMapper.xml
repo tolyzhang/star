@@ -49,6 +49,7 @@
         <result column="OPERATOR" jdbcType="VARCHAR" property="operator" />
         <result column="ITEM_NO" jdbcType="VARCHAR" property="itemNo"/>
         <result column="IS_ANNEX" jdbcType="INTEGER" property="isAnnex" />
+        <result column="DECLARE_TOPIC" jdbcType="VARCHAR" property="declareTopic" />
     </resultMap>
 
 
@@ -95,7 +96,7 @@
     PRODUCT_PLAN as productPlan, PRODUCT_BENEFIT as productBenefit, ENCLOSURE as enclosure,
     EXPAND_A  as  expandA, EXPAND_B as expandB, EXPAND_C as expandC, EXPAND_D  as expandD,
     CREATIVE_STATUS as creativeStatus, CRT_TIME as crtTime, UPT_TIME as uptTime, OPERATOR  as operator,
-    ITEM_NO as itemNo,IS_ANNEX as isAnnex
+    ITEM_NO as itemNo,IS_ANNEX as isAnnex,DECLARE_TOPIC AS declare_topic
     </sql>
 
     <sql id="Base_Column_List_ANNEX">
@@ -115,20 +116,23 @@
         select
         <include refid="Base_Column_List"/>
         from T_CREATIVE where 1 = 1
-        <if test="productName != null and productName !=''">
-            and PRODUCT_NAME= #{productName}
+        <if test="creativeTile != null and creativeTile !=''">
+            and  DECLARE_TOPIC like '%${creativeTile}%'
+        </if>
+        <if test="companyName != null and companyName !=''">
+            and  COMPANY_NAME like '%${companyName}%'
         </if>
         <if test="industryType != null and industryType != ''">
             and INDUSTRY_TYPE = #{industryType}
         </if>
         <if test="productName != null and productName !=''">
-           and  PRODUCT_NAME like '%productName%'
+           and  PRODUCT_NAME like '%${productName}%'
         </if>
         <if test="productPerson !=null and productPerson !=''">
-            and  PRODUCT_PERSON like '%productPerson%'
+            and  PRODUCT_PERSON like '%${productPerson}%'
         </if>
         <if test="orgNo !=null and orgNo !=''">
-            and  ORG_NO like '%orgNo%'
+            and  ORG_NO like '%${orgNo}%'
         </if>
     </select>
 
@@ -137,20 +141,23 @@
         select
         <include refid="Base_Column_List"/>
         from T_CREATIVE where 1 = 1
-        <if test="productName != null and productName !=''">
-            and PRODUCT_NAME= #{productName}
+        <if test="creativeTile != null and creativeTile !=''">
+            and  DECLARE_TOPIC like '%${creativeTile}%'
+        </if>
+        <if test="companyName != null and companyName !=''">
+            and  COMPANY_NAME like '%${companyName}%'
         </if>
         <if test="industryType != null and industryType != ''">
             and INDUSTRY_TYPE = #{industryType}
         </if>
         <if test="productName != null and productName !=''">
-            and  PRODUCT_NAME like '%productName%'
+            and  PRODUCT_NAME like '%${productName}%'
         </if>
         <if test="productPerson !=null and productPerson !=''">
-            and  PRODUCT_PERSON like '%productPerson%'
+            and  PRODUCT_PERSON like '%${productPerson}%'
         </if>
         <if test="orgNo !=null and orgNo !=''">
-            and  ORG_NO like '%orgNo%'
+            and  ORG_NO like '%${orgNo}%'
         </if>
     </select>
 
@@ -183,6 +190,9 @@
     <insert id="addCreative" parameterType="cn.stylefeng.star.modular.bussines.entity.Creative">
         insert into T_CREATIVE
         <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="itemNo != null">
+                ITEM_NO,
+            </if>
             <if test="unitId != null">
                 UNIT_ID,
             </if>
@@ -314,6 +324,9 @@
             </if>
         </trim>
         <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="itemNo != null">
+                #{itemNo,jdbcType=VARCHAR},
+            </if>
             <if test="unitId != null">
                 #{unitId,jdbcType=INTEGER},
             </if>

@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.star.modular.bussines.mapper.ExpertMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="cn.stylefeng.star.modular.bussines.entity.Expert">
+        <id column="ID" jdbcType="BIGINT" property="id" />
+        <result column="UNIT_ID" jdbcType="INTEGER" property="unitId" />
+        <result column="UNIT_NAME" jdbcType="VARCHAR" property="unitName" />
+        <result column="ITEM_NO" jdbcType="VARCHAR" property="itemNo" />
+        <result column="INDUSTRY_TYPE" jdbcType="INTEGER" property="industryType" />
+        <result column="ALL_TYPE" jdbcType="VARCHAR" property="allType" />
+        <result column="EXPERT_NAME" jdbcType="VARCHAR" property="expertName" />
+        <result column="EXPERT_SEX" jdbcType="VARCHAR" property="expertSex" />
+        <result column="EXPERT_BIRTH" jdbcType="VARCHAR" property="expertBirth" />
+        <result column="EXPERT_CARD_NO" jdbcType="VARCHAR" property="expertCardNo" />
+        <result column="EXPERT_PHONE" jdbcType="VARCHAR" property="expertPhone" />
+        <result column="EXPERT_EMAIL" jdbcType="VARCHAR" property="expertEmail" />
+        <result column="EXPERT_SCHOOL" jdbcType="VARCHAR" property="expertSchool" />
+        <result column="EXPERT_PROFE" jdbcType="VARCHAR" property="expertProfe" />
+        <result column="EXPERT_EDU" jdbcType="VARCHAR" property="expertEdu" />
+        <result column="EXPERT_WORK" jdbcType="VARCHAR" property="expertWork" />
+        <result column="EXPERT_DEPAR" jdbcType="VARCHAR" property="expertDepar" />
+        <result column="EXPERT_POSI" jdbcType="VARCHAR" property="expertPosi" />
+        <result column="EXPERT_JOB" jdbcType="VARCHAR" property="expertJob" />
+        <result column="EXPERT_GROUP" jdbcType="VARCHAR" property="expertGroup" />
+        <result column="EXPERT_RESUME" jdbcType="VARCHAR" property="expertResume" />
+        <result column="EXPERT_PROJECT" jdbcType="VARCHAR" property="expertProject" />
+        <result column="EXPERT_SIT" jdbcType="VARCHAR" property="expertSit" />
+        <result column="EXPERT_RECORD" jdbcType="VARCHAR" property="expertRecord" />
+        <result column="EXPERT_REWARDS" jdbcType="VARCHAR" property="expertRewards" />
+        <result column="EXPERT_REVIEW" jdbcType="VARCHAR" property="expertReview" />
+        <result column="EXPERT_PHOTO" jdbcType="VARCHAR" property="expertPhoto" />
+        <result column="EXPERT_TIME" jdbcType="TIMESTAMP" property="expertTime" />
+        <result column="EXPERT_STATUS" jdbcType="INTEGER" property="expertStatus" />
+        <result column="EXPERT_UPT_TIME" jdbcType="TIMESTAMP" property="expertUptTime" />
+        <result column="OPERATOR" jdbcType="VARCHAR" property="operator" />
+    </resultMap>
+
+    <!--上传附属表-->
+    <resultMap id="BaseResultAnntx" type="cn.stylefeng.star.modular.bussines.entity.TAnnex">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="item_no" jdbcType="VARCHAR" property="itemNo" />
+        <result column="all_type" jdbcType="VARCHAR" property="allType" />
+        <result column="annex_name" jdbcType="VARCHAR" property="annexName" />
+        <result column="annex_url_add" jdbcType="VARCHAR" property="annexUrlAdd" />
+        <result column="annex_type" jdbcType="VARCHAR" property="annexType" />
+        <result column="annex_status" jdbcType="INTEGER" property="annexStatus" />
+        <result column="crt_time" jdbcType="TIMESTAMP" property="crtTime" />
+        <result column="upt_time" jdbcType="TIMESTAMP" property="uptTime" />
+        <result column="operator" jdbcType="VARCHAR" property="operator" />
+    </resultMap>
+
+    <!--项目人员附属表-->
+    <resultMap id="BaseResultMapPart" type="cn.stylefeng.star.modular.bussines.entity.TPart">
+        <id column="ID" jdbcType="INTEGER" property="id" />
+        <result column="ITEM_NO" jdbcType="VARCHAR" property="itemNo" />
+        <result column="PART_NAME" jdbcType="VARCHAR" property="partName" />
+        <result column="PART_CODE" jdbcType="VARCHAR" property="partCode" />
+        <result column="PART_JOB" jdbcType="VARCHAR" property="partJob" />
+        <result column="PART_EDU" jdbcType="VARCHAR" property="partEdu" />
+        <result column="CRT_TIME" jdbcType="TIMESTAMP" property="crtTime" />
+        <result column="UPT_TIME" jdbcType="TIMESTAMP" property="uptTime" />
+        <result column="UNIT_ID" jdbcType="INTEGER" property="unitId" />
+        <result column="UNIT_NAME" jdbcType="VARCHAR" property="unitName" />
+        <result column="PART_STATUS" jdbcType="INTEGER" property="partStatus" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+    ID as id, UNIT_ID as unitID, UNIT_NAME as unitName, INDUSTRY_TYPE as industryType,
+    ALL_TYPE as allType, EXPERT_NAME as expertName, EXPERT_SEX as expertSex, EXPERT_BIRTH as expertBirth,
+    EXPERT_CARD_NO as expertCardNo, EXPERT_PHONE as expertPhone, EXPERT_EMAIL as expertEmail, EXPERT_SCHOOL as expertSchool,
+    EXPERT_PROFE as expertPerofe, EXPERT_EDU as expertEdu,
+    EXPERT_WORK as expertWork, EXPERT_DEPAR as expertDepar, EXPERT_POSI as expertPosi, EXPERT_JOB as expertJob,
+    EXPERT_GROUP as expertGroup,  EXPERT_RESUME as expertResume,
+    EXPERT_PROJECT as expertProject, EXPERT_SIT as expertSit, EXPERT_RECORD as expertRecord,
+    EXPERT_REWARDS as expertRewards, EXPERT_REVIEW as expertReview, EXPERT_PHOTO as expertPhoto,
+    EXPERT_TIME as expertTime, EXPERT_STATUS as expertStatus, EXPERT_UPT_TIME as expertUptTime, OPERATOR as operator,
+    ITEM_NO as itemNo
+  </sql>
+
+    <sql id="Base_Column_List_ANNEX">
+    id as id, item_no as itemNo, all_type as allType, annex_name as annexName, annex_url_add as annexUrlAdd,
+    annex_type as annexType, annex_status as annexStatus, crt_time as crtTime,
+    upt_time as uptTime, operator
+  </sql>
+
+    <sql id="Base_Column_List_Part">
+    ID as id, ITEM_NO as itemNo, PART_NAME as partName, PART_CODE as partCode,
+    PART_JOB as partJob, PART_EDU as partEdu, CRT_TIME as crtTime, UPT_TIME as uptTime, UNIT_ID as unitId,
+    UNIT_NAME as unitName, PART_STATUS as partStatus
+  </sql>
+
+    <!--查询全部信息-->
+    <select id="getExpertList" resultType="map" parameterType="com.baomidou.mybatisplus.extension.plugins.pagination.Page">
+        select
+        <include refid="Base_Column_List"/>
+        from T_EXPERT where 1 = 1
+        <if test="expertName != null and expertName !=''">
+            and EXPERT_NAME like '%${expertName}%'
+        </if>
+        <if test="industryType != null and industryType != ''">
+            and INDUSTRY_TYPE = #{industryType}
+        </if>
+        <if test="expertWork != null and expertWork !=''">
+           and   EXPERT_WORK like '%${expertWork}%'
+        </if>
+        <if test="expertProfe !=null and expertProfe !=''">
+            and   EXPERT_PROFE like '%${expertProfe}%'
+        </if>
+        <if test="expertTime !=null and expertTime !=''">
+            and   EXPERT_TIME like '%${expertTime}%'
+        </if>
+        <if test="expertJob !=null and expertJob !=''">
+            and   EXPERT_JOB like '%${expertJob}%'
+        </if>
+    </select>
+
+    <!--导出下载-->
+    <select id="getDownExcel" resultType="map" parameterType="cn.stylefeng.star.modular.bussines.entity.Expert">
+        select
+        <include refid="Base_Column_List"/>
+        from T_EXPERT where 1 = 1
+        <if test="expertName != null and expertName !=''">
+            and EXPERT_NAME like '%${expertName}%'
+        </if>
+        <if test="industryType != null and industryType != ''">
+            and INDUSTRY_TYPE = #{industryType}
+        </if>
+        <if test="expertWork != null and expertWork !=''">
+            and   EXPERT_WORK like '%${expertWork}%'
+        </if>
+        <if test="expertProfe !=null and expertProfe !=''">
+            and   EXPERT_PROFE like '%${expertProfe}%'
+        </if>
+        <if test="expertTime !=null and expertTime !=''">
+            and   EXPERT_TIME like '%${expertTime}%'
+        </if>
+        <if test="expertJob !=null and expertJob !=''">
+            and   EXPERT_JOB like '%${expertJob}%'
+        </if>
+    </select>
+
+
+
+    <!--查询id-->
+    <select id="findById" resultType="cn.stylefeng.star.modular.bussines.entity.Expert">
+        select <include refid="Base_Column_List"/>
+        from T_EXPERT where 1 = 1 and id=#{id}
+    </select>
+
+    <!--根据编号查询上传附件表信息-->
+    <select id="selectByTannex" resultType="cn.stylefeng.star.modular.bussines.entity.TAnnex" resultMap="BaseResultAnntx">
+        select*
+        from T_ANNEX
+        where 1=1
+        <if test="itemNo != null and itemNo != ''">
+            and item_no = #{itemNo}
+        </if>
+    </select>
+
+    <select id="selectByPart" resultType="cn.stylefeng.star.modular.bussines.entity.TPart" resultMap="BaseResultMapPart">
+        SELECT * FROM T_PART  WHERE  1=1 AND ITEM_NO = #{itemNo}
+    </select>
+
+    <!--新增-->
+    <insert id="addExpert" parameterType="cn.stylefeng.star.modular.bussines.entity.Expert">
+        insert into T_EXPERT
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="unitId != null">
+                UNIT_ID,
+            </if>
+            <if test="unitName != null">
+                UNIT_NAME,
+            </if>
+            <if test="itemNo != null">
+                ITEM_NO,
+            </if>
+            <if test="industryType != null">
+                INDUSTRY_TYPE,
+            </if>
+            <if test="allType != null">
+                ALL_TYPE,
+            </if>
+            <if test="expertName != null">
+                EXPERT_NAME,
+            </if>
+            <if test="expertSex != null">
+                EXPERT_SEX,
+            </if>
+            <if test="expertBirth != null">
+                EXPERT_BIRTH,
+            </if>
+            <if test="expertCardNo != null">
+                EXPERT_CARD_NO,
+            </if>
+            <if test="expertPhone != null">
+                EXPERT_PHONE,
+            </if>
+            <if test="expertEmail != null">
+                EXPERT_EMAIL,
+            </if>
+            <if test="expertSchool != null">
+                EXPERT_SCHOOL,
+            </if>
+            <if test="expertProfe != null">
+                EXPERT_PROFE,
+            </if>
+            <if test="expertEdu != null">
+                EXPERT_EDU,
+            </if>
+            <if test="expertWork != null">
+                EXPERT_WORK,
+            </if>
+            <if test="expertDepar != null">
+                EXPERT_DEPAR,
+            </if>
+            <if test="expertPosi != null">
+                EXPERT_POSI,
+            </if>
+            <if test="expertJob != null">
+                EXPERT_JOB,
+            </if>
+            <if test="expertGroup != null">
+                EXPERT_GROUP,
+            </if>
+            <if test="expertField != null">
+                EXPERT_FIELD,
+            </if>
+            <if test="expertResume != null">
+                EXPERT_RESUME,
+            </if>
+            <if test="expertProject != null">
+                EXPERT_PROJECT,
+            </if>
+            <if test="expertSit != null">
+                EXPERT_SIT,
+            </if>
+            <if test="expertRecord != null">
+                EXPERT_RECORD,
+            </if>
+            <if test="expertRewards != null">
+                EXPERT_REWARDS,
+            </if>
+            <if test="expertReview != null">
+                EXPERT_REVIEW,
+            </if>
+            <if test="expertPhoto != null">
+                EXPERT_PHOTO,
+            </if>
+            <if test="expertTime != null">
+                EXPERT_TIME,
+            </if>
+            <if test="expertStatus != null">
+                EXPERT_STATUS,
+            </if>
+            <if test="expertUptTime != null">
+                EXPERT_UPT_TIME,
+            </if>
+            <if test="operator != null">
+                OPERATOR,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="unitId != null">
+                #{unitId,jdbcType=INTEGER},
+            </if>
+            <if test="unitName != null">
+                #{unitName,jdbcType=VARCHAR},
+            </if>
+            <if test="itemNo != null">
+                #{itemNo,jdbcType=VARCHAR},
+            </if>
+            <if test="industryType != null">
+                #{industryType,jdbcType=INTEGER},
+            </if>
+            <if test="allType != null">
+                #{allType,jdbcType=VARCHAR},
+            </if>
+            <if test="expertName != null">
+                #{expertName,jdbcType=VARCHAR},
+            </if>
+            <if test="expertSex != null">
+                #{expertSex,jdbcType=VARCHAR},
+            </if>
+            <if test="expertBirth != null">
+                #{expertBirth,jdbcType=VARCHAR},
+            </if>
+            <if test="expertCardNo != null">
+                #{expertCardNo,jdbcType=VARCHAR},
+            </if>
+            <if test="expertPhone != null">
+                #{expertPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="expertEmail != null">
+                #{expertEmail,jdbcType=VARCHAR},
+            </if>
+            <if test="expertSchool != null">
+                #{expertSchool,jdbcType=VARCHAR},
+            </if>
+            <if test="expertProfe != null">
+                #{expertProfe,jdbcType=VARCHAR},
+            </if>
+            <if test="expertEdu != null">
+                #{expertEdu,jdbcType=VARCHAR},
+            </if>
+            <if test="expertWork != null">
+                #{expertWork,jdbcType=VARCHAR},
+            </if>
+            <if test="expertDepar != null">
+                #{expertDepar,jdbcType=VARCHAR},
+            </if>
+            <if test="expertPosi != null">
+                #{expertPosi,jdbcType=VARCHAR},
+            </if>
+            <if test="expertJob != null">
+                #{expertJob,jdbcType=VARCHAR},
+            </if>
+            <if test="expertGroup != null">
+                #{expertGroup,jdbcType=VARCHAR},
+            </if>
+            <if test="expertField != null">
+                #{expertField,jdbcType=VARCHAR},
+            </if>
+            <if test="expertResume != null">
+                #{expertResume,jdbcType=VARCHAR},
+            </if>
+            <if test="expertProject != null">
+                #{expertProject,jdbcType=VARCHAR},
+            </if>
+            <if test="expertSit != null">
+                #{expertSit,jdbcType=VARCHAR},
+            </if>
+            <if test="expertRecord != null">
+                #{expertRecord,jdbcType=VARCHAR},
+            </if>
+            <if test="expertRewards != null">
+                #{expertRewards,jdbcType=VARCHAR},
+            </if>
+            <if test="expertReview != null">
+                #{expertReview,jdbcType=VARCHAR},
+            </if>
+            <if test="expertPhoto != null">
+                #{expertPhoto,jdbcType=VARCHAR},
+            </if>
+            <if test="expertTime != null">
+                #{expertTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="expertStatus != null">
+                #{expertStatus,jdbcType=INTEGER},
+            </if>
+            <if test="expertUptTime != null">
+                #{expertUptTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="operator != null">
+                #{operator,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+
+    <!--修改-->
+    <update id="editExpert" parameterType="cn.stylefeng.star.modular.bussines.entity.Expert">
+        update T_EXPERT
+        <set>
+            <if test="unitId != null">
+                UNIT_ID = #{unitId,jdbcType=INTEGER},
+            </if>
+            <if test="unitName != null">
+                UNIT_NAME = #{unitName,jdbcType=VARCHAR},
+            </if>
+            <if test="itemNo != null">
+                ITEM_NO = #{itemNo,jdbcType=VARCHAR},
+            </if>
+            <if test="industryType != null">
+                INDUSTRY_TYPE = #{industryType,jdbcType=INTEGER},
+            </if>
+            <if test="allType != null">
+                ALL_TYPE = #{allType,jdbcType=VARCHAR},
+            </if>
+            <if test="expertName != null">
+                EXPERT_NAME = #{expertName,jdbcType=VARCHAR},
+            </if>
+            <if test="expertSex != null">
+                EXPERT_SEX = #{expertSex,jdbcType=VARCHAR},
+            </if>
+            <if test="expertBirth != null">
+                EXPERT_BIRTH = #{expertBirth,jdbcType=VARCHAR},
+            </if>
+            <if test="expertCardNo != null">
+                EXPERT_CARD_NO = #{expertCardNo,jdbcType=VARCHAR},
+            </if>
+            <if test="expertPhone != null">
+                EXPERT_PHONE = #{expertPhone,jdbcType=VARCHAR},
+            </if>
+            <if test="expertEmail != null">
+                EXPERT_EMAIL = #{expertEmail,jdbcType=VARCHAR},
+            </if>
+            <if test="expertSchool != null">
+                EXPERT_SCHOOL = #{expertSchool,jdbcType=VARCHAR},
+            </if>
+            <if test="expertProfe != null">
+                EXPERT_PROFE = #{expertProfe,jdbcType=VARCHAR},
+            </if>
+            <if test="expertEdu != null">
+                EXPERT_EDU = #{expertEdu,jdbcType=VARCHAR},
+            </if>
+            <if test="expertWork != null">
+                EXPERT_WORK = #{expertWork,jdbcType=VARCHAR},
+            </if>
+            <if test="expertDepar != null">
+                EXPERT_DEPAR = #{expertDepar,jdbcType=VARCHAR},
+            </if>
+            <if test="expertPosi != null">
+                EXPERT_POSI = #{expertPosi,jdbcType=VARCHAR},
+            </if>
+            <if test="expertJob != null">
+                EXPERT_JOB = #{expertJob,jdbcType=VARCHAR},
+            </if>
+            <if test="expertGroup != null">
+                EXPERT_GROUP = #{expertGroup,jdbcType=VARCHAR},
+            </if>
+            <if test="expertResume != null">
+                EXPERT_RESUME = #{expertResume,jdbcType=VARCHAR},
+            </if>
+            <if test="expertProject != null">
+                EXPERT_PROJECT = #{expertProject,jdbcType=VARCHAR},
+            </if>
+            <if test="expertSit != null">
+                EXPERT_SIT = #{expertSit,jdbcType=VARCHAR},
+            </if>
+            <if test="expertRecord != null">
+                EXPERT_RECORD = #{expertRecord,jdbcType=VARCHAR},
+            </if>
+            <if test="expertRewards != null">
+                EXPERT_REWARDS = #{expertRewards,jdbcType=VARCHAR},
+            </if>
+            <if test="expertReview != null">
+                EXPERT_REVIEW = #{expertReview,jdbcType=VARCHAR},
+            </if>
+            <if test="expertPhoto != null">
+                EXPERT_PHOTO = #{expertPhoto,jdbcType=VARCHAR},
+            </if>
+            <if test="expertTime != null">
+                EXPERT_TIME = #{expertTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="expertStatus != null">
+                EXPERT_STATUS = #{expertStatus,jdbcType=INTEGER},
+            </if>
+            <if test="expertUptTime != null">
+                EXPERT_UPT_TIME = #{expertUptTime,jdbcType=TIMESTAMP},
+            </if>
+            <if test="operator != null">
+                OPERATOR = #{operator,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where ID = #{id,jdbcType=BIGINT}
+    </update>
+
+</mapper>

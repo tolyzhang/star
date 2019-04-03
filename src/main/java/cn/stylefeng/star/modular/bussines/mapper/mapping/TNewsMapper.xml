@@ -10,11 +10,12 @@
     <result column="NEW_UPT_TIME" jdbcType="TIMESTAMP" property="newUptTime" />
     <result column="NEW_STATUS" jdbcType="VARCHAR" property="newStatus" />
     <result column="OPERATOR" jdbcType="VARCHAR" property="operator" />
+    <result column="PRO_TYPE" jdbcType="VARCHAR" property="proType" />
   </resultMap>
 
   <sql id="Base_Column_List">
     ID AS id, NEW_TYPE as newType, NEW_TITLE as newTitle, NEW_CONTENT as newContent,
-    NEW_TIME as newTime, NEW_UPT_TIME as newUptTime, NEW_STATUS as newStatus, OPERATOR
+    NEW_TIME as newTime, NEW_UPT_TIME as newUptTime, NEW_STATUS as newStatus, OPERATOR as operator,PRO_TYPE as proType
   </sql>
 
   <!--查询全部-->
@@ -25,11 +26,19 @@
     <if test="newType != null and newType !=''">
       and NEW_TYPE= #{newType}
     </if>
+    <if test="newTitle !=null and newTitle != ''">
+      and NEW_TITLE = #{newTitle}
+    </if>
+    and PRO_TYPE = #{proType}
+    order by id desc
   </select>
 
   <insert id="addNews" parameterType="cn.stylefeng.star.modular.bussines.entity.TNews">
     insert into T_NEWS
     <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="proType != null">
+        PRO_TYPE,
+      </if>
       <if test="newType != null">
         NEW_TYPE,
       </if>
@@ -53,7 +62,9 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-
+      <if test="proType != null">
+        #{proType,jdbcType=VARCHAR},
+      </if>
       <if test="newType != null">
         #{newType,jdbcType=VARCHAR},
       </if>
@@ -83,6 +94,9 @@
     <set>
       <if test="newType != null">
         NEW_TYPE = #{newType,jdbcType=VARCHAR},
+      </if>
+      <if test="proType != null">
+        PRO_TYPE = #{proType,jdbcType=VARCHAR},
       </if>
       <if test="newTitle != null">
         NEW_TITLE = #{newTitle,jdbcType=VARCHAR},

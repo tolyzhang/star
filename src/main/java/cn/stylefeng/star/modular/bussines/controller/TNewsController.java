@@ -65,10 +65,12 @@ public class TNewsController extends BaseController {
     @ResponseBody
     public Object list(
                        @RequestParam(required = false) String newType,
-                       @RequestParam(required = false) String newStatus) {
+                       @RequestParam(required = false) String newStatus,
+                        @RequestParam(required = false) String newTitle) {
         //获取分页参数
+        Integer proType = 2;
         Page page = LayuiPageFactory.defaultPage();
-       List<Map<String,Object>> result =tNewsService.getNewList(page,newType,newStatus);
+       List<Map<String,Object>> result =tNewsService.getNewList(page,newType,newStatus,proType,newTitle);
         log.info("返回的结果:{}",result);
         page.setRecords(new newWarpper(result).wrap());
         return LayuiPageFactory.createPageInfo(page);
@@ -102,6 +104,7 @@ public class TNewsController extends BaseController {
         log.info("获取保存参数:{}",news);
         String  counts = request.getParameter("newContent");
         news.setNewContent(counts);
+        news.setProType(2);
         log.info("详情内容:{}",counts);
         this.tNewsService.addNews(news);
         return SUCCESS_TIP;

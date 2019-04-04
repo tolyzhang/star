@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.star.modular.bussines.mapper.TPartMapper">
+  <resultMap id="BaseResultMap" type="cn.stylefeng.star.modular.bussines.entity.TAnnex">
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="ITEM_NO" jdbcType="VARCHAR" property="itemNo" />
+    <result column="PART_NAME" jdbcType="VARCHAR" property="partName" />
+    <result column="PART_CODE" jdbcType="VARCHAR" property="partCode" />
+    <result column="PART_JOB" jdbcType="VARCHAR" property="partJob" />
+    <result column="PART_EDU" jdbcType="VARCHAR" property="partEdu" />
+    <result column="CRT_TIME" jdbcType="TIMESTAMP" property="crtTime" />
+    <result column="UPT_TIME" jdbcType="TIMESTAMP" property="uptTime" />
+    <result column="UNIT_ID" jdbcType="INTEGER" property="unitId" />
+    <result column="UNIT_NAME" jdbcType="VARCHAR" property="unitName" />
+    <result column="PART_STATUS" jdbcType="INTEGER" property="partStatus" />
+  </resultMap>
+
+  <insert id="addTpart" parameterType="cn.stylefeng.star.modular.bussines.entity.TAnnex">
+    insert into T_PART
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="itemNo != null">
+        ITEM_NO,
+      </if>
+      <if test="partName != null">
+        PART_NAME,
+      </if>
+      <if test="partCode != null">
+        PART_CODE,
+      </if>
+      <if test="partJob != null">
+        PART_JOB,
+      </if>
+      <if test="partEdu != null">
+        PART_EDU,
+      </if>
+      <if test="crtTime != null">
+        CRT_TIME,
+      </if>
+      <if test="uptTime != null">
+        UPT_TIME,
+      </if>
+      <if test="unitId != null">
+        UNIT_ID,
+      </if>
+      <if test="unitName != null">
+        UNIT_NAME,
+      </if>
+      <if test="partStatus != null">
+        PART_STATUS,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="itemNo != null">
+        #{itemNo,jdbcType=VARCHAR},
+      </if>
+      <if test="partName != null">
+        #{partName,jdbcType=VARCHAR},
+      </if>
+      <if test="partCode != null">
+        #{partCode,jdbcType=VARCHAR},
+      </if>
+      <if test="partJob != null">
+        #{partJob,jdbcType=VARCHAR},
+      </if>
+      <if test="partEdu != null">
+        #{partEdu,jdbcType=VARCHAR},
+      </if>
+      <if test="crtTime != null">
+        #{crtTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uptTime != null">
+        #{uptTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="unitId != null">
+        #{unitId,jdbcType=INTEGER},
+      </if>
+      <if test="unitName != null">
+        #{unitName,jdbcType=VARCHAR},
+      </if>
+      <if test="partStatus != null">
+        #{partStatus,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+
+</mapper>

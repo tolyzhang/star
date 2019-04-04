@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a56a6ce1-b635-49cc-8cd5-58c191729350" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/util/CheckUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/common/constant/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/core/common/constant/Const.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/controller/CreativeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/controller/CreativeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/entity/Creative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/entity/Creative.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/mapper/mapping/CreativeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/mapper/mapping/CreativeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/service/CreativeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/bussines/service/CreativeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/welcome/controller/KcsbbController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/welcome/controller/KcsbbController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/kcsbb_d.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/kcsbb_d.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/pages/kcsbb_sb.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/pages/kcsbb_sb.html" afterDir="false" />
-    </list>
+    <list default="true" id="a56a6ce1-b635-49cc-8cd5-58c191729350" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,8 +59,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/welcome/controller/KcsbbController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="106" column="39" lean-forward="true" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
+            <state relative-caret-position="-62">
+              <caret line="108" column="36" lean-forward="true" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -386,7 +375,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554311425290" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554313132450" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -433,7 +422,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1554297841368</updated>
-      <workItem from="1554297844720" duration="13548000" />
+      <workItem from="1554297844720" duration="14150000" />
     </task>
     <task id="LOCAL-00001" summary="over">
       <created>1554298373593</created>
@@ -453,7 +442,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13548000" />
+    <option name="totallyTimeSpent" value="14150000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -819,8 +808,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cn/stylefeng/star/modular/welcome/controller/KcsbbController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="106" column="39" lean-forward="true" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
+        <state relative-caret-position="-62">
+          <caret line="108" column="36" lean-forward="true" selection-start-line="108" selection-start-column="36" selection-end-line="108" selection-end-column="36" />
         </state>
       </provider>
     </entry>

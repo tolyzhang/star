@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.stylefeng.star.modular.bussines.mapper.TAnnexMapper">
+  <resultMap id="BaseResultMap" type="cn.stylefeng.star.modular.bussines.entity.TAnnex">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="item_no" jdbcType="VARCHAR" property="itemNo" />
+    <result column="all_type" jdbcType="VARCHAR" property="allType" />
+    <result column="annex_name" jdbcType="VARCHAR" property="annexName" />
+    <result column="annex_url_add" jdbcType="VARCHAR" property="annexUrlAdd" />
+    <result column="annex_type" jdbcType="VARCHAR" property="annexType" />
+    <result column="annex_status" jdbcType="INTEGER" property="annexStatus" />
+    <result column="crt_time" jdbcType="TIMESTAMP" property="crtTime" />
+    <result column="upt_time" jdbcType="TIMESTAMP" property="uptTime" />
+    <result column="operator" jdbcType="VARCHAR" property="operator" />
+  </resultMap>
+
+
+  <insert id="tannexAdd" parameterType="cn.stylefeng.star.modular.bussines.entity.TAnnex">
+    insert into T_ANNEX
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="itemNo != null">
+        item_no,
+      </if>
+      <if test="allType != null">
+        all_type,
+      </if>
+      <if test="annexName != null">
+        annex_name,
+      </if>
+      <if test="annexUrlAdd != null">
+        annex_url_add,
+      </if>
+      <if test="annexType != null">
+        annex_type,
+      </if>
+      <if test="annexStatus != null">
+        annex_status,
+      </if>
+      <if test="crtTime != null">
+        crt_time,
+      </if>
+      <if test="uptTime != null">
+        upt_time,
+      </if>
+      <if test="operator != null">
+        operator,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="itemNo != null">
+        #{itemNo,jdbcType=VARCHAR},
+      </if>
+      <if test="allType != null">
+        #{allType,jdbcType=VARCHAR},
+      </if>
+      <if test="annexName != null">
+        #{annexName,jdbcType=VARCHAR},
+      </if>
+      <if test="annexUrlAdd != null">
+        #{annexUrlAdd,jdbcType=VARCHAR},
+      </if>
+      <if test="annexType != null">
+        #{annexType,jdbcType=VARCHAR},
+      </if>
+      <if test="annexStatus != null">
+        #{annexStatus,jdbcType=INTEGER},
+      </if>
+      <if test="crtTime != null">
+        #{crtTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uptTime != null">
+        #{uptTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operator != null">
+        #{operator,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="cn.stylefeng.star.modular.bussines.entity.TAnnex">
+    update T_ANNEX
+    <set>
+      <if test="itemNo != null">
+        item_no = #{itemNo,jdbcType=VARCHAR},
+      </if>
+      <if test="allType != null">
+        all_type = #{allType,jdbcType=VARCHAR},
+      </if>
+      <if test="annexName != null">
+        annex_name = #{annexName,jdbcType=VARCHAR},
+      </if>
+      <if test="annexUrlAdd != null">
+        annex_url_add = #{annexUrlAdd,jdbcType=VARCHAR},
+      </if>
+      <if test="annexType != null">
+        annex_type = #{annexType,jdbcType=VARCHAR},
+      </if>
+      <if test="annexStatus != null">
+        annex_status = #{annexStatus,jdbcType=INTEGER},
+      </if>
+      <if test="crtTime != null">
+        crt_time = #{crtTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="uptTime != null">
+        upt_time = #{uptTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="operator != null">
+        operator = #{operator,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

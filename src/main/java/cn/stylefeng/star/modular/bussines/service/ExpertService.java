@@ -3,12 +3,10 @@ package cn.stylefeng.star.modular.bussines.service;
 import cn.stylefeng.roses.core.util.ToolUtil;
 import cn.stylefeng.roses.kernel.model.exception.ServiceException;
 import cn.stylefeng.star.core.common.exception.BizExceptionEnum;
-import cn.stylefeng.star.modular.bussines.entity.Creative;
-import cn.stylefeng.star.modular.bussines.entity.Expert;
-import cn.stylefeng.star.modular.bussines.entity.TAnnex;
-import cn.stylefeng.star.modular.bussines.entity.TPart;
+import cn.stylefeng.star.modular.bussines.entity.*;
 import cn.stylefeng.star.modular.bussines.mapper.CreativeMapper;
 import cn.stylefeng.star.modular.bussines.mapper.ExpertMapper;
+import cn.stylefeng.star.modular.bussines.model.SessionDto;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
@@ -41,7 +39,6 @@ public class ExpertService extends ServiceImpl<ExpertMapper, Expert> {
      * @param industryType
      * @param expertProfe
      * @param expertJob
-     * @param crtTime
      * @return
      */
     public List<Map<String, Object>> getExpert(Page page,
@@ -54,6 +51,26 @@ public class ExpertService extends ServiceImpl<ExpertMapper, Expert> {
         return this.baseMapper.getExpertList(page, expertName,expertWork,industryType,expertProfe,expertJob,expertTime);
     }
 
+
+
+    /**
+     * ADD
+     * @author zhangty
+     * @Date 2018/12/23 5:00 PM
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public void addExpert(Expert dto, SessionDto sdto) {
+        if (ToolUtil.isOneEmpty(dto.getItemNo())) {
+            throw new ServiceException(BizExceptionEnum.REQUEST_NULL);
+        }
+        dto.setId(1);
+        dto.setExpertTime(new Date());
+        dto.setAllType("2");
+        dto.setUnitId(sdto.getUnitId());
+        dto.setUnitName(sdto.getUnitName());
+        log.info("所有参数:{}",dto);
+        this.expertMapper.addExpert(dto);
+    }
 
     /**
      * 修改

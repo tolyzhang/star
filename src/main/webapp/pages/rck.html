@@ -118,8 +118,8 @@
                     <ol class="breadcrumb">
                         <li><a href="kcpt/">首页</a></li>
 						<li><a href='/kcpt/index.html' title='科创平台'>科创平台</a></li>
-						<li><a href='/hysj' title='行业信息'>行业信息</a></li>
-						<li><a href='/rck' title='行业数据'>专家人才库</a></li>
+						<li><a href='${ctxPath}/hysj' title='行业信息'>行业信息</a></li>
+						<li><a href='${ctxPath}/rck' title='行业数据'>专家人才库</a></li>
                     </ol>
                 </div>
             </div>
@@ -129,13 +129,13 @@
                         <dl class="menu-left">
                             <dt><i class="iconfont icon-xinwen"></i> 行业信息</dt>
                             <dd>
-                                <a  href="hysj.html" title="行业数据"><i class="iconfont icon-arrfill_u-copy"></i> <span>行业数据</span></a>
+                                <a  href=${ctxPath}/hysj" title="行业数据"><i class="iconfont icon-arrfill_u-copy"></i> <span>行业数据</span></a>
                                 
-                                <a  href="hygf.html" title="规范标准"><i class="iconfont icon-arrfill_u-copy"></i> <span>规范标准</span></a>
+                                <a  href="${ctxPath}/hygf" title="规范标准"><i class="iconfont icon-arrfill_u-copy"></i> <span>规范标准</span></a>
                                 
-                                <a class="active" href="/rck" title="专家人才库"><i class="iconfont icon-arrfill_u-copy"></i> <span>专家人才库</span></a>
+                                <a class="active" href="${ctxPath}/rck" title="专家人才库"><i class="iconfont icon-arrfill_u-copy"></i> <span>专家人才库</span></a>
                                 
-                                <a  href="sys.html" title="重点实验室"><i class="iconfont icon-arrfill_u-copy"></i> <span>重点实验室</span></a>
+                                <a  href="${ctxPath}/sys" title="重点实验室"><i class="iconfont icon-arrfill_u-copy"></i> <span>重点实验室</span></a>
                                 
                             </dd>
                         </dl>
@@ -144,7 +144,6 @@
                         <div class="panel padding-20 padding-bottom-5">
 
                             <div class="search-bar clearfix">
-                                <form action="#" id="searchForm" target="_blank " method="post" accept-charset="utf-8" onsubmit="document.charset='utf-8'";>
                           			<input type="hidden" name="pageIndex" id="pageIndex" value=""/>
                           			<input type="hidden" name="cmsSearchId" id="cmsSearchId" value="0"/>
                           			<input type="hidden" name="researchFlg" id="researchFlg" value="1"/>
@@ -152,10 +151,11 @@
                                     <input type="text" class="form-control" id="keyword" name="keyword" placeholder="请输入关键词搜索">
                                     <span class="input-group-btn">
                                         <button class="btn btn-primary" onclick='javascript:onsubmmit()' id="button" type="submit">搜索</button>
-										<button class="btn btn-warning" type="button">我要发布需求</button>
+                                          <input type="hidden" id="islogin" value="${msg}" />
+                                      <button class="btn btn-warning" id="onRckAdd">我要发布需求</button>
                                     </span>
                                     </div>
-								</form>
+
                             </div>
 
                             <div class="box">
@@ -239,28 +239,39 @@
 <script src="${ctxPath}/assets/style/js/main.js"></script>
 <script type="text/javascript" src="${ctxPath}/assets/style/plugin/infinitypush/jquery.ma.infinitypush.js"></script>
     <script>
-        jQuery(document).ready(function () {
+
+        $(function(){
             Main.init();
+            $("#onRckAdd").click(function(){
+                var isLogin = $("#islogin").val();
+                if(isLogin=="0"){
+                    alert("您还未登陆,请登录");
+                }else{
+                    window.location.href = '${ctxPath}/onRckAdd';
+                }
+            });
+
+                var isLogin = "${msgs}";
+                if(isLogin=='1'){
+                    $("#logintName").show();
+                    $("#loginTitle").hide();
+                    $("#uuName").text("${userName}");
+                }
+                $("#loginOut").click(function () {
+                    $.ajax({
+                        url:'${ctxPath}/loginOut',
+                        type:'GET',
+                        success:function (data) {
+                            if(data==1){
+                                //退出成功
+                                $("#loginTitle").show();
+                                $("#logintName").hide();
+                            }
+                        }
+                    });
+                });
+
         });
-    </script>
-
-    <script>
-        $('.li1').click(function(){
-            $(this).addClass('acli').siblings('.li1').removeClass('acli')
-        })
-        $('.li2').click(function(){
-            $(this).addClass('acli_1').siblings('.li2').removeClass('acli_1')
-        })
-        $('.prv').click(function(){
-            $('.acli_1').prev('.li2').addClass('acli_1').siblings('.li2').removeClass('acli_1')
-        })
-        $('.next').click(function(){
-            $('.acli_1').next('.li2').addClass('acli_1').siblings('.li2').removeClass('acli_1')
-        })
-
-        $('.btn-warning').click(function(){
-            window.open('/onRckAdd')
-        })
     </script>
 </body>
 </html>

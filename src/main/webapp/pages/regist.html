@@ -46,9 +46,9 @@
             <div class="white-bg">
             <div class="container">
             <ol class="breadcrumb">
-            <li><a href="index.html">首页</a></li>
+            <li><a href="">首页</a></li>
 
-        <li><a href="regist.html" title="企业注册">企业注册</a></li>
+        <li><a href="${ctxPath}/regSt" title="企业注册">企业注册</a></li>
         </ol>
         </div>
         </div>
@@ -64,7 +64,7 @@
             </a>
             </li>
             </ul>
-            <form class="form-horizontal user-form-horizontal" action="/rest" enctype="multipart/form-data" method="POST" onsubmit="return checktosubmit()" >
+            <form class="form-horizontal user-form-horizontal" action="${ctxPath}/rest" enctype="multipart/form-data" method="POST" onsubmit="return checktosubmit()" >
             <div class="row">
             <div class="col-md-12">
             <div class="errorHandler alert alert-danger padding-5 no-display">
@@ -196,14 +196,7 @@
         <input type="submit" />
     </form>-->
 </div>
-<script>
-    jQuery(document).ready(function () {
-        Main.init();
-    });
-    function checktosubmit(){
-        return true;
-    }
-</script>
+
 <!--Main JS-->
 <script src="${ctxPath}/assets/style/js/ETUI/jquery-2.0.3.min.js"></script>
 <!--[if lt IE 9]>
@@ -215,7 +208,30 @@
 <script src="${ctxPath}/assets/style/js/main.js"></script>
 <script type="text/javascript" src="${ctxPath}/assets/style/plugin/infinitypush/jquery.ma.infinitypush.js"></script>
 
-<script type="text/javascript" src="./regist2_files/3100000004.js.下载"></script>
+<script>
+    $(function () {
+        Main.init();
+        var isLogin = "${msgs}";
+        if(isLogin=='1'){
+            $("#logintName").show();
+            $("#loginTitle").hide();
+            $("#uuName").text("${userName}");
+        }
+        $("#loginOut").click(function () {
+            $.ajax({
+                url:'${ctxPath}/loginOut',
+                type:'GET',
+                success:function (data) {
+                    if(data==1){
+                        //退出成功
+                        $("#loginTitle").show();
+                        $("#logintName").hide();
+                    }
+                }
+            });
+        });
+    });
+</script>
 
 </body>
 </html>

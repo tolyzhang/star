@@ -9,6 +9,7 @@ import cn.stylefeng.star.modular.bussines.entity.TPart;
 import cn.stylefeng.star.modular.bussines.entity.TWarehous;
 import cn.stylefeng.star.modular.bussines.mapper.ExpertMapper;
 import cn.stylefeng.star.modular.bussines.mapper.TWarehousMapper;
+import cn.stylefeng.star.modular.bussines.model.SessionDto;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
@@ -41,6 +42,25 @@ public class TWarehousService extends ServiceImpl<TWarehousMapper, TWarehous> {
         return this.baseMapper.getWarehousList(page, companyName,companyOrgNo,industryType,productName,productPerson,crtTime);
     }
 
+
+    /**
+     * ADD
+     * @author zhangty
+     * @Date 2018/12/23 5:00 PM
+     */
+    @Transactional(rollbackFor = Exception.class)
+    public void addWarehous(TWarehous dto, SessionDto sdto) {
+        if (ToolUtil.isOneEmpty(dto.getItemNo())) {
+            throw new ServiceException(BizExceptionEnum.REQUEST_NULL);
+        }
+        dto.setId(1);
+        dto.setCrtTime(new Date());
+        dto.setAllType("2");
+        dto.setUnitId(sdto.getUnitId());
+        dto.setUnitName(sdto.getUnitName());
+        log.info("所有参数:{}",dto);
+        this.warehousMapper.addWarehous(dto);
+    }
 
 
     /**

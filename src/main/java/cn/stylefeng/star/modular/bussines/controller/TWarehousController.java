@@ -10,6 +10,7 @@ import cn.stylefeng.star.modular.bussines.entity.TPart;
 import cn.stylefeng.star.modular.bussines.entity.TWarehous;
 import cn.stylefeng.star.modular.bussines.service.TWarehousService;
 import cn.stylefeng.star.modular.bussines.warpper.WarehousWarpper;
+import cn.stylefeng.star.modular.util.DateUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -125,14 +126,14 @@ public class TWarehousController  extends BaseController {
                                         @RequestParam(required = false) String industryType,
                                         @RequestParam(required = false) String productName,
                                         @RequestParam(required = false) String productPerson,
-                                        @RequestParam(required = false) String crtTime){
+                                        @RequestParam(required = false) String crtTime) throws  Exception{
         TWarehous model = new TWarehous();
         model.setCompanyName(companyName);
         model.setCompanyOrgNo(companyOrgNo);
         model.setIndustryType(industryType);
         model.setProductName(productName);
         model.setProductPerson(productPerson);
-        model.setCrtTime(crtTime);
+        model.setCrtTime(DateUtils.getNowDate(crtTime));
         List<TWarehous> list = tWarehousService.getDownExcel(model);
         log.info("结果数量：{}",list.size());
         return list;

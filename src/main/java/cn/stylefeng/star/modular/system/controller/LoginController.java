@@ -15,6 +15,7 @@
  */
 package cn.stylefeng.star.modular.system.controller;
 
+import cn.stylefeng.roses.core.util.MD5Util;
 import cn.stylefeng.star.core.common.node.MenuNode;
 import cn.stylefeng.star.core.log.LogManager;
 import cn.stylefeng.star.core.log.factory.LogTaskFactory;
@@ -25,6 +26,7 @@ import cn.stylefeng.star.modular.bussines.entity.TUser;
 import cn.stylefeng.star.modular.bussines.service.TUserService;
 import cn.stylefeng.star.modular.system.service.UserService;
 import cn.stylefeng.roses.core.base.controller.BaseController;
+import cn.stylefeng.star.modular.util.CheckUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
@@ -158,8 +160,15 @@ public class LoginController extends BaseController {
      * @return
      */
     @RequestMapping(value="/logo",method = RequestMethod.GET)
-    public String overs(Model model){
-        model. addAttribute("msg", "");
+    public String overs(Model model,HttpServletRequest req){
+        HttpSession session = req.getSession();
+        String isLogin = CheckUtil.isLogins(req);
+        log.info("是否登陆:{}",isLogin);
+        model. addAttribute("msgs", isLogin);
+        if(isLogin.equals("1")){
+            model.addAttribute("userName",session.getAttribute("userName"));
+        }
+        model.addAttribute("msg","");
         return "/logo.html";
     }
 
@@ -171,8 +180,15 @@ public class LoginController extends BaseController {
      * @return
      */
     @RequestMapping(value="/regSt",method = RequestMethod.GET)
-    public String regist(Model model){
-        model. addAttribute("msg", "");
+    public String regist(Model model,HttpServletRequest req){
+        HttpSession session = req.getSession();
+        String isLogin = CheckUtil.isLogins(req);
+        log.info("是否登陆:{}",isLogin);
+        model. addAttribute("msgs", isLogin);
+        if(isLogin.equals("1")){
+            model.addAttribute("userName",session.getAttribute("userName"));
+        }
+        model.addAttribute("msg","");
         return "/regist.html";
     }
 
@@ -189,7 +205,7 @@ public class LoginController extends BaseController {
         String password = request.getParameter("userPassword");
         TUser tUser = new TUser();
         tUser.setUserName(userName);
-        tUser.setUserPassword(password);
+        tUser.setUserPassword(MD5Util.encrypt(password));
         TUser dto = tUserService.getUserPass(tUser);
         log.info("用户登录结果:{}",dto);
         if(dto==null){
@@ -205,6 +221,8 @@ public class LoginController extends BaseController {
                 model.addAttribute("msg",msgd);
             }else{
                 HttpSession session = request.getSession();
+                model. addAttribute("msgs", "1");
+                model.addAttribute("userName",userName);
                 session. setAttribute("userName",userName);
                 session. setAttribute("isLogin","1");
                 session.setAttribute("companyName",dto.getCompanyName());
@@ -230,7 +248,7 @@ public class LoginController extends BaseController {
     String registst(TUser tUser, HttpServletRequest request, Model model, @RequestParam("files") MultipartFile file){
         log.info("获取所有请求参数:{}",tUser);
         //本地上传项目空间
-        String pathRoot = "C:\\Users\\zhangty\\yf项目\\guns\\target\\classes\\static\\imgs\\";
+        String pathRoot = "C:\\Users\\zhangty\\yf项目\\star\\target\\classes\\static\\imgs\\";
         String info ="";
         //获取所有注册信息表单,提交后上传图片信息,保存到user表中
         try {

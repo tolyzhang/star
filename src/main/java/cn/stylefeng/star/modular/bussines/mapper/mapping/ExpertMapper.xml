@@ -35,6 +35,7 @@
         <result column="EXPERT_STATUS" jdbcType="INTEGER" property="expertStatus" />
         <result column="EXPERT_UPT_TIME" jdbcType="TIMESTAMP" property="expertUptTime" />
         <result column="OPERATOR" jdbcType="VARCHAR" property="operator" />
+        <result column="IS_ANNEX" jdbcType="INTEGER" property="isAnnex" />
     </resultMap>
 
     <!--上传附属表-->
@@ -71,13 +72,13 @@
     ID as id, UNIT_ID as unitID, UNIT_NAME as unitName, INDUSTRY_TYPE as industryType,
     ALL_TYPE as allType, EXPERT_NAME as expertName, EXPERT_SEX as expertSex, EXPERT_BIRTH as expertBirth,
     EXPERT_CARD_NO as expertCardNo, EXPERT_PHONE as expertPhone, EXPERT_EMAIL as expertEmail, EXPERT_SCHOOL as expertSchool,
-    EXPERT_PROFE as expertPerofe, EXPERT_EDU as expertEdu,
+    EXPERT_PROFE as expertProfe, EXPERT_EDU as expertEdu,
     EXPERT_WORK as expertWork, EXPERT_DEPAR as expertDepar, EXPERT_POSI as expertPosi, EXPERT_JOB as expertJob,
     EXPERT_GROUP as expertGroup,  EXPERT_RESUME as expertResume,
     EXPERT_PROJECT as expertProject, EXPERT_SIT as expertSit, EXPERT_RECORD as expertRecord,
     EXPERT_REWARDS as expertRewards, EXPERT_REVIEW as expertReview, EXPERT_PHOTO as expertPhoto,
     EXPERT_TIME as expertTime, EXPERT_STATUS as expertStatus, EXPERT_UPT_TIME as expertUptTime, OPERATOR as operator,
-    ITEM_NO as itemNo
+    ITEM_NO as itemNo,IS_ANNEX as isAnnex
   </sql>
 
     <sql id="Base_Column_List_ANNEX">
@@ -225,9 +226,6 @@
             <if test="expertGroup != null">
                 EXPERT_GROUP,
             </if>
-            <if test="expertField != null">
-                EXPERT_FIELD,
-            </if>
             <if test="expertResume != null">
                 EXPERT_RESUME,
             </if>
@@ -319,9 +317,6 @@
             </if>
             <if test="expertGroup != null">
                 #{expertGroup,jdbcType=VARCHAR},
-            </if>
-            <if test="expertField != null">
-                #{expertField,jdbcType=VARCHAR},
             </if>
             <if test="expertResume != null">
                 #{expertResume,jdbcType=VARCHAR},

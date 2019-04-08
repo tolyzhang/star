@@ -22,6 +22,8 @@
     <result column="UPT_TIME" jdbcType="TIMESTAMP" property="uptTime" />
     <result column="OPERATOR" jdbcType="VARCHAR" property="operator" />
     <result column="INDUSTRY_TYPE" jdbcType="INTEGER" property="industryType" />
+    <result column="IS_ANNEX" jdbcType="INTEGER" property="isAnnex" />
+    <result column="ALL_TYPE" jdbcType="VARCHAR" property="allType" />
   </resultMap>
 
   <!--上传附属表-->
@@ -60,7 +62,7 @@
     PRODUCT_PHONE as productPhone, PRODUCT_EMAIL as productEmail, COMPANY_BRIEF as companyBrief, PRODUCT_NAME  as productName,
    PRODUCT_SURVEY as productSurvey, ENCLOSURE_ID as enclosureId,
     WAREHOUS_STATUS  as warehousStatus, CRT_TIME as crtTime, UPT_TIME  as uptTime,
-    OPERATOR  as operator,INDUSTRY_TYPE  as industryType,ITEM_NO  as itemNo
+    OPERATOR  as operator,INDUSTRY_TYPE  as industryType,ITEM_NO  as itemNo,ALL_TYPE as allType,IS_ANNEX as isAnnex
   </sql>
 
   <sql id="Base_Column_List_ANNEX">
@@ -152,6 +154,12 @@
   <insert id="addWarehous" parameterType="cn.stylefeng.star.modular.bussines.entity.TWarehous">
     insert into T_WAREHOUS
     <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="isAnnex != null">
+        IS_ANNEX,
+      </if>
+      <if test="allType != null">
+        ALL_TYPE,
+      </if>
       <if test="itemNo != null">
         ITEM_NO,
       </if>
@@ -214,6 +222,12 @@
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="isAnnex != null">
+        #{isAnnex,jdbcType=INTEGER},
+      </if>
+      <if test="allType != null">
+        #{allType,jdbcType=VARCHAR},
+      </if>
       <if test="itemNo != null">
         #{itemNo,jdbcType=VARCHAR},
       </if>

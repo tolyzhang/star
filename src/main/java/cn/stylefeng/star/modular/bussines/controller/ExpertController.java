@@ -11,6 +11,7 @@ import cn.stylefeng.star.modular.bussines.service.ExpertService;
 import cn.stylefeng.star.modular.bussines.service.TInfosService;
 import cn.stylefeng.star.modular.bussines.warpper.CreativeWarpper;
 import cn.stylefeng.star.modular.bussines.warpper.ExpertWarpper;
+import cn.stylefeng.star.modular.util.DateUtils;
 import cn.stylefeng.star.modular.util.UploadUtils;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
@@ -124,14 +125,14 @@ public class ExpertController extends BaseController {
                                        @RequestParam(required = false) String industryType,
                                        @RequestParam(required = false) String expertProfe,
                                        @RequestParam(required = false) String expertJob,
-                                       @RequestParam(required = false) String crtTime){
+                                       @RequestParam(required = false) String crtTime) throws Exception{
         Expert model = new Expert();
         model.setExpertName(expertName);
         model.setExpertWork(expertWork);
         model.setIndustryType(industryType);
         model.setExpertProfe(expertProfe);
         model.setExpertJob(expertJob);
-        model.setExpertTime(crtTime);
+        model.setExpertTime(DateUtils.getNowDate(crtTime));
         List<Expert> list = expertService.getDownExcel(model);
         log.info("结果数量：{}",list.size());
         return list;

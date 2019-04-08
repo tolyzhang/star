@@ -46,7 +46,7 @@
                     <ol class="breadcrumb">
                         <li><a href="/kcpt/">首页</a></li>
 						
-						<li><a href='logo.html' title=''>登陆</a></li>
+						<li><a href='${ctxPath}/logo' title=''>登陆</a></li>
 						
                     </ol>
                 </div>
@@ -62,7 +62,7 @@
                                     </a>
                                 </li>
                             </ul>
-                            <form class="form-horizontal user-form-horizontal" method="POST" action="/reLogins" id="form" onsubmit="return checktosubmit()">
+                            <form class="form-horizontal user-form-horizontal" method="POST" action="${ctxPath}/reLogins" id="form" onsubmit="return checktosubmit()">
                                 <div class="row">
                                     <div class="col-md-12">
                                         ${msg}
@@ -101,10 +101,44 @@
         <script src="${ctxPath}/assets/style/js/footerkc.js"></script>
 </div>
 </div>
+
+    <!--Main JS-->
+    <script src="${ctxPath}/assets/style/js/ETUI/jquery-2.0.3.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/${ctxPath}/assets/style/js/ETUI/html5shiv.min.js"></script>
+    <script src="/${ctxPath}/assets/style/js/ETUI/respond.min.js"></script>
+    <![endif]-->
+    <script src="${ctxPath}/assets/style/js/ETUI/ETUI3.min.js"></script>
+    <!--Custom JS-->
+    <script src="${ctxPath}/assets/style/js/main.js"></script>
+<script src="${ctxPath}/assets/style/js/loginHear.js"></script>
+<script type="text/javascript" src="${ctxPath}/assets/style/plugin/infinitypush/jquery.ma.infinitypush.js"></script>
+
 <script>
-    jQuery(document).ready(function () {
+
+    $(function () {
         Main.init();
+        var isLogin = "${msgs}";
+        if(isLogin=='1'){
+            $("#logintName").show();
+            $("#loginTitle").hide();
+            $("#uuName").text("${userName}");
+        }
+        $("#loginOut").click(function () {
+            $.ajax({
+                url:'${ctxPath}/loginOut',
+                type:'GET',
+                success:function (data) {
+                    if(data==1){
+                        //退出成功
+                        $("#loginTitle").show();
+                        $("#logintName").hide();
+                    }
+                }
+            });
+        });
     });
+
 
     function checktosubmit(){
         var userName = $("#userName").val();
@@ -120,19 +154,10 @@
         $("#form").submit();
 
     }
-</script>
-    <!--Main JS-->
-    <script src="${ctxPath}/assets/style/js/ETUI/jquery-2.0.3.min.js"></script>
-    <!--[if lt IE 9]>
-    <script src="/${ctxPath}/assets/style/js/ETUI/html5shiv.min.js"></script>
-    <script src="/${ctxPath}/assets/style/js/ETUI/respond.min.js"></script>
-    <![endif]-->
-    <script src="${ctxPath}/assets/style/js/ETUI/ETUI3.min.js"></script>
-    <!--Custom JS-->
-    <script src="${ctxPath}/assets/style/js/main.js"></script>
-    <script type="text/javascript" src="${ctxPath}/assets/plugin/infinitypush/jquery.ma.infinitypush.js"></script>
 
+
+
+</script>
     
-    <script type="text/javascript" src="https://jhelper.shanghai.gov.cn/publicJS/3100000004.js"/> 
 </body>
 </html>

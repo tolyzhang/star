@@ -61,13 +61,15 @@ public class Expert implements Serializable {
 
     private String expertPhoto;
 
-    private String  expertTime;
+    private Date  expertTime;
 
     private Integer expertStatus;
 
     private Date expertUptTime;
 
     private String operator;
+
+    private Integer isAnnex;
 
     private static final long serialVersionUID = 1L;
 

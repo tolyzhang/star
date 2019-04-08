@@ -43,7 +43,7 @@ public class TWarehous implements Serializable {
 
     private Integer warehousStatus;
 
-    private String crtTime;
+    private Date crtTime;
 
     private Date uptTime;
 
@@ -51,7 +51,11 @@ public class TWarehous implements Serializable {
 
     private  String  industryType;
 
+    private Integer  isAnnex;
+
+    private String  allType;
   private static final long serialVersionUID = 1L;
+
 
 
 }

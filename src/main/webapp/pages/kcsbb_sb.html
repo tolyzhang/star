@@ -102,8 +102,8 @@
                     <ol class="breadcrumb">
                         <li><a href="kcpt/">首页</a></li>
                         <li><a href='' title='科创平台'>科创平台</a></li>
-                        <li><a href='/kcsbb' title='科创服务'>科创服务</a></li>
-                        <li><a href='/kcsbb' title='科创项目申报'>科创项目申报</a></li>
+                        <li><a href='${ctxPath}/kcsbb' title='科创服务'>科创服务</a></li>
+                        <li><a href=${ctxPath}/kcsbb' title='科创项目申报'>科创项目申报</a></li>
                     </ol>
                 </div>
             </div>
@@ -117,7 +117,7 @@
                                     <h2 style="text-align: center;margin: 35px 0px;">科创项目申报 申请表</h2>
                                 </li>
                             </ul>
-                            <form class="form-horizontal user-form-horizontal" action="/add" role="form" id="form" method="post" enctype="multipart/form-data">
+                            <form class="form-horizontal user-form-horizontal" action="${ctxPath}/add" role="form" id="form" method="post" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="errorHandler alert alert-danger padding-5 no-display">
@@ -368,7 +368,7 @@
                                     </div>
                                 </div>
 
-                            <input class="bc" type="submit" value="保存提交"/>
+                            <input class="bc btn btn-warning" style="line-height: 20px;" type="submit" value="保存提交"/>
                             </form>
 
 
@@ -392,10 +392,31 @@
 <script type="text/javascript" src="${ctxPath}/assets/style/plugin/infinitypush/jquery.ma.infinitypush.js"></script>
     <script>
         $(function(){
+            Main.init();
             var isLogin = "${msg}";
             if(isLogin=="0"){
-                window.location.href = '/logo';
+                window.location.href = '${ctxPath}/logo';
             }
+
+            var isLogin = "${msgs}";
+            if(isLogin=='1'){
+                $("#logintName").show();
+                $("#loginTitle").hide();
+                $("#uuName").text("${userName}");
+            }
+            $("#loginOut").click(function () {
+                $.ajax({
+                    url:'${ctxPath}/loginOut',
+                    type:'GET',
+                    success:function (data) {
+                        if(data==1){
+                            //退出成功
+                            $("#loginTitle").show();
+                            $("#logintName").hide();
+                        }
+                    }
+                });
+            });
         });
         var num=5;
         $('.add').click(function(){
@@ -403,6 +424,10 @@
             var filest = "files"+num;
             $(this).parent().append('<input type="file" name="file" id="file">');
         });
+
+
+
+
     </script>
 
 </body>

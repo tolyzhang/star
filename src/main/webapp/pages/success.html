@@ -64,7 +64,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="errorHandler alert alert-danger padding-5 no-display">
-                                            <i class="iconfont icon-removecircle"></i>您的输入有误，请完成后重新提交！
+                                            <i class="iconfont icon-removecircle"></i>
                                         </div>
                                         <div class="successHandler alert alert-success padding-5 no-display">
                                             <i class="iconfont icon-okcircle"></i>您的输入正确，请提交！
@@ -99,10 +99,27 @@
 <script src="${ctxPath}/assets/style/js/ETUI/ETUI3.min.js"></script>
 <!--Custom JS-->
 <script src="${ctxPath}/assets/style/js/main.js"></script>
-<script type="text/javascript" src="${ctxPath}/assets/style/plugin/infinitypush/jquery.ma.infinitypush.js"></script>
     <script>
-        jQuery(document).ready(function () {
-            Main.init();
+        $(function () {
+            var isLogin = "${msgs}";
+            if(isLogin=='1'){
+                $("#logintName").show();
+                $("#loginTitle").hide();
+                $("#uuName").text("${userName}");
+            }
+            $("#loginOut").click(function () {
+                $.ajax({
+                    url:'${ctxPath}/loginOut',
+                    type:'GET',
+                    success:function (data) {
+                        if(data==1){
+                            //退出成功
+                            $("#loginTitle").show();
+                            $("#logintName").hide();
+                        }
+                    }
+                });
+            });
         });
     </script>
     

@@ -1,3 +1,4 @@
+/*
 package cn.stylefeng.star.multi.service.impl;
 
 import cn.stylefeng.star.core.common.constant.DatasourceEnum;
@@ -9,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+*/
 /**
  * <p>
  * 服务实现类
@@ -16,7 +18,8 @@ import org.springframework.transaction.annotation.Transactional;
  *
  * @author fengshuonan
  * @since 2018-07-10
- */
+ *//*
+
 @Service
 public class TestServiceImpl implements TestService {
 
@@ -41,3 +44,4 @@ public class TestServiceImpl implements TestService {
         testMapper.insert(test);
     }
 }
+*/

@@ -55,7 +55,7 @@ public class CreativeService  extends ServiceImpl<CreativeMapper, Creative> {
     }
 
     /**
-     * 修改
+     * 新增
      * @author zhangty
      * @Date 2018/12/23 5:00 PM
      */

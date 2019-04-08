@@ -96,8 +96,8 @@
                     <ol class="breadcrumb">
                         <li><a href="kcpt/">首页</a></li>
                         <li><a href='/kcpt/index.html' title='科创平台'>科创平台</a></li>
-                        <li><a href='/kc-hyxx/index.html' title='行业信息'>行业信息</a></li>
-                        <li><a href='/rck' title='行业数据'>专家人才库</a></li>
+                        <li><a href='${ctxPath}/hysj' title='行业信息'>行业信息</a></li>
+                        <li><a href='${ctxPath}/rck' title='行业数据'>专家人才库</a></li>
                     </ol>
                 </div>
             </div>
@@ -111,7 +111,7 @@
                                     <h2 style="text-align: center;margin: 35px 0px;">科创专家库申请表</h2>
                                 </li>
                             </ul>
-                            <form class="form-horizontal user-form-horizontal" action="http://www.jt.sh.cn/kc-qyzc/#" role="form" id="form">
+                            <form class="form-horizontal user-form-horizontal" action="${ctxPath}/rckAdd" role="form" id="form" method="post" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="errorHandler alert alert-danger padding-5 no-display">
@@ -125,193 +125,167 @@
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>姓名：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="" value="">
+                                        <input type="text" placeholder="" class="form-control" id="expertName" name="expertName" >
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>性别：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <select name="expertSex" id="Select1" class="selectpicker form-control">
+                                            <option value="1">男</option>
+                                            <option value="2">女</option>
+                                        </select>
                                     </div>
                                 </div>
                                 
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="zipcode"><span class="symbol required"></span>职称：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>职称：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="expertJob" name="expertJob">
                                     </div>
                                 </div>
 
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>身份证号：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="expertCardNo" name="expertCardNo">
                                     </div>
                                 </div>
 
                                 <div class="form-group ">
-                                    <label class="control-label col-sm-3" for=""><span class="symbol required"></span>手机：</label>
+                                    <label class="control-label col-sm-3" for=""><span class="symbol required"></span>邮箱：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="expertEmail" name="expertEmail">
                                     </div>
                                 </div>
                                 
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>手机：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="expertPhone" name="expertPhone">
                                     </div>
                                 </div>
 
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>毕业院校：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="expertSchool" name="expertSchool">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>专业：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="expertProfe" name="expertProfe">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>学历学位：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="expertEdu" name="expertEdu">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>工作单位：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>工作单位：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="expertWork" name="expertWork">
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>所属部门：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>所属部门：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="expertDepar" name="expertDepar">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>职务：</label>
+                                    <label class="control-label col-sm-3"><span class="symbol required"></span>职务：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="expertPosi" name="expertPosi">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>兼任其他团体/协会的职务：</label>
+                                    <label class="control-label col-sm-3"><span class="symbol required"></span>兼任其他团体/协会的职务：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="expertGroup" name="expertGroup">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>所属行业：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>所属行业：</label>
                                     <div class="col-sm-5">
-                                      <input type="checkbox" name="" id="">
-                                      <span>道路交通 </span>
-                                      <input type="checkbox" name="" id="">
-                                      <span>绿色交通</span>
-                                      <input type="checkbox" name="" id="">
-                                      <span>智能交通</span>
-                                      <input type="checkbox" name="" id="">
-                                      <span>公路运输 </span>
-                                      <input type="checkbox" name="" id="">
-                                      <span>铁路城轨运输</span>
-                                      <input type="checkbox" name="" id="">
-                                      <span>水上运输</span>
-                                      <input type="checkbox" name="" id="">
-                                      <span>其他 </span>
+                                        <select name="expertSex" id="industryType" name="industryType" class="selectpicker form-control">
+                                            <option value="1">道路交通</option>
+                                            <option value="2">绿色交通</option>
+                                            <option value="3">智能交通</option>
+                                            <option value="4">公路运输</option>
+                                            <option value="5">铁路城轨运输</option>
+                                            <option value="6">水上运输</option>
+                                            <option value="7">其他</option>
+                                        </select>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>主要工作简历：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>主要工作简历：</label>
                                     <div class="col-sm-5">
-                                        <textarea name="" id="" cols="30" rows="10" placeholder="500字以内"></textarea>
+                                        <textarea name="expertResume" id="expertResume" cols="30" rows="10" placeholder="500字以内"></textarea>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>近五年从事的主要科研项目：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>近五年从事的主要科研项目：</label>
                                     <div class="col-sm-5">
-                                        <textarea name="" id="" cols="30" rows="10" placeholder="500字以内"></textarea>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>近五年发表学术论著、论文情况：</label>
-                                    <div class="col-sm-5">
-                                        <textarea name="" id="" cols="30" rows="10" placeholder="名称、所属领域、出版社、期刊名、时间、影响因子）（500字以内"></textarea>
+                                        <textarea name="expertProject" id="expertProject" cols="30" rows="10" placeholder="500字以内"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>获得知识产权记录：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>近五年发表学术论著、论文情况：</label>
                                     <div class="col-sm-5">
-                                        <textarea name="" id="" cols="30" rows="10" placeholder="名称、所属领域、位次、知识产权类型、登记日期、有否应用）（500字以内"></textarea>
+                                        <textarea name="expertSit" id="expertSit" cols="30" rows="10" placeholder="名称、所属领域、出版社、期刊名、时间、影响因子）（500字以内"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>获得科技奖励：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>获得知识产权记录：</label>
                                     <div class="col-sm-5">
-                                        <textarea name="" id="" cols="30" rows="10" placeholder="500字以内"></textarea>
+                                        <textarea name="expertRecord" id="expertRecord" cols="30" rows="10" placeholder="名称、所属领域、位次、知识产权类型、登记日期、有否应用）（500字以内"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>参与科技项目评审记录：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>获得科技奖励：</label>
                                     <div class="col-sm-5">
-                                        <textarea name="" id="" cols="30" rows="10" placeholder="500字以内"></textarea>
+                                        <textarea name="expertRewards" id="expertRewards" cols="30" rows="10" placeholder="500字以内"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>参与科技项目评审记录：</label>
+                                    <div class="col-sm-5">
+                                        <textarea name="expertReview" id="expertReview" cols="30" rows="10" placeholder="500字以内"></textarea>
+                                    </div>
+                                </div>
+
+                              <!--  <div class="form-group">
                                     <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>(交通委)审核意见：</label>
                                     <div class="col-sm-5">
                                         <input type="text" placeholder="" class="form-control" id="" name="" style="margin-bottom:10px;">
                                         <span>时间：</span>
                                         <input type="text" name="" id="">
                                     </div>
-                                </div>
-
-
-
-                                <!-- <div class="form-group code-form-group">
-                                    <label class="control-label col-sm-3" for="codes"><span class="symbol required" aria-required="true"></span>验证码：</label>
-                                    <div class="col-sm-5">
-                                        <div class="row">
-                                            <div class="col-sm-8 col-xs-6">
-                                                <input type="text" placeholder="" class="form-control" id="codes" name="codes">
-                                            </div>
-                                            <div class="col-sm-4 col-xs-6">
-                                                <img src="./regist2_files/code.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-
-                                
-
-                                
-                                
-
+                                </div>-->
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3">附件上传：</label>
                                     <div class="col-sm-5">
                                         <p class="add">上传更多</p>
-                                        <input type="file" name="" id="">
+                                        <input type="file" name="file" id="file">
                                     </div>
                                 </div>
 
-                         
+                                <input class="bc btn btn-warning" type="submit" value="保存并提交" style="line-height: 20px;"/>
                             </form>
-
-                           <a href="zj_1.html" class="bc">保存并预览</a>
                         </div>
                     </div>
                 </div>
@@ -330,16 +304,49 @@
 <!--Custom JS-->
 <script src="${ctxPath}/assets/style/js/main.js"></script>
 <script type="text/javascript" src="${ctxPath}/assets/style/plugin/infinitypush/jquery.ma.infinitypush.js"></script>
-    <script>
-        jQuery(document).ready(function () {
-            Main.init();
-        });
-    </script>
+
     
     <script>
-        $('.add').click(function(){
-            $(this).parent().append('<input type="file" name="" id="">')
-        })
+
+        $(function(){
+            Main.init();
+            var isLogin = "${msg}";
+            if(isLogin=="0"){
+                window.location.href = '${ctxPath}/logo';
+            }
+
+            var isLogin = "${msgs}";
+            if(isLogin=='1'){
+                $("#logintName").show();
+                $("#loginTitle").hide();
+                $("#uuName").text("${userName}");
+            }
+            $("#loginOut").click(function () {
+                $.ajax({
+                    url:'${ctxPath}/loginOut',
+                    type:'GET',
+                    success:function (data) {
+                        if(data==1){
+                            //退出成功
+                            $("#loginTitle").show();
+                            $("#logintName").hide();
+                        }
+                    }
+                });
+            });
+
+        });
+        var num=5;
+        $('.add').click(function() {
+            num--;
+            if (num < 0) {
+                return false;
+            }
+            var filest = "files" + num;
+            $(this).parent().append('<input type="file" name="file" id="file">');
+        });
+
+
     
     </script>
     

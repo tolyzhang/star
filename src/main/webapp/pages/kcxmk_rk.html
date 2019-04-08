@@ -93,7 +93,7 @@
 <div id="main-container">
     <div id="container" class="page-bg">
     <div id="tblj" style="display:none;">科创服务</div>
-        <script src="${ctxPath}/assets/style/js/header.js"></script>
+        <script src="${ctxPath}/assets/style/js/headerkc.js"></script>
 
         <div class="main" id="main">
             <div class="white-bg">
@@ -101,8 +101,8 @@
                     <ol class="breadcrumb">
                         <li><a href="kcpt/">首页</a></li>
                         <li><a href='/kcpt/index.html' title='科创平台'>科创平台</a></li>
-                        <li><a href='/kcsbb' title='科创服务'>科创服务</a></li>
-                        <li><a href='/kcxmk' title='科创项目申报'>科创项目库</a></li>
+                        <li><a href='${ctxPath}/kcsbb' title='科创服务'>科创服务</a></li>
+                        <li><a href='${ctxPath}/kcxmk' title='科创项目申报'>科创项目库</a></li>
                     </ol>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                                     <h2 style="text-align: center;margin: 35px 0px;">科创项目入库 申请表</h2>
                                 </li>
                             </ul>
-                            <form class="form-horizontal user-form-horizontal" action="http://www.jt.sh.cn/kc-qyzc/#" role="form" id="form">
+                            <form class="form-horizontal user-form-horizontal" action="${ctxPath}/kcxmkAdd" role="form" id="form" method="post" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="errorHandler alert alert-danger padding-5 no-display">
@@ -131,34 +131,34 @@
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>单位名称：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="" value="">
+                                        <input type="text" placeholder="" class="form-control" id="companyName" name="companyName" >
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>企业地址：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="companyAddress" name="companyAddress">
                                     </div>
                                 </div>
                                 
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="zipcode"><span class="symbol required"></span>组织机构代码：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="组织机构代码" class="form-control" id="companyOrgNo" name="companyOrgNo">
                                     </div>
                                 </div>
 
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>法定代表人：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="法定代表人" class="form-control" id="COMPANY_LEGAL" name="companyLegal">
                                     </div>
                                 </div>
 
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>企业情况、主导产品、主营业务情况简介：</label>
                                     <div class="col-sm-5">
-                                        <textarea name="" id="" cols="30" rows="10" placeholder="300字以内"></textarea>
+                                        <textarea name="companyBrief" id="companyBrief" cols="30" rows="10" placeholder="300字以内"></textarea>
                                     </div>
                                 </div>
                                 
@@ -166,7 +166,7 @@
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>项目名称：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="productName" name="productName">
                                     </div>
                                 </div>
 
@@ -175,46 +175,46 @@
                                 <div class="form-group">
                                     <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>所属行业：</label>
                                     <div class="col-sm-5">
-                                      <input type="checkbox" name="" id="">
-                                      <span>道路交通 </span>
-                                      <input type="checkbox" name="" id="">
-                                      <span>绿色交通</span>
-                                      <input type="checkbox" name="" id="">
-                                      <span>智能交通</span>
-                                      <input type="checkbox" name="" id="">
-                                      <span>公路运输 </span>
-                                      <input type="checkbox" name="" id="">
-                                      <span>铁路城轨运输</span>
-                                      <input type="checkbox" name="" id="">
-                                      <span>水上运输</span>
-                                      <input type="checkbox" name="" id="">
-                                      <span>其他 </span>
+                                        <input type="checkbox" name="intype01" id="intype01">
+                                        <span>道路交通 </span>
+                                        <input type="checkbox" name="intype02" id="intype02">
+                                        <span>绿色交通</span>
+                                        <input type="checkbox" name="intype03" id="intype03">
+                                        <span>智能交通</span>
+                                        <input type="checkbox" name="intype04" id="intype04">
+                                        <span>公路运输 </span>
+                                        <input type="checkbox" name="intype05" id="intype05">
+                                        <span>铁路城轨运输</span>
+                                        <input type="checkbox" name="intype06" id="intype06">
+                                        <span>水上运输</span>
+                                        <input type="checkbox" name="intype07" id="intype07">
+                                        <span>其他 </span>
                                     </div>
                                 </div>
 
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>项目联系人：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="productPerson" name="productPerson">
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>联系电话：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="productPhone" name="productPhone">
                                     </div>
                                 </div>
                                 <div class="form-group ">
                                     <label class="control-label col-sm-3" for=""><span class="symbol required"></span>邮箱：</label>
                                     <div class="col-sm-5">
-                                        <input type="text" placeholder="" class="form-control" id="" name="">
+                                        <input type="text" placeholder="" class="form-control" id="productEmail" name="productEmail">
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>项目概述：</label>
+                                    <label class="control-label col-sm-3" ><span class="symbol required"></span>项目概述：</label>
                                     <div class="col-sm-5">
-                                        <textarea name="" id="" cols="30" rows="10" placeholder="简述技术特点和应用情况，1000字以内"></textarea>
+                                        <textarea name="productSurvey" id="productSurvey" cols="30" rows="10" placeholder="简述技术特点和应用情况，1000字以内"></textarea>
                                     </div>
                                 </div>
                                 
@@ -224,14 +224,14 @@
                                     <label class="control-label col-sm-3">附件上传：</label>
                                     <div class="col-sm-5">
                                         <p class="add">上传更多</p>
-                                        <input type="file" name="" id="">
+                                        <input type="file" name="file" id="file">
                                     </div>
                                 </div>
 
-                         
+                                <input type="submit" class="bc btn btn-warning" value="保存并提交" style="line-height: 20px;"/>
                             </form>
 
-                           <a href="rk_1.html" class="bc">保存并预览</a>
+
                         </div>
                     </div>
                 </div>
@@ -251,17 +251,43 @@
 <script src="${ctxPath}/assets/style/js/main.js"></script>
 <script type="text/javascript" src="${ctxPath}/assets/style/plugin/infinitypush/jquery.ma.infinitypush.js"></script>
     <script>
-        jQuery(document).ready(function () {
+
+        $(function(){
             Main.init();
+            var isLogin = "${msg}";
+            if(isLogin=='0'){
+                window.location.href = '${ctxPath}/logo';
+            }
+
+            var isLogin = "${msgs}";
+            if(isLogin=='1'){
+                $("#logintName").show();
+                $("#loginTitle").hide();
+                $("#uuName").text("${userName}");
+            }
+            $("#loginOut").click(function () {
+                $.ajax({
+                    url:'${ctxPath}/loginOut',
+                    type:'GET',
+                    success:function (data) {
+                        if(data==1){
+                            //退出成功
+                            $("#loginTitle").show();
+                            $("#logintName").hide();
+                        }
+                    }
+                });
+            });
         });
-    </script>
-    
-    <script type="text/javascript" src="./regist2_files/3100000004.js.下载"></script>
-    <script>
+        var num=5;
         $('.add').click(function(){
-            $(this).parent().append('<input type="file" name="" id="">')
-        })
-    
+            num--;
+            if(num<0){
+                return false;
+            }
+            var filest = "files"+num;
+            $(this).parent().append('<input type="file" name="file" id="file">');
+        });
     </script>
     
 </body>

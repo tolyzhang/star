@@ -1,23 +1,12 @@
 package cn.stylefeng.star.modular.welcome.controller;
 
 
-import cn.stylefeng.roses.core.reqres.response.ResponseData;
-import cn.stylefeng.star.core.common.annotion.Permission;
-import cn.stylefeng.star.core.common.constant.Const;
-import cn.stylefeng.star.core.common.page.LayuiPageFactory;
-import cn.stylefeng.star.core.log.LogManager;
-import cn.stylefeng.star.core.log.factory.LogTaskFactory;
-import cn.stylefeng.star.core.shiro.ShiroKit;
 import cn.stylefeng.star.core.util.FileUtil;
-import cn.stylefeng.star.modular.bussines.controller.TNewController;
 import cn.stylefeng.star.modular.bussines.entity.*;
 import cn.stylefeng.star.modular.bussines.model.SessionDto;
 import cn.stylefeng.star.modular.bussines.service.*;
-import cn.stylefeng.star.modular.bussines.warpper.newWarpper;
 import cn.stylefeng.star.modular.util.CheckUtil;
 import cn.stylefeng.star.modular.util.ItemNoUtil;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,11 +18,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.util.Date;
 import java.util.List;
-import java.util.Map;
-
-import static cn.stylefeng.roses.core.util.HttpContext.getIp;
 
 
 @Slf4j
@@ -143,6 +128,19 @@ public class KcsbbController {
         return "/success.html";
     }
 
+    @RequestMapping(value="/error",method = RequestMethod.GET)
+    public String error(Model model,HttpServletRequest req){
+        HttpSession session = req.getSession();
+        String isLogin = CheckUtil.isLogins(req);
+        log.info("是否登陆:{}",isLogin);
+        model. addAttribute("msgs", isLogin);
+        if(isLogin.equals("1")){
+            model.addAttribute("userName",session.getAttribute("userName"));
+        }
+        model.addAttribute("msg",isLogin);
+        return "/error.html";
+    }
+
     @RequestMapping(value="/add", method = RequestMethod.POST)
     @ResponseBody
     public void add(Creative dto, TPart tPart, HttpServletRequest request,HttpServletResponse response) throws  Exception {
@@ -204,7 +202,7 @@ public class KcsbbController {
         return "/kcxmk.html";
     }
 
-    @RequestMapping(value="/kcxmk_d",method = RequestMethod.GET)
+  /*  @RequestMapping(value="/kcxmk_d",method = RequestMethod.GET)
     public String kcxmk_d(Model model,HttpServletRequest req){
         HttpSession session = req.getSession();
         String isLogin = CheckUtil.isLogins(req);
@@ -217,6 +215,25 @@ public class KcsbbController {
         }
         model.addAttribute("msg",isLogin);
         return "/kcxmk_d.html";
+    }*/
+
+    @RequestMapping(value="/kcxmk_d/{id}",method = RequestMethod.GET)
+    public String kcxmk_dn(Model model,HttpServletRequest req,@PathVariable("id") String id){
+        log.info("获取详情的ID:{}",id);
+        HttpSession session = req.getSession();
+        String isLogin = CheckUtil.isLogins(req);
+        log.info("是否登陆:{}",isLogin);
+        model. addAttribute("msgs", isLogin);
+        if(isLogin.equals("1")){
+            model.addAttribute("userName",session.getAttribute("userName"));
+        }else{
+            model.addAttribute("userName","");
+        }
+        model.addAttribute("msg",isLogin);
+        String  url = "/kcxmk_d"+id+".html";
+        log.info("地址：{}",url);
+        return url;
+
     }
 
     @RequestMapping(value="/onkcxmkAdd",method = RequestMethod.GET)
@@ -326,6 +343,54 @@ public class KcsbbController {
         model.addAttribute("msg","");
         return "/hysj.html";
     }
+
+    @RequestMapping(value="/hygf",method = RequestMethod.GET)
+    public String hygf(Model model,HttpServletRequest req){
+        HttpSession session = req.getSession();
+        String isLogin = CheckUtil.isLogins(req);
+        log.info("是否登陆:{}",isLogin);
+        model. addAttribute("msgs", isLogin);
+        if(isLogin.equals("1")){
+            model.addAttribute("userName",session.getAttribute("userName"));
+        }else{
+            model.addAttribute("userName","");
+        }
+        model.addAttribute("msg","");
+        return "/hygf.html";
+    }
+
+
+    @RequestMapping(value="/detailcgzh",method = RequestMethod.GET)
+    public String detailcgzh(Model model,HttpServletRequest req){
+        HttpSession session = req.getSession();
+        String isLogin = CheckUtil.isLogins(req);
+        log.info("是否登陆:{}",isLogin);
+        model. addAttribute("msgs", isLogin);
+        if(isLogin.equals("1")){
+            model.addAttribute("userName",session.getAttribute("userName"));
+        }else{
+            model.addAttribute("userName","");
+        }
+        model.addAttribute("msg","");
+        return "/detailcgzh.html";
+    }
+
+
+    @RequestMapping(value="/sys",method = RequestMethod.GET)
+    public String sys(Model model,HttpServletRequest req){
+        HttpSession session = req.getSession();
+        String isLogin = CheckUtil.isLogins(req);
+        log.info("是否登陆:{}",isLogin);
+        model. addAttribute("msgs", isLogin);
+        if(isLogin.equals("1")){
+            model.addAttribute("userName",session.getAttribute("userName"));
+        }else{
+            model.addAttribute("userName","");
+        }
+        model.addAttribute("msg","");
+        return "/sys.html";
+    }
+
     @RequestMapping(value="/kcxqzj",method = RequestMethod.GET)
     public String kcxqzj(Model model,HttpServletRequest req){
         HttpSession session = req.getSession();

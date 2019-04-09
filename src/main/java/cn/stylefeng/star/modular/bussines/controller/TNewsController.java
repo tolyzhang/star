@@ -56,7 +56,7 @@ public class TNewsController extends BaseController {
     }
 
     /**
-     * 成果转化
+     * 科创成果
      * @author zhangty
      * @Date 2019/03/23 5:34 PM
      */

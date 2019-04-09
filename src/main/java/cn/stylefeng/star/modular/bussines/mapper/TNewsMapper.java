@@ -11,7 +11,7 @@ import java.util.Map;
 public interface TNewsMapper extends BaseMapper<TNews> {
 
     /**
-     * 查询全部成果转化信息
+     * 查询全部科创成果信息
      * @param page
      * @param newType
      * @param newStatus

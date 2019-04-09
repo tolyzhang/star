@@ -16,6 +16,7 @@
 package cn.stylefeng.star.modular.system.controller;
 
 import cn.stylefeng.roses.core.util.MD5Util;
+import cn.stylefeng.roses.core.util.ToolUtil;
 import cn.stylefeng.star.core.common.node.MenuNode;
 import cn.stylefeng.star.core.log.LogManager;
 import cn.stylefeng.star.core.log.factory.LogTaskFactory;
@@ -247,21 +248,31 @@ public class LoginController extends BaseController {
     public
     String registst(TUser tUser, HttpServletRequest request, Model model, @RequestParam("files") MultipartFile file){
         log.info("获取所有请求参数:{}",tUser);
+        if (ToolUtil.isOneEmpty(tUser)) {
+            model. addAttribute("msg", "请完整填写信息");
+            return "/regist.html";
+        }
         //本地上传项目空间
-        String pathRoot = "C:\\Users\\zhangty\\yf项目\\star\\target\\classes\\static\\imgs\\";
+        //String pathRoot = "C:\\Users\\zhangty\\yf项目\\star\\target\\classes\\static\\imgs\\";
         String info ="";
         //获取所有注册信息表单,提交后上传图片信息,保存到user表中
         try {
-            //服务器上传
-            //String pathRoot =  ResourceUtils.getURL("classpath:").getPath()+"static/imgs/";
-            info = FileUtil.uploadFile(file,pathRoot);
-            log.info("保存数据库上传信息:{}",info);
-            String uploadAdd = "/imgs/"+info;
-            log.info("上传图片保存文件名:{}",uploadAdd);
-            tUser.setCompanyUrlAdd(uploadAdd);
+            if(file.isEmpty()){
+
+            }else{
+                //服务器上传
+                String pathRoot =  ResourceUtils.getURL("classpath:").getPath()+"static/imgs/";
+                info = FileUtil.uploadFile(file,pathRoot);
+                log.info("保存数据库上传信息:{}",info);
+                String uploadAdd = "/imgs/"+info;
+                log.info("上传图片保存文件名:{}",uploadAdd);
+                tUser.setCompanyUrlAdd(uploadAdd);
+            }
             tUserService.insertUser(tUser);
+
         } catch (Exception e) {
             e.printStackTrace();
+            return "/error.html";
         }
         model. addAttribute("msg", "注册成功,审核中");
         return "/logo.html";

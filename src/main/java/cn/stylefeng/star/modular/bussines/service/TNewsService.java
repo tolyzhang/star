@@ -28,7 +28,7 @@ public class TNewsService extends ServiceImpl<TNewsMapper, TNews> {
     @Resource
     private TNewsMapper tNewsMapperl;
     /**
-     * 查询全部成果转化
+     * 查询全部科创成果
      * @param page
      * @param newType
      * @param newStatus

@@ -64,11 +64,11 @@
             </a>
             </li>
             </ul>
-            <form class="form-horizontal user-form-horizontal" action="${ctxPath}/rest" enctype="multipart/form-data" method="POST" onsubmit="return checktosubmit()" >
+            <form class="form-horizontal user-form-horizontal" action="${ctxPath}/rest" enctype="multipart/form-data" method="POST" >
             <div class="row">
             <div class="col-md-12">
-            <div class="errorHandler alert alert-danger padding-5 no-display">
-            <i class="iconfont icon-removecircle"></i>您的输入有误，请完成后重新提交！
+            <div class="errorHandler alert alert-danger padding-5">
+            <i class="iconfont icon-removecircle"></i> ${msg}
             </div>
             <div class="successHandler alert alert-success padding-5 no-display">
             <i class="iconfont icon-okcircle"></i>您的输入正确，请提交！
@@ -231,6 +231,26 @@
             });
         });
     });
+
+    function checktosubmit(){
+        var userName = $("#userName").val();
+        var password = $("#password").val();
+        var files = $("#input-b5").val();
+        if(userName==null || userName==''){
+            $("#beginForm").attr('class','successHandler alert alert-success padding-5');
+            return;
+        }
+        if(password==null || password ==''){
+            $("#beginForm").attr('class','successHandler alert alert-success padding-5');
+            return;
+        }
+        if(files==null || files ==''){
+           alert("营业执照不能为空");
+            return;
+        }
+        $("#form").submit();
+
+    }
 </script>
 
 </body>

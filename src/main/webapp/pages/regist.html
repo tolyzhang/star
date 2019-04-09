@@ -40,15 +40,14 @@
 <div id="main-container">
     <div id="container" class="page-bg">
 
-        <script src="${ctxPath}/assets/style/js/header.js"></script></script>
+        <script src="${ctxPath}/assets/style/js/header.js"></script>
 
         <div class="main" id="main">
             <div class="white-bg">
             <div class="container">
             <ol class="breadcrumb">
             <li><a href="">首页</a></li>
-
-        <li><a href="${ctxPath}/regSt" title="企业注册">企业注册</a></li>
+            <li><a href="${ctxPath}/regSt" title="企业注册">企业注册</a></li>
         </ol>
         </div>
         </div>
@@ -67,9 +66,7 @@
             <form class="form-horizontal user-form-horizontal" action="${ctxPath}/rest" enctype="multipart/form-data" method="POST" >
             <div class="row">
             <div class="col-md-12">
-            <div class="errorHandler alert alert-danger padding-5">
-            <i class="iconfont icon-removecircle"></i> ${msg}
-            </div>
+                ${msg}
             <div class="successHandler alert alert-success padding-5 no-display">
             <i class="iconfont icon-okcircle"></i>您的输入正确，请提交！
             </div>
@@ -124,21 +121,25 @@
             </div>
 
             <div class="form-group">
-            <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>手机号码：</label>
-        <div class="col-sm-5">
-            <input type="text" placeholder="" class="form-control" id="userPhone" name="userPhone">
-            </div>
+                <label class="control-label col-sm-3" for="mobile"><span class="symbol required"></span>手机号码：</label>
+                 <div class="col-sm-5">
+                <input type="text" placeholder="" class="form-control" id="userPhone" name="userPhone">
+                </div>
+                <div class="col-sm-1">
+                    <a class="btn btn-warning" id="smssend">发送验证码</a>
+                </div>
             </div>
 
             <div class="form-group code-form-group">
-            <label class="control-label col-sm-3" for="codes"><span class="symbol required" aria-required="true"></span>验证码：</label>
+            <label class="control-label col-sm-3" for="codes">
+                <span class="symbol required" aria-required="true"></span>验证码：</label>
         <div class="col-sm-5">
             <div class="row">
             <div class="col-sm-8 col-xs-6">
             <input type="text" placeholder="" class="form-control" id="codes" name="codes">
             </div>
             <div class="col-sm-4 col-xs-6">
-            <img src="./regist2_files/code.png" alt="">
+
             </div>
             </div>
             </div>
@@ -211,11 +212,11 @@
 <script>
     $(function () {
         Main.init();
+
         var isLogin = "${msgs}";
         if(isLogin=='1'){
             $("#logintName").show();
             $("#loginTitle").hide();
-            $("#uuName").text("${userName}");
         }
         $("#loginOut").click(function () {
             $.ajax({
@@ -230,6 +231,29 @@
                 }
             });
         });
+
+        //发送验证码
+       $("#smssend").click(function () {
+           alert("cc");
+           var phone = $("#userPhone").val();
+           if(phone==null || phone ==""){
+               alert("请填写手机号");
+               return false;
+           }
+           $.ajax({
+               url:'${ctxPath}/valiPhone',
+               data:{
+                   userPhone:phone
+               },
+               type:"POST",
+               success:function (data) {
+                   alert("验证手机号是否存在"+data);
+               }
+           });
+       });
+
+
+
     });
 
     function checktosubmit(){
@@ -250,7 +274,9 @@
         }
         $("#form").submit();
 
-    }
+    };
+
+
 </script>
 
 </body>

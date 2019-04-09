@@ -54,4 +54,11 @@ public interface TUserMapper extends BaseMapper<TUser> {
      */
     void insertUser(TUser dto);
 
+    /**
+     * 查询商户
+     * @param dto
+     * @return
+     */
+    TUser findByUser(TUser dto);
+
 }

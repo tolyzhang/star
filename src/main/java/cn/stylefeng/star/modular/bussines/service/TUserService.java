@@ -106,4 +106,16 @@ public class TUserService extends ServiceImpl<TUserMapper, TUser> {
         tUser.setId(1);
         tUserMapper.insertUser(tUser);
     }
+
+
+    /**
+     * 登录验证
+     * @param tUser
+     * @return
+     */
+    public TUser findByUser(TUser tUser){
+        log.info("查询用户是否存在");
+        TUser dto = tUserMapper.findByUser(tUser);
+        return dto;
+    }
 }

@@ -19,6 +19,8 @@
     <result column="COMPANY_PERSON" jdbcType="VARCHAR" property="companyPerson" />
     <result column="COMPANY_LICENSE" jdbcType="VARCHAR" property="companyLicense" />
     <result column="COMPANY_URL_ADD" jdbcType="VARCHAR" property="companyUrlAdd" />
+    <result column="COMPANY_ADDRESS" jdbcType="VARCHAR" property="companyAddress" />
+    <result column="USER_TEL" jdbcType="VARCHAR" property="userTel" />
     <result column="CRT_TIME" jdbcType="TIMESTAMP" property="crtTime" />
     <result column="UPT_TIME" jdbcType="TIMESTAMP" property="uptTime" />
   </resultMap>
@@ -29,7 +31,7 @@
     USER_PHONE as userPhone, USER_CODE as userCode, USER_EMAIL as userEmail,
     USER_STATUS as userStatus, USER_IP as userIp, COMPANY_NAME as companyName, COMPANY_CODE companyCode,
     COMPANY_PERSON as companyPerson, COMPANY_LICENSE as  companyLicense, COMPANY_URL_ADD as companyUrlAdd,
-     CRT_TIME as crtTime, UPT_TIME as uptTime
+     CRT_TIME as crtTime, UPT_TIME as uptTime,USER_TEL as userTel,COMPANY_ADDRESS as companyAddress
   </sql>
 
   <!--查询全部-->
@@ -55,6 +57,67 @@
   <select id="getUserPass" parameterType="cn.stylefeng.star.modular.bussines.entity.TUser" resultType="cn.stylefeng.star.modular.bussines.entity.TUser">
     select   <include refid="Base_Column_List"/>
     from T_USER where 1=1 and USER_NAME = #{userName} and USER_PASSWORD=#{userPassword}
+  </select>
+
+
+  <!--查询用户名和密码-->
+  <select id="findByUser" parameterType="cn.stylefeng.star.modular.bussines.entity.TUser" resultType="cn.stylefeng.star.modular.bussines.entity.TUser">
+    select   <include refid="Base_Column_List"/>
+    from T_USER where 1=1
+    <if test="userName != null">
+     AND USER_NAME = #{userName,jdbcType=VARCHAR}
+    </if>
+    <if test="userRealName != null">
+      AND  USER_REAL_NAME = #{userRealName,jdbcType=VARCHAR}
+    </if>
+    <if test="industryType != null">
+      AND  INDUSTRY_TYPE = #{industryType,jdbcType=VARCHAR}
+    </if>
+    <if test="industrtId != null">
+      AND  INDUSTRT_ID = #{industrtId,jdbcType=INTEGER}
+    </if>
+    <if test="userFax != null">
+      AND   USER_FAX = #{userFax,jdbcType=VARCHAR}
+    </if>
+    <if test="userPassword != null">
+      AND  USER_PASSWORD = #{userPassword,jdbcType=VARCHAR}
+    </if>
+    <if test="userPhone != null" >
+      AND  USER_PHONE = #{userPhone,jdbcType=VARCHAR}
+    </if>
+    <if test="userCode != null">
+      AND   USER_CODE = #{userCode,jdbcType=VARCHAR}
+    </if>
+    <if test="userEmail != null">
+      AND  USER_EMAIL = #{userEmail,jdbcType=VARCHAR}
+    </if>
+    <if test="userStatus != null">
+      AND   USER_STATUS = #{userStatus,jdbcType=VARCHAR}
+    </if>
+    <if test="userIp != null">
+      AND   USER_IP = #{userIp,jdbcType=VARCHAR}
+    </if>
+    <if test="companyName != null">
+      AND   COMPANY_NAME = #{companyName,jdbcType=VARCHAR}
+    </if>
+    <if test="companyCode != null">
+      AND   COMPANY_CODE = #{companyCode,jdbcType=VARCHAR}
+    </if>
+    <if test="companyPerson != null">
+      AND  COMPANY_PERSON = #{companyPerson,jdbcType=VARCHAR}
+    </if>
+    <if test="companyLicense != null">
+      AND   COMPANY_LICENSE = #{companyLicense,jdbcType=VARCHAR}
+    </if>
+    <if test="companyUrlAdd != null">
+      AND   COMPANY_URL_ADD = #{companyUrlAdd,jdbcType=VARCHAR}
+    </if>
+    <if test="companyAddress != null">
+      AND   COMPANY_ADDRESS = #{companyAddress,jdbcType=VARCHAR}
+    </if>
+    <if test="userTel != null">
+      AND   USER_TEL = #{userTel,jdbcType=VARCHAR}
+    </if>
   </select>
 
   <!--新增-->

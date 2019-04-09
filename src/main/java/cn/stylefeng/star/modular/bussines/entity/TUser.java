@@ -45,6 +45,10 @@ public class TUser implements Serializable {
 
     private Date uptTime;
 
+    private String userTel;
+
+    private String companyAddress;
+
     private static final long serialVersionUID = 1L;
 
 }

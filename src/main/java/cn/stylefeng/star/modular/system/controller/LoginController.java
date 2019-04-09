@@ -28,7 +28,10 @@ import cn.stylefeng.star.modular.bussines.service.TUserService;
 import cn.stylefeng.star.modular.system.service.UserService;
 import cn.stylefeng.roses.core.base.controller.BaseController;
 import cn.stylefeng.star.modular.util.CheckUtil;
+import cn.stylefeng.star.modular.util.SendUtils;
+import com.alibaba.fastjson.JSONObject;
 import lombok.extern.slf4j.Slf4j;
+import net.sf.ehcache.search.parser.MValue;
 import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -248,9 +251,24 @@ public class LoginController extends BaseController {
     public
     String registst(TUser tUser, HttpServletRequest request, Model model, @RequestParam("files") MultipartFile file){
         log.info("获取所有请求参数:{}",tUser);
-        if (ToolUtil.isOneEmpty(tUser)) {
+        if (ToolUtil.isOneEmpty(tUser,tUser.getCompanyName(),tUser.getCompanyCode(),
+                tUser.getUserPassword(),tUser.getUserEmail(),tUser.getUserName(),tUser.getUserPhone()
+        ,tUser.getCompanyPerson(),tUser.getUserCode(),tUser.getCompanyCode(),tUser.getCompanyAddress(),tUser.getUserTel())) {
             model. addAttribute("msg", "请完整填写信息");
             return "/regist.html";
+        }
+        //判断session里面是否有验证码
+        String codes = request.getParameter("codes");
+        if(("").equals(codes)){
+            model.addAttribute("msg","请填写验证码");
+        }else{
+            HttpSession session = request.getSession();
+            String codest = session.getAttribute("codes")+"";
+            if(!(codes).equals(codest)){
+                model.addAttribute("msg","验证码错误");
+                return "/regist.html";
+            }
+            log.info("验证码正确:{}",codes);
         }
         //本地上传项目空间
         //String pathRoot = "C:\\Users\\zhangty\\yf项目\\star\\target\\classes\\static\\imgs\\";
@@ -272,10 +290,38 @@ public class LoginController extends BaseController {
 
         } catch (Exception e) {
             e.printStackTrace();
-            return "/error.html";
+            log.error("保存异常:{}",e);
         }
         model. addAttribute("msg", "注册成功,审核中");
         return "/logo.html";
+    }
+    @RequestMapping(value = "/valiPhone",method = RequestMethod.POST)
+    @ResponseBody
+    public int sendSms(Model model,HttpServletRequest req){
+        log.info("获取发送");
+        int result = 0;
+        //查询手机号是否存在
+        TUser models  = new TUser();
+        models.setUserPhone(req.getParameter("userPhone"));
+        TUser ret = tUserService.findByUser(models);
+        log.info("根据手机号查询用户:{}",ret);
+        if(ret==null){
+            //手机号存在发送验证
+            Integer codev = SendUtils.randomCode();
+            JSONObject reJson = SendUtils.sendSms(models.getUserPhone(),codev);
+            log.info("所有响应结果:{}",reJson);
+            if(("Success").equals(reJson.get("returnstatus"))){
+                HttpSession session = req.getSession();
+                session.setAttribute("codes",codev);
+                result = 200;
+            }else{
+                log.info("结果！=SUCCESS：{}",reJson);
+                result = 204;
+            }
+        }else{
+            result = 202;
+        }
+        return result;
     }
 
 
@@ -288,5 +334,6 @@ public class LoginController extends BaseController {
         String path = ResourceUtils.getURL("classpath:").getPath();
         System.out.println(path+"static/imgs/");
     }
+
 
 }

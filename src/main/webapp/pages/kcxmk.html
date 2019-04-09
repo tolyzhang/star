@@ -1,0 +1,287 @@
+<html lang="zh-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=Edge,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <title>上海交通委科技创新服务平台</title>
+    <meta name="sitename" content="">
+    <meta name="sitedomain" content="">
+    <meta name="siteidcode" content="">
+    <meta name="columntype" content="">
+    <meta name="articletitle" content="">
+    <meta name="pubdate" content="">
+    <meta name="contentsource" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="description" content=""/>
+    <meta name="url" content="">
+    <meta name="catalog" content="">
+    <meta name="lanmu" content="">
+    <meta name="manuscriptId" content="">
+    <meta name="firstpublishedtime" content="">
+    <meta name="lastmodifiedtime" content="">
+    <link rel="stylesheet" href="${ctxPath}/assets/style/css/ETUI/ETUI3.min.css">
+    <link rel="stylesheet" href="${ctxPath}/assets/style/css/ETUI/ETUI3.Utility.css">
+    <link href="${ctxPath}/assets/plugin/infinitypush/jquery.ma.infinitypush.css" rel="stylesheet">
+    <!-- Widget CSS -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="${ctxPath}/assets/style/css/style.css">
+    <link rel="stylesheet" href="${ctxPath}/assets/style/css/responsive.css">
+    <!-- icons -->
+
+</head>
+<body>
+<div id="main-container">
+    <div id="container" class="page-bg">
+		<div id="tblj" style="display:none;">科创服务</div>
+        <script src="${ctxPath}/assets/style/js/headerkc.js"></script>
+        <div class="main" id="main">
+            
+            <div class="white-bg">
+                <div class="container">
+                    <ol class="breadcrumb">
+                        <li><a href="">首页</a></li>
+                        <li><a href='' title='科创平台'>科创平台</a></li>
+                        <li><a href='${ctxPath}/kcsbb' title='科创服务'>科创服务</a></li>
+                        <li><a href='${ctxPath}/kcxmk' title='科创项目申报'>科创项目库</a></li>
+                    </ol>
+                </div>
+            </div>
+            <div class="container padding-top-30">
+                <div class="row">
+                    <div class="col-md-3">
+                        <dl class="menu-left">
+                            <dt><i class="iconfont icon-xinwen"></i> 科创服务</dt>
+                            <dd>
+                                <a href="${ctxPath}/kcsbb" title="科创项目申报"><i class="iconfont icon-arrfill_u-copy"></i> <span>科创项目申报</span></a>
+                                <a class="active" href="${ctxPath}/kcxmk" title="科创项目库"><i class="iconfont icon-arrfill_u-copy"></i> <span>科创项目库</span></a>
+                                <a href="${ctxPath}/kcxqzj" title="科创成果"><i class="iconfont icon-arrfill_u-copy"></i> <span>科创成果</span></a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="panel padding-20 padding-bottom-5">
+                            <div class="search-bar clearfix">
+
+                          				<input type="hidden" name="pageIndex" id="pageIndex" value=""/>
+                          				<input type="hidden" name="cmsSearchId" id="cmsSearchId" value="0"/>
+                          				<input type="hidden" name="researchFlg" id="researchFlg" value="1"/>
+                          				<div class="input-group">
+                                    <input type="text" class="form-control" id="keyword" name="keyword" placeholder="请输入关键词搜索">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" onclick='javascript:onsubmmit()' id="button" type="submit">搜索</button>
+										     <input type="hidden" id="islogin" value="${msg}" />
+                                      <button class="btn btn-warning" id="onkcxmkAdd">申请发布科创成果</button>
+                                    </span>
+                                </div>
+
+                            </div>
+
+                            <ul class="uli14  nowrapli list-date margin-top-10 list--span">
+                                    <li><a href="${ctxPath}/kcxmk_d/1" title="路桥隧综合监控与指挥调度系统" target="_blank">路桥隧综合监控与指挥调度系统</a>
+                                    <span class="time">2019.04.03</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/2" title="静态交通智能化综合管理系统" target="_blank">静态交通智能化综合管理系统</a>
+                                    <span class="time">2019.03.28</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/3" title="智慧路口" target="_blank">智慧路口</a>
+                                    <span class="time">2019.03.23</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/4" title="智慧路侧匝道控制系统" target="_blank">智慧路侧匝道控制系统</a>
+                                    <span class="time">2019.03.16</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/5" title="城市交通时空分析、可视化和仿真系统" target="_blank">城市交通时空分析、可视化和仿真系统</a>
+                                    <span class="time">2019.03.02</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/6" title="时刻表自动生成系统" target="_blank">时刻表自动生成系统</a>
+                                    <span class="time">2019.02.26</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/7" title="三思智慧路灯系统" target="_blank">三思智慧路灯系统</a>
+                                    <span class="time">2019.02.19</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/8" title="精准分时到站预报整体解决方案" target="_blank">精准分时到站预报整体解决方案</a>
+                                    <span class="time">2019.02.12</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/9" title="城市道路车路协同与交通控制平台应用示范" target="_blank">城市道路车路协同与交通控制平台应用示范</a>
+                                    <span class="time">2019.02.05</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/10" title="城市轨道交通车站大客流检测与预警处置示范系统研究" target="_blank">城市轨道交通车站大客流检测与预警处置示范系统研究</a>
+                                    <span class="time">2019.01.30</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/11" title="智能辅助交通执法创新" target="_blank">智能辅助交通执法创新</a>
+                                    <span class="time">2019.01.25</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/12" title="轻量化路面质量快速检测系统" target="_blank">轻量化路面质量快速检测系统</a>
+                                    <span class="time">2019.01.18</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d13" title="智慧多功能杆" target="_blank">智慧多功能杆</a>
+                                    <span class="time">2019.01.11</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/14" title="物联网高速公路网感知设备与系统健康运行维护技术" target="_blank">物联网高速公路网感知设备与系统健康运行维护技术</a>
+                                    <span class="time">2019.01.08</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/15" title="上海市道路基础设施全寿命周期管理与决策支持平台示范应用" target="_blank">上海市道路基础设施全寿命周期管理与决策支持平台示范应用</a>
+                                    <span class="time">2018.12.28</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/16" title="基于交通大数据的城市交通区域协调信号控制技术" target="_blank">基于交通大数据的城市交通区域协调信号控制技术</a>
+                                    <span class="time">2018.12.21</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/17" title="新型城市公交优先信号控制技术" target="_blank">新型城市公交优先信号控制技术</a>
+                                    <span class="time">2018.12.14</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/18" title="道路基础设施智能感知机理及感知数据解析方法研究" target="_blank">道路基础设施智能感知机理及感知数据解析方法研究</a>
+                                    <span class="time">2018.12.07</span></li>
+                                    <li><a href="${ctxPath}/kcxmk_d/19" title="智能网联环境下智慧基础设施研究及标准制定" target="_blank">智能网联环境下智慧基础设施研究及标准制定</a>
+                                    <span class="time">2018.11.27</span></li>
+                            </ul>
+                            <!-- <ul class="picTextList row">
+                                <li>
+                                    <a href="kc-kcxmk/20190129/28521.html" target="_blank">
+                                        <img class="col-xs-2" src="upload/201901/0130_091714_318.jpg">
+                                        <div class="col-xs-9">
+                                            <p class="title"><span>城市道路车路协同与交通控制平台应用示范</span></p>
+                                            <p class="date"><i class="iconfont icon-liulan"></i> 2019.01.29</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="kc-kcxmk/20190129/28519.html" target="_blank">
+                                        <img class="col-xs-2" src="upload/201901/0130_091906_132.jpg">
+                                        <div class="col-xs-9">
+                                            <p class="title"><span>城市轨道交通车站大客流检测与预警处置示范系统研究</span></p>
+                                            <p class="date"><i class="iconfont icon-liulan"></i> 2019.01.23</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="kc-kcxmk/20190129/28513.html" target="_blank">
+                                        <img class="col-xs-2" src="upload/201901/0130_091906_132.jpg">
+                                        <div class="col-xs-9">
+                                            <p class="title"><span>智能辅助交通执法创新</span></p>
+                                            <p class="date"><i class="iconfont icon-liulan"></i> 2019.01.17</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="kc-kcxmk/20190129/28527.html" target="_blank">
+                                        <img class="col-xs-2" src="upload/201901/0130_090913_113.jpg">
+                                        <div class="col-xs-9">
+                                            <p class="title"><span>轻量化路面质量快速检测系统</span></p>
+                                            <p class="date"><i class="iconfont icon-liulan"></i> 2019.01.08</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="kc-kcxmk/20190129/28529.html" target="_blank">
+                                        <img class="col-xs-2" src="upload/201901/0130_090218_717.jpg">
+                                        <div class="col-xs-9">
+                                            <p class="title"><span>智慧多功能杆</span></p>
+                                            <p class="date"><i class="iconfont icon-liulan"></i> 2018.12.31</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="kc-kcxmk/20190129/28523.html" target="_blank">
+                                        <img class="col-xs-2" src="upload/201901/0130_091906_132.jpg">
+                                        <div class="col-xs-9">
+                                            <p class="title"><span>物联网高速公路网感知设备与系统健康运行维护技术</span></p>
+                                            <p class="date"><i class="iconfont icon-liulan"></i> 2018.12.23</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="kc-kcxmk/20190129/28485.html" target="_blank">
+                                        <img class="col-xs-2" src="upload/201901/0130_091906_132.jpg">
+                                        <div class="col-xs-9">
+                                            <p class="title"><span>上海市道路基础设施全寿命周期管理与决策支持平台示范应用</span></p>
+                                            <p class="date"><i class="iconfont icon-liulan"></i> 2018.12.12</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="kc-kcxmk/20190129/28517.html" target="_blank">
+                                        <img class="col-xs-2" src="upload/201901/0130_091906_132.jpg">
+                                        <div class="col-xs-9">
+                                            <p class="title"><span>基于交通大数据的城市交通区域协调信号控制技术</span></p>
+                                            <p class="date"><i class="iconfont icon-liulan"></i> 2018.12.06</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="kc-kcxmk/20190129/28515.html" target="_blank">
+                                        <img class="col-xs-2" src="upload/201901/0130_094637_573.jpg">
+                                        <div class="col-xs-9">
+                                            <p class="title"><span>新型城市公交优先信号控制技术</span></p>
+                                            <p class="date"><i class="iconfont icon-liulan"></i> 2018.11.27</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="kc-kcxmk/20190129/28483.html" target="_blank">
+                                        <img class="col-xs-2" src="upload/201901/0130_091906_132.jpg">
+                                        <div class="col-xs-9">
+                                            <p class="title"><span>道路基础设施智能感知机理及感知数据解析方法研究</span></p>
+                                            <p class="date"><i class="iconfont icon-liulan"></i> 2018.11.14</p>
+                                        </div>
+                                    </a>
+                                </li>
+                               
+                            </ul> -->
+                            <nav class="text-center">
+                                <ul class="pagination">
+<html>
+ <head></head> 
+ <body>
+     <div>
+    共11条记录 1/2页 &nbsp; 
+   <a disabled="disabled">首页</a> 
+<a disabled="disabled">上一页</a>  &nbsp; 
+   <a href="#" onclick="location.href=encodeURI('index_2.html');">下一页</a> 
+   <a href="#" onclick="location.href=encodeURI('index_2.html');">尾页</a>  &nbsp;第 
+   <select onchange="if(this.value==1){location.href=encodeURI('index.html')}else{location.href=encodeURI('index_'+this.value+'.html')}this.disabled='disabled'">  <option value="1" selected="selected">1</option> <option value="2" >2</option> <select>页 
+  </div>  
+ </body>
+</html>                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+        <script src="${ctxPath}/assets/style/js/footerkc.js"></script>
+    </div>
+</div>
+<!--Main JS-->
+<script src="${ctxPath}/assets/style/js/ETUI/jquery-2.0.3.min.js"></script>
+<!--[if lt IE 9]>
+<script src="${ctxPath}/assets/style/js/ETUI/html5shiv.min.js"></script>
+<script src="${ctxPath}/assets/style/js/ETUI/respond.min.js"></script>
+<![endif]-->
+<script src="${ctxPath}/assets/style/js/ETUI/ETUI3.min.js"></script>
+<!--Custom JS-->
+<script src="${ctxPath}/assets/style/js/main.js"></script>
+<script type="text/javascript" src="${ctxPath}/assets/style/plugin/infinitypush/jquery.ma.infinitypush.js"></script>
+<script>
+    $(function(){
+        Main.init();
+        $("#onkcxmkAdd").click(function(){
+            var isLogin = $("#islogin").val();
+            if(isLogin=='0'){
+                alert("您还未登陆,请登录");
+            }else{
+                window.location.href='${ctxPath}/onkcxmkAdd';
+            }
+        });
+        var isLoginst = "${msgs}";
+        if(isLoginst=='1'){
+            $("#logintName").show();
+            $("#loginTitle").hide();
+            $("#uuName").text("${userName}");
+        }
+        $("#loginOut").click(function () {
+            $.ajax({
+                url:'${ctxPath}/loginOut',
+                type:'GET',
+                success:function (data) {
+                    if(data==1){
+                        //退出成功
+                        $("#loginTitle").show();
+                        $("#logintName").hide();
+                    }
+                }
+            });
+        });
+
+
+    });
+</script>
+</body>
+</html>
+

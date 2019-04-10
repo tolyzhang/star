@@ -45,6 +45,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
@@ -308,7 +309,7 @@ public class LoginController extends BaseController {
 
     @RequestMapping(value = "/valiPhone",method = RequestMethod.POST)
     @ResponseBody
-    public int sendSms(Model model,HttpServletRequest req){
+    public int sendSms(Model model,HttpServletRequest req,HttpServletResponse response){
         log.info("获取发送");
         int result = 0;
         //查询手机号是否存在
@@ -320,7 +321,7 @@ public class LoginController extends BaseController {
             //手机号存在发送验证
             Integer codev = SendUtils.randomCode();
             log.info("发送的验证码:{}",codev);
-            JSONObject reJson = SendUtils.sendSms(models.getUserPhone(),codev);
+            JSONObject reJson = SendUtils.sendSms(models.getUserPhone(),codev,response);
             log.info("所有响应结果:{}",reJson);
             if(("Success").equals(reJson.get("returnstatus"))){
                 HttpSession session = req.getSession();
@@ -339,7 +340,7 @@ public class LoginController extends BaseController {
 
     @RequestMapping(value = "/valiName",method = RequestMethod.POST)
     @ResponseBody
-    public int valiName(Model model,HttpServletRequest req){
+    public int valiName(Model model, HttpServletRequest req, HttpServletResponse response){
         log.info("验证用户名是否存在");
         int result = 0;
         //查询手机号是否存在
@@ -354,7 +355,7 @@ public class LoginController extends BaseController {
         }
         return result;
     }
-    
+
 
 
 

@@ -9,6 +9,9 @@ import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 
 
+import javax.servlet.http.HttpServletResponse;
+import java.net.MalformedURLException;
+import java.net.URLEncoder;
 import java.util.*;
 
 /**
@@ -22,46 +25,49 @@ public class SendUtils {
 
     private static String  URL = "https://sh2.ipyy.com/sms.aspx";
 
-    public static JSONObject  sendSms(String phone,Integer code){
+    public static JSONObject  sendSms(String phone, Integer code, HttpServletResponse response) {
+        response.setCharacterEncoding("UTF-8");
         log.info("发送短信:{}",URL);
         SendDto dto = new SendDto();
-         dto.setAccount("gsj121");
-        String password = "ab123456";	//发送帐号密码
+         dto.setAccount("jksc1296");
+        String password = "jksc129635";	//发送帐号密码
         String newPass = MD5Util.MD5Encode(password).toUpperCase();
          dto.setPassword(newPass);
          dto.setMobile(phone);
-        String content = "尊敬的用户您好,您正在使用手机号码注册,验证码为："+code+"";	//发送内容
-        String url = URL+"?action=send&userid=&account=gsj121&password="+newPass+"&mobile="+phone+"&content="+content+"&sendTime=&extno=";
-        String result = HttpUtils.HttpDoPost(url,"");
-        log.info("发送结果:{}",result);
-        String json = xml2JSON(result);
-        log.info("结果:{}",json);
-        JSONObject jsonj = JSONObject.parseObject(json);
-        String returnSms = jsonj.getString("returnsms");
-        log.info("解析所有返回参数:{}",returnSms);
-        JSONObject jsont = JSONObject.parseObject(returnSms);
-        return jsont;
+        String url="";
+        try{
+        //String content = "尊敬的用户您好,您正在使用手机号码注册,验证码为："+code+"";	//发送内容
+        String content = "【创新平台】"+code+"（你的手机验证码，请完成验证），如非本人操作，请忽略本短信。";
+        log.info("发送短信内容:{}",content);
+             content = new String(content.getBytes("utf-8"), "utf-8");
+            log.info("发送短信内容content:{}",content);
+            URLEncoder.encode(content,"utf-8");
+             url = URL+"?action=send&userid=&account=jksc1296&password="+newPass+"&mobile="+phone+"&content="+URLEncoder.encode(content,"utf-8")+"&sendTime=&extno=";
+            log.info("地址:{}",url);
+            String result = HttpUtils.HttpDoPost(url,"");
+            log.info("发送结果:{}",result);
+            String json = xml2JSON(result);
+            log.info("结果:{}",json);
+            JSONObject jsonj = JSONObject.parseObject(json);
+            String returnSms = jsonj.getString("returnsms");
+            log.info("解析所有返回参数:{}",returnSms);
+            JSONObject jsont = JSONObject.parseObject(returnSms);
+            return jsont;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
     }
 
 
-    public static void main(String[] arge){
+    public static void main(String[] arge) throws Exception{
         String password = "ab123456";	//发送帐号密码
         String newPass = MD5Util.MD5Encode(password).toUpperCase();
-        String content = "您的短信验证码为:[123456],验证码5分钟内有效。";	//发送内容
-        String url = URL+"?action=send&userid=&account=gsj121&password="+newPass+"&mobile=17602100029&content="+content+"&sendTime=&extno=";
-        String result = HttpUtils.HttpDoPost(url,"");
-        log.info("发送结果:{}",result);
-       // JSONObject jsObj = JSONObject.parseObject(result);
-        try{
-           // JSONObject json = null;
-
-
-            //log.info("结果:{}",jsonj);
-            //log.info("结果:{}",jsonj.get("returnstatus"));
-        }catch (Exception e){
-            log.info("转换异常:{}",e);
+        String content = "【创新平台】111111（你的手机验证码，请完成验证），如非本人操作，请忽略本短信。";	//发送内容
+        content = new String(content.getBytes("utf-8"),"utf-8");
+        System.out.println(content);
         }
-     }
+
 
     public static int randomCode() {
         StringBuilder str = new StringBuilder();
@@ -194,8 +200,6 @@ public class SendUtils {
         }
         return obj;
     }
-
-
 
 
 

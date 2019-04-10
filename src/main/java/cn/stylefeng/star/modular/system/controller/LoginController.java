@@ -46,6 +46,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.List;
 
 import static cn.stylefeng.roses.core.util.HttpContext.getIp;
@@ -280,7 +282,13 @@ public class LoginController extends BaseController {
             }else{
                 //服务器上传
                 String pathRoot =  ResourceUtils.getURL("classpath:").getPath()+"static/imgs/";
-                info = FileUtil.uploadFile(file,pathRoot);
+                String pathRoots = request.getRealPath("")+"imgs\\";
+                String url = request.getSession().getServletContext().getRealPath("");
+                log.info("上传文件目录:{}",url);
+                int ch = url.lastIndexOf("\\");
+                String webapp = url.substring(0, ch-4)+"\\imgs\\";;
+                log.info("上传文件地址:{}",webapp);
+                info = FileUtil.uploadFile(file,webapp);
                 log.info("保存数据库上传信息:{}",info);
                 String uploadAdd = "/imgs/"+info;
                 log.info("上传图片保存文件名:{}",uploadAdd);
@@ -295,6 +303,9 @@ public class LoginController extends BaseController {
         model. addAttribute("msg", "注册成功,审核中");
         return "/logo.html";
     }
+
+
+
     @RequestMapping(value = "/valiPhone",method = RequestMethod.POST)
     @ResponseBody
     public int sendSms(Model model,HttpServletRequest req){
@@ -308,6 +319,7 @@ public class LoginController extends BaseController {
         if(ret==null){
             //手机号存在发送验证
             Integer codev = SendUtils.randomCode();
+            log.info("发送的验证码:{}",codev);
             JSONObject reJson = SendUtils.sendSms(models.getUserPhone(),codev);
             log.info("所有响应结果:{}",reJson);
             if(("Success").equals(reJson.get("returnstatus"))){
@@ -325,15 +337,26 @@ public class LoginController extends BaseController {
     }
 
 
-
-
-
-
-
-    public static void main(String[] arge) throws  Exception{
-        String path = ResourceUtils.getURL("classpath:").getPath();
-        System.out.println(path+"static/imgs/");
+    @RequestMapping(value = "/valiName",method = RequestMethod.POST)
+    @ResponseBody
+    public int valiName(Model model,HttpServletRequest req){
+        log.info("验证用户名是否存在");
+        int result = 0;
+        //查询手机号是否存在
+        TUser models  = new TUser();
+        models.setUserName(req.getParameter("userName"));
+        TUser ret = tUserService.findByUser(models);
+        log.info("根据用户名查询用户:{}",ret);
+        if(ret==null){
+           result = 200;
+        }else{
+            result = 202;
+        }
+        return result;
     }
+    
+
+
 
 
 }

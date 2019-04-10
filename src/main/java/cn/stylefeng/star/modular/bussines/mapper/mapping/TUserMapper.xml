@@ -51,6 +51,7 @@
     <if test="userName != null and userName !=''">
       and USER_NAME like '%${userName}%'
     </if>
+    order by ID desc
   </select>
 
   <!--查询用户名和密码-->

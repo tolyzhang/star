@@ -30,14 +30,16 @@ public class SendUtils {
         String newPass = MD5Util.MD5Encode(password).toUpperCase();
          dto.setPassword(newPass);
          dto.setMobile(phone);
-        String content = "您的短信验证码为:["+code+"],验证码5分钟内有效。";	//发送内容
+        String content = "尊敬的用户您好,您正在使用手机号码注册,验证码为："+code+"";	//发送内容
         String url = URL+"?action=send&userid=&account=gsj121&password="+newPass+"&mobile="+phone+"&content="+content+"&sendTime=&extno=";
         String result = HttpUtils.HttpDoPost(url,"");
         log.info("发送结果:{}",result);
         String json = xml2JSON(result);
         log.info("结果:{}",json);
         JSONObject jsonj = JSONObject.parseObject(json);
-        JSONObject jsont = JSONObject.parseObject(jsonj.get("retrunsms")+"");
+        String returnSms = jsonj.getString("returnsms");
+        log.info("解析所有返回参数:{}",returnSms);
+        JSONObject jsont = JSONObject.parseObject(returnSms);
         return jsont;
     }
 
